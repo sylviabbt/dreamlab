@@ -16,6 +16,12 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 
+# added gems
+gem 'acts-as-taggable-on', '~> 6.0'
+gem 'pg_search'
+gem 'geocoder'
+gem 'pundit'
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
