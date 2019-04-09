@@ -1,6 +1,6 @@
 class DrawingsController < ApplicationController
   def index
-    @drawings = policy_scope(Drawing).where(user: current_user)
+    @drawings = policy_scope(Drawing).where(kid: current_user)
   end
 
   def create

@@ -1,0 +1,8 @@
+<div class="collab-form">
+  <%= simple_form_for(@collaborations) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :image_url %>
+    <%= f.button :submit, class:"btn btn-flat" %>
+  <% end %>
+  <p><%= link_to "Back to Gallery", collaborations_path %></p>
+</div>
