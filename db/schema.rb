@@ -10,10 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_08_101847) do
+ActiveRecord::Schema.define(version: 2019_04_09_083128) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "collaborations", force: :cascade do |t|
+    t.datetime "completed_at"
+    t.string "image_url"
+    t.bigint "drawings_id"
+    t.bigint "creators_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["creators_id"], name: "index_collaborations_on_creators_id"
+    t.index ["drawings_id"], name: "index_collaborations_on_drawings_id"
+  end
+
+  create_table "creators", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "drawings", force: :cascade do |t|
+    t.string "status"
+    t.string "name"
+    t.string "image_url"
+    t.datetime "upload_at"
+    t.datetime "booking_at"
+    t.bigint "kids_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["kids_id"], name: "index_drawings_on_kids_id"
+  end
+
+  create_table "kids", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "pg_search_documents", force: :cascade do |t|
     t.text "content"
@@ -57,8 +90,21 @@ ActiveRecord::Schema.define(version: 2019_04_08_101847) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "city"
+    t.text "description"
+    t.string "avatar"
+    t.integer "age"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "portfolio_url"
+    t.string "favourite_things"
+    t.string "dislikes"
+    t.string "type"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "collaborations", "creators", column: "creators_id"
+  add_foreign_key "collaborations", "drawings", column: "drawings_id"
+  add_foreign_key "drawings", "kids", column: "kids_id"
 end
