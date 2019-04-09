@@ -106,5 +106,6 @@ ActiveRecord::Schema.define(version: 2019_04_09_083128) do
 
   add_foreign_key "collaborations", "creators", column: "creators_id"
   add_foreign_key "collaborations", "drawings", column: "drawings_id"
+
   add_foreign_key "drawings", "kids", column: "kids_id"
 end
