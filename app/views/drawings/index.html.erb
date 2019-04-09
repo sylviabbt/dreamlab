@@ -1,0 +1,7 @@
+<% @drawings.each do |drawing| %>
+  <div class="card">
+    <p><%= drawing.image_url %></p>
+    <p><%= drawing.upload_at %></p>
+    <p><%= drawing.booking_at %></p>
+  </div>
+<% end %>
