@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_09_083128) do
+ActiveRecord::Schema.define(version: 2019_04_09_112743) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,12 +18,12 @@ ActiveRecord::Schema.define(version: 2019_04_09_083128) do
   create_table "collaborations", force: :cascade do |t|
     t.datetime "completed_at"
     t.string "image_url"
-    t.bigint "drawings_id"
     t.bigint "creators_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "drawing_id"
     t.index ["creators_id"], name: "index_collaborations_on_creators_id"
-    t.index ["drawings_id"], name: "index_collaborations_on_drawings_id"
+    t.index ["drawing_id"], name: "index_collaborations_on_drawing_id"
   end
 
   create_table "creators", force: :cascade do |t|
@@ -105,7 +105,6 @@ ActiveRecord::Schema.define(version: 2019_04_09_083128) do
   end
 
   add_foreign_key "collaborations", "creators", column: "creators_id"
-  add_foreign_key "collaborations", "drawings", column: "drawings_id"
-
+  add_foreign_key "collaborations", "drawings"
   add_foreign_key "drawings", "kids", column: "kids_id"
 end
