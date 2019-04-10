@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Dream Gallery</h1>
+</div>
+<div class="row">
+  <%= @collaborations.each do |collab| %>
+    <div class="col-4">
+      <div class="card-collab">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
+        <div class="card-collab-infos">
+          <div>
+            <h2><%= collab.drawing.name %> </h2>
+            <p><%= collab.kid.first_name %></p>
+            <p><%= collab.creator.first_name %></p>
+          </div>
+          <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-collab-user avatar-bordered"/>
+          <img src="#" class="card-collab-user avatar-bordered"/>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
