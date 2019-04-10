@@ -5,7 +5,6 @@ gem 'letter_opener', group: :development
 gem 'postmark-rails'
 
 
-
 gem 'bootsnap', require: false
 gem 'devise'
 gem 'jbuilder', '~> 2.0'

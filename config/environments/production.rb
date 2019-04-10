@@ -65,6 +65,9 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "dreamlab_#{Rails.env}"
 
   config.action_mailer.perform_caching = false
+  config.action_mailer.delivery_method     = :postmark
+  config.action_mailer.postmark_settings   = { api_key: ENV['ca0f0ed8-6e99-4321-93e0-f71eca7095c9'] }
+  config.action_mailer.default_url_options = { host: "www.dreamcolab.com" }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.

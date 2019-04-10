@@ -5,9 +5,16 @@ class UserMailer < ApplicationMailer
   #
   #   en.user_mailer.welcome.subject
   #
-  def welcome(user)
+  def matched(user)
     @user = user
 
     mail(to: @user.email, subject: "You've been matched!")
   end
+
+  def completed(user)
+    @user = user
+
+    mail(to: @user.email, subject: "The collaboration is completed!")
+  end
+
 end
