@@ -1,6 +1,9 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background-color: transparent;
+  width: 100%;
+  color: white;
+  box-shadow: rgba(0,0,0,0.2);
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,5 +11,14 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 60px;
+}
+
+#logo-name {
+  font-family: 'Covered By Your Grace', cursive;
+  font-size: 30px;
+}
+
+.navbar #navbarSupportedContent .navbar-nav .nav-item .nav-link {
+  color: black;
 }
