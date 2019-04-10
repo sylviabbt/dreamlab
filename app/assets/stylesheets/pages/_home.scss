@@ -1,1 +1,91 @@
 // Specific CSS for your home-page
+// Banner Top
+.banner {
+  height: 93vh;
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.banner h1 {
+  margin: 0;
+  font-family: 'Covered By Your Grace', cursive;
+  color: #f38181;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  font-family: 'Cutive Mono', monospace;
+  color: #fbfbfb;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+
+
+// DreamCoLab Intro
+.card-join-community {
+  align-items: center;
+  border-bottom: 2px solid white;
+}
+
+.card-join-community h3 {
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: bold;
+  color: #b9e1dc;
+  font-size: 50px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.card-join-community a {
+  background-color: #756c83;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: 'Cutive Mono', monospace;
+  font-size: 20px;
+  margin-bottom: 50px;
+
+}
+
+.mission-card, .gallery-card {
+margin: 0 auto;
+padding: 40px;
+border-bottom: 2px solid white;
+
+}
+
+.mission-card h1, .gallery-card h1 {
+  align-text: center;
+  font-family: 'Shadows Into Light', cursive;
+  color: #b9e1dc;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.mission-card p, .gallery-card p {
+  font-family: 'Cutive Mono', monospace;
+  color: #756c83;
+  font-size: 20px;
+}
+
+.image-card {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+
+.image {
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  border: 2px solid  white;
+  box-shadow: 2px;
+  border-radius: 5px;
+}
+}
