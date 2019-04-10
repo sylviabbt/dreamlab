@@ -1,0 +1,41 @@
+.container {
+  border: 2px solid #756c83;
+  margin-top: 40px;
+  background-color: white;
+  padding-left: 0;
+
+}
+
+.container-login {
+  margin-left: 30px;
+  margin-right:30px;
+}
+
+.container img {
+  margin-left: 0;
+  height: 100%;
+  width: auto;
+  margin-right: 0;
+}
+
+.container h1 {
+  margin-top: 20px;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: bold;
+  color:  #b9e1dc;
+  padding: 10px;
+  text-align: center;
+}
+
+.button-register {
+  background-color: #756c83;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px
+}
+
+.button-register:hover {
+  opacity: 0.8;
+  color: #f38181;
+}
