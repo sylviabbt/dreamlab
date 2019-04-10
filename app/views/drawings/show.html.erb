@@ -1,0 +1,8 @@
+<div class="container text-center">
+  <h1>Hi! I'm <%= current_user.age %></h1>
+  <div class="btn btn-flat my-3 w-75">My Drawing:</div>
+  <% current_user.drawings.each do |drawing| %>
+    <p><%= drawing.name %></p>
+  <% end %>
+</div>
+</div>
