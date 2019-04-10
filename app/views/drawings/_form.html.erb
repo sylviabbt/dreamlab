@@ -1,0 +1,6 @@
+<%= simple_form_for [@drawing.kid, @drawing] do |d| %>
+  <%= d.input :name %>
+  <%= d.input :image %>
+  <%= d.input :image_cache, as: :hidden %>
+  <%= d.submit "Upload Now!", class:"btn btn-flat" %>
+<% end %>

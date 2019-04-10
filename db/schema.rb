@@ -10,12 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2019_04_09_113433) do
+ActiveRecord::Schema.define(version: 2019_04_10_095451) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
 
   create_table "collaborations", force: :cascade do |t|
     t.datetime "completed_at"
@@ -31,7 +29,7 @@ ActiveRecord::Schema.define(version: 2019_04_09_113433) do
   create_table "drawings", force: :cascade do |t|
     t.string "status"
     t.string "name"
-    t.string "image_url"
+    t.string "image"
     t.datetime "upload_at"
     t.datetime "booking_at"
     t.bigint "kid_id"

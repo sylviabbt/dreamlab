@@ -1,5 +1,7 @@
 class Drawing < ApplicationRecord
   belongs_to :kid
 
-  validates :image_url, presence: true
+  mount_uploader :image, PhotoUploader
+
+  # validates :image_url, presence: true
 end
