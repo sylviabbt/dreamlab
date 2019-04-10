@@ -1,20 +1,52 @@
-<h2>Log in</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
+<!-- Login/Sign up Form -->
+<div class="container d-flex">
+  <div class="sub-image">
+    <%= image_tag 'drawing2.png', class:"image" %>
+  </div>
+  <div class="session-form col-8">
+    <h2>Log in</h2>
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :email,
                 required: false,
                 autofocus: true,
                 input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
+        <%= f.input :password,
                 required: false,
                 input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+      </div>
+      <div class="form-actions">
+        <%= f.button :submit, "Log in", class:"btn-sign-in" %>
+      </div>
+    <% end %>
+    <%= render "devise/shared/links" %>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
+<!-- ~~~~~~~ -->
+<!-- <div class="col-md-offset-1 col-md-4">
+  <h2>Dreamer Login</h2>
+  <%#= simple_form_for(@kid, as: :kid, url: session_path(:kid)) do |f| %>
+    <div class="form-inputs">
+      <%#= f.input :email, required: false, autofocus: true %>
+      <%#= f.input :password, required: false %>
+      <%#= f.input :remember_me, as: :boolean if Devise.mappings[:kid].rememberable? %>
+    </div>
+    <div class="form-actions">
+      <%#= f.button :submit, "Log in", class:"btn btn-sign-in" %>
+    </div>
+  <%# end %>
+</div>
+<div class="col-md-offset-2 col-md-4">
+  <h2>Creator Login</h2>
+  <%#= simple_form_for(@creator, as: :creator, url: session_path(:creator)) do |f| %>
+    <div class="form-inputs">
+      <%#= f.input :email, required: false, autofocus: true %>
+      <%#= f.input :password, required: false %>
+      <%#= f.input :remember_me, as: :boolean if Devise.mappings[:creator].rememberable? %>
+    </div>
+    <div class="form-actions">
+      <%#= f.button :submit, "Log in", class:"btn btn-sign-in" %>
+    </div>
+  <%# end %>
+</div> -->
