@@ -1,6 +1,6 @@
 <!-- Banner Top -->
 <div class="banner d-flex " style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://blogs.rch.org.au/news/files/2013/03/00067006-leadimage.jpg);">
-  <div class="container">
+  <div class="container-text">
     <h1> dreamCo Lab</h1>
     <p>give back through art</p>
   </div>
@@ -9,8 +9,8 @@
 <div class="card-join-community text-center col-sm-8 offset-sm-2">
   <h3>Join our community.</h3>
   <div class="d-flex justify-content-center col-sm-8 offset-sm-2">
-    <%= link_to "I'm a dreamer", class:"button-user" %>
-    <%= link_to "I'm a creator", class:"button-user" %>
+    <%= link_to "I'm a dreamer", new_kid_path(@kid), class:"button-user" %>
+    <%= link_to "I'm a creator", new_creator_path(@creator), class:"button-user" %>
   </div>
 </div>
 <div class="mission-card col-sm-8 offset-sm-2 text-center">
