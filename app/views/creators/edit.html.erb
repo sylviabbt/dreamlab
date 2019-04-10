@@ -1,0 +1,18 @@
+
+<div class='contianer'>
+  <div class='row'>
+    <div class='col-xs-12 col-sm-6 col-sm-offset-3'>
+
+      <%= simple_form_for @creator do |f| %>
+        <%= f.input :first_name, placeholder: "Insert first name" %>
+        <%= f.input :last_name, placeholder: "Insert last name" %>
+        <%= f.input :age, placeholder: "How old are you?" %>
+        <%= f.input :avatar, placeholder: "upload your favourite picture" %>
+        <%= f.input :city, placeholder: "Which city do you live in?" %>
+        <%= f.input :description, placeholder: "How would you describe yourself?" %>
+        <%= f.input :portfolio_url, placeholder: "Please insert a link to your portfolio" %>
+        <%= f.submit 'Submit!', class: 'btn btn-primary' %>
+      <% end %>
+
+    </div>
+  </div

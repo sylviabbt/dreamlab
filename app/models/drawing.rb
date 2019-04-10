@@ -1,5 +1,5 @@
 class Drawing < ApplicationRecord
-  belongs_to :kids
+  belongs_to :kid
 
   validates :image_url, presence: true
 end

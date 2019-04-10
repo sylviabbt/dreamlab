@@ -10,19 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_09_073133) do
+
+
+ActiveRecord::Schema.define(version: 2019_04_09_113433) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "creators", force: :cascade do |t|
+
+
+  create_table "collaborations", force: :cascade do |t|
+    t.datetime "completed_at"
+    t.string "image_url"
+    t.bigint "creators_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "drawing_id"
+    t.index ["creators_id"], name: "index_collaborations_on_creators_id"
+    t.index ["drawing_id"], name: "index_collaborations_on_drawing_id"
   end
 
-  create_table "kids", force: :cascade do |t|
+  create_table "drawings", force: :cascade do |t|
+    t.string "status"
+    t.string "name"
+    t.string "image_url"
+    t.datetime "upload_at"
+    t.datetime "booking_at"
+    t.bigint "kid_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["kid_id"], name: "index_drawings_on_kid_id"
   end
 
   create_table "pg_search_documents", force: :cascade do |t|
@@ -81,4 +99,5 @@ ActiveRecord::Schema.define(version: 2019_04_09_073133) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "collaborations", "drawings"
 end
