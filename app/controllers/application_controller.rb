@@ -9,7 +9,11 @@ class ApplicationController < ActionController::Base
   private
 
   def after_sign_in_path_for(user)
-    new_kid_drawing_path(user)
+    if user.type == "Kid"
+      new_kid_drawing_path(user)
+    else
+      drawings_path
+    end
   end
 
   def after_sign_out_path_for(user)

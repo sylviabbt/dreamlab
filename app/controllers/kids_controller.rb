@@ -1,5 +1,6 @@
 class KidsController < ApplicationController
   before_action :set_kid, only: [:show, :edit, :update]
+  skip_before_action :authenticate_user!, only: [:new, :create, :show, :edit, :update]
 
   def show
     #refer to private method set_kid, called through before_action ()top line)
