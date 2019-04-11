@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
 // Banner Top
 .banner {
-  height: 93vh;
+  height: 89vh;
   background-size: cover;
   background-position: center;
 }
@@ -16,16 +16,18 @@
 }
 
 .banner p {
-  font-size: 20px;
+  font-size: 30px;
   font-family: 'Cutive Mono', monospace;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-.container-text {
+.container-homepage {
   margin-left: 40px;
   padding: 40px;
 }
+
+
 
 
 // DreamCoLab Intro

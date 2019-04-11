@@ -5,19 +5,23 @@ class DrawingPolicy < ApplicationPolicy
     end
   end
 
-  def create
+  def create?
     true
   end
 
-  def new
+  def new?
     true
   end
 
-  def index
+  def index?
     true
   end
 
-  def show
+  def show?
+    true
+  end
+
+  def destroy?
     true
   end
 end

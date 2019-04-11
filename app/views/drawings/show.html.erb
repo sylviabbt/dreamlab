@@ -1,0 +1,12 @@
+<div class="container text-center">
+  <div class="btn btn-flat my-3 w-75">
+    <h1>My Drawing:</h1>
+  </div>
+  <p><%= @drawing.name %></p>
+  <p><%= cl_image_tag @drawing.image %></p>
+  <p class="card-text">
+    <%= link_to kid_drawing_path(@drawing.kid, @drawing),
+        method: :delete,
+        data: { confirm: "Are you sure?" } do %> <i class="fas fa-trash-alt"></i> <% end %> </p>
+</div>
+</div>
