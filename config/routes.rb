@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   resources :kids, only: [:create, :new, :show, :edit, :update] do
-    resources :drawings, only: [:create, :new, :index, :show]
+    resources :drawings, only: [:create, :new, :index, :show, :destroy]
   end
 
   resources :creators, only: [:create, :new, :show, :edit, :update]
