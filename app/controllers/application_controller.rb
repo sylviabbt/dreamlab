@@ -1,12 +1,16 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: :home
   include Pundit
 
   after_action :verify_authorized, except: :index, unless: :skip_pundit?
   after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
 
   private
+
+  def after_sign_in_path_for(user)
+    new_kid_drawing_path(user)
+  end
 
   def after_sign_out_path_for(user)
     root_path
