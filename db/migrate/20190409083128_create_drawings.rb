@@ -6,7 +6,7 @@ class CreateDrawings < ActiveRecord::Migration[5.2]
       t.string :image_url
       t.datetime :upload_at
       t.datetime :booking_at
-      t.references :kid, foreign_key: true
+      t.references :kid, foreign_key: false
 
       t.timestamps
     end
