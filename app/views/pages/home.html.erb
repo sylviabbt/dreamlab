@@ -1,2 +1,44 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!-- Banner Top -->
+
+<div class="banner d-flex flex-column" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://blogs.rch.org.au/news/files/2013/03/00067006-leadimage.jpg);">
+  <div class="container">
+    <h1> dreamCo Lab</h1>
+    <p>give back through art</p>
+  </div>
+</div>
+<!-- DreamCoLab Info -->
+<div class="card-join-community text-center col-sm-8 offset-sm-2">
+  <h3>Join our community.</h3>
+  <div class="d-flex justify-content-center col-sm-8 offset-sm-2">
+    <%= link_to "I'm a dreamer", new_kid_path(@kid), class:"button-user" %>
+    <%= link_to "I'm a creator", new_creator_path(@creator), class:"button-user" %>
+  </div>
+</div>
+<div class="mission-card col-sm-8 offset-sm-2 text-center">
+  <h1>our mission.</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptates nisi est soluta ipsum harum ab architecto, repellendus inventore exercitationem quam placeat commodi laboriosam. Alias modi quae, vel ad eum!</p>
+</div>
+<!-- Dream Gallery examples -->
+<div class="gallery-card col-sm-8 offset-sm-2 text-center">
+  <h1>dream gallery.</h1>
+  <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, quo. Rerum laudantium officia iusto blanditiis ea culpa delectus sint ab maxime  dolor, cumque sequi magnam error optio autem numquam porro.</p>
+  <div class="row">
+    <div class="image-card col-md-6 col-sm-8">
+      <p><%= image_tag 'drawing2.png', class:"image" %></p>
+      <p><%= image_tag 'collab2.png', class:"image" %></p>
+    </div>
+    <div class="image-card col-md-6 col-sm-8">
+      <p><%= image_tag 'drawing4.png', class:"image" %></p>
+      <p><%= image_tag 'collab4.png', class:"image" %></p>
+    </div>
+    <div class="image-card col-md-6 col-sm-8">
+      <p><%= image_tag 'drawing1.png', class:"image" %></p>
+      <p><%= image_tag 'collab1.png', class:"image" %></p>
+    </div>
+    <div class="image-card col-md-6 col-sm-8">
+      <p><%= image_tag 'drawing3.png', class:"image" %></p>
+      <p><%= image_tag 'collab3.png', class:"image" %></p>
+    </div>
+  </div>
+</div>
+</div>
