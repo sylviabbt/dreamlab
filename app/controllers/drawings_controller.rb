@@ -9,7 +9,7 @@ class DrawingsController < ApplicationController
     @drawing.kid = current_user
     authorize @drawing
     if @drawing.save
-      redirect_to kid_drawings_path, notice: 'Thank you! Your drawing was successfully uploaded'
+      redirect_to drawings_path, notice: 'Thank you! Your drawing was successfully uploaded'
     else
       render :new
     end
@@ -30,7 +30,7 @@ class DrawingsController < ApplicationController
   def destroy
     @drawing.destroy
     authorize @drawing
-    redirect_to kid_drawings_path
+    redirect_to drawings_path
   end
 
   private
