@@ -1,16 +1,17 @@
-.navbar-lewagon {
+.navbar-dreamcolab {
   justify-content: space-between;
   background-color: transparent;
+  background:rgba(0,0,0,0.2);
   width: 100%;
-  color: white;
+  color: #b9e1dc;
   box-shadow: rgba(0,0,0,0.2);
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-dreamcolab .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-dreamcolab .navbar-brand img {
   width: 60px;
 }
 

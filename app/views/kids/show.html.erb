@@ -1,16 +1,43 @@
-<div class='container'>
-  <div class='row'>
-    <div class='col-md-12 col-sm-offset-3'>
-      <div class="card-product">
-        <img src="@kid.avatar">
-        <div class="card-product-infos">
-          <h2><%= @kid.first_name %></h2>
-          <p><strong>City:</strong>  <%= @kid.city %> <strong>Age:</strong> <%= @kid.age %></p>
-          <p><strong>Introduction: </strong> <%= @kid.description %></p>
-          <p><strong>Favorite things: </strong> <%= @kid.favourite_things %></p>
-          <p><strong>Dislikes:</strong> <%= @kid.dislikes %></p>
-        </div>
-      </div>
+<div class='container-profile'>
+  <div class="text-center col-md-6 col-sm-8 offset-sm-2">
+    <%= image_tag @kid.avatar, class:"avatar-bordered w-50 h-50 m-3" %>
+    <h1><%= @kid.first_name %>, <%= @kid.age %></h2>
+    <h2>Location: <%= @kid.city %></h2>
+    <h4>Favourite Things:</h4>
+    <p><%= @kid.favourite_things %></p>
+    <h4>Dislikes: </h4>
+    <p><%= @kid.dislikes %></p>
+    <h4>Description: </h4>
+    <p><%= @kid.description %></p>
+  </div>
+</div>
+<!-- My artwork -->
+<div class="my-art-card text-center col-md-6 col-sm-8 offset-sm-2">
+  <h1>My Artwork</h1>
+  <div class="row">
+    <div class="image-card col-md-4 col-sm-8">
+      <p><%= image_tag 'drawing2.png', class:"image" %></p>
+    </div>
+    <div class="image-card col-md-4 col-sm-8">
+      <p><%= image_tag 'drawing4.png', class:"image" %></p>
+    </div>
+    <div class="image-card col-md-4 col-sm-8">
+      <p><%= image_tag 'drawing3.png', class:"image" %></p>
+    </div>
+  </div>
+</div>
+<!-- My collabs -->
+<div class="my-art-card text-center col-md-6 col-sm-8 offset-sm-2">
+  <h1>My Collaborations</h1>
+  <div class="row">
+    <div class="image-card col-md-4 col-sm-8">
+      <p><%= image_tag 'collab2.png', class:"image" %></p>
+    </div>
+    <div class="image-card col-md-4 col-sm-8">
+      <p><%= image_tag 'collab4.png', class:"image" %></p>
+    </div>
+    <div class="image-card col-md-4 col-sm-8">
+      <p><%= image_tag 'collab3.png', class:"image" %></p>
     </div>
   </div>
 </div>
