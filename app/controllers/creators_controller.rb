@@ -1,5 +1,6 @@
 class CreatorsController < ApplicationController
   before_action :set_creator, only: [:show, :edit, :update]
+  skip_before_action :authenticate_user!, only: [:new, :create, :show, :edit, :update]
 
   def show
     #refer to private method set_creator, called through before_action ()top line)
@@ -17,7 +18,7 @@ class CreatorsController < ApplicationController
     authorize @creator
     #the correct fields were entered and saved
     if @creator.save
-      redirect_to creator_path(@creator)
+      redirect_to edit_creator_path(@creator)
     else
       render :new
     end

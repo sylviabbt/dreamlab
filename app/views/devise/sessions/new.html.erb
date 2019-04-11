@@ -3,10 +3,10 @@
   <!-- <div class="sub-image">
     <%#= image_tag 'drawing2.png', class:"image" %>
   </div> -->
-  <div class="session-form col-8">
+  <div class="session-form col-8 my-3">
     <h2>Log in</h2>
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="form-inputs">
+      <div class="form-inputs my-3">
         <%= f.input :email,
                 required: false,
                 autofocus: true,
@@ -17,7 +17,7 @@
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
       <div class="form-actions">
-        <%= f.button :submit, "Log in", class:"btn-sign-in" %>
+        <%= f.button :submit, "Log in", class:"button-register mb-3" %>
       </div>
     <% end %>
     <%= render "devise/shared/links" %>
