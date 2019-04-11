@@ -16,14 +16,17 @@ Kid.delete_all if Rails.env.development?
 
 Ethan = Kid.create!(first_name: 'Ethan', city: 'Shanghai', favourite_things: 'chocolate, pizza', dislikes: 'spinach', description: 'stronger than Superman!', avatar: 'https://www.shareicon.net/data/128x128/2016/06/25/786536_people_512x512.png', email: 'ethan@gmail.com', age: '8', password: '123123')
 
+
 url1 = image_path + '/drawing1.png'
 drawing1 = Drawing.new(name: 'my first drawing', kid: Ethan)
 drawing1.remote_image_url = url1
 drawing1.save
 
+
 Sammy = Kid.create!(first_name: 'Sammy', city: 'Shanghai', favourite_things: 'ice cream', dislikes: 'injections', description: '', avatar: 'https://image.flaticon.com/icons/svg/1718/1718044.svg', email: 'sammy@gmail.com', age: '7', password: '111111')
 
 Leo = Kid.create!(first_name: 'Leo', city: 'Shanghai', favourite_things: 'french fries, pasta', dislikes: 'thunder, brussel sprouts', description: '', avatar: 'https://image.flaticon.com/icons/svg/163/163801.svg', email: 'leo@gmail.com', age: '5', password: '444444')
+
 
 url2 = image_path + '/drawing2.png'
 drawing2 = Drawing.new(name: 'my first drawing', kid: Leo)

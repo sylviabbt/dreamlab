@@ -1,13 +1,13 @@
-<% @drawings.each do |drawing| %>
-  <div class="card-trip">
-    <img src="collab1.png">
+<div class="card-trip">
+  <% @drawings.each do |drawing| %>
+    <%= cl_image_tag drawing.image %>
     <div class="card-trip-infos">
       <div>
-        <h2>drawing.name </h2>
+        <h2><%= drawing.name %></h2>
         <p><%= drawing.upload_at %></p>
       </div>
-      <h2 class="card-trip-pricing">drawing.kid_id</h2>
+      <h2 class="card-trip-pricing"><%= drawing.kid_id %></h2>
       <img src='https://kitt.lewagon.com/placeholder/users/krokro' class="card-trip-user avatar-bordered"/>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>
