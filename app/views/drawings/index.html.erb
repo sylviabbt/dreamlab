@@ -1,6 +1,6 @@
 <div class="card-trip">
   <% @drawings.each do |drawing| %>
-    <h1>Image<%= drawing.image %></h1>
+    <%= cl_image_tag drawing.image %>
     <div class="card-trip-infos">
       <div>
         <h2><%= drawing.name %></h2>
