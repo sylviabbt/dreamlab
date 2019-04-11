@@ -14,18 +14,18 @@ Kid.delete_all if Rails.env.development?
 
 Ethan = Kid.create!(first_name: 'Ethan', city: 'Shanghai', favourite_things: 'chocolate, pizza', dislikes: 'spinach', description: 'stronger than Superman!', avatar: 'https://www.shareicon.net/data/128x128/2016/06/25/786536_people_512x512.png', email: 'ethan@gmail.com', age: '8', password: '123123')
 
-drawing1 = Drawing.create(name: 'untitled', image: '/assets/images/drawing1.png', kid: Ethan)
+drawing1 = Drawing.create!(name: 'untitled55', image: '/assets/images/drawing1.png', kid: Ethan)
 
 Sammy = Kid.create!(first_name: 'Sammy', city: 'Shanghai', favourite_things: 'ice cream', dislikes: 'injections', description: '', avatar: 'https://image.flaticon.com/icons/svg/1718/1718044.svg', email: 'sammy@gmail.com', age: '7', password: '111111')
 
 Leo = Kid.create!(first_name: 'Leo', city: 'Shanghai', favourite_things: 'french fries, pasta', dislikes: 'thunder, brussel sprouts', description: '', avatar: 'https://image.flaticon.com/icons/svg/163/163801.svg', email: 'leo@gmail.com', age: '5', password: '444444')
 
-drawing2 = Drawing.create(name: 'untitled', image: '/assets/images/drawing2.png', kid: Leo)
-drawing3 = Drawing.create(name: 'untitled', image: '/assets/images/drawing3.png', kid: Leo)
+drawing2 = Drawing.create!(name: 'untitled', image: '/assets/images/drawing2.png', kid: Leo)
+drawing3 = Drawing.create!(name: 'untitled', image: '/assets/images/drawing3.png', kid: Leo)
 
 Lily = Kid.create!(first_name: 'Lily', city: 'Shanghai', favourite_things: 'cotton candy, balloons', dislikes: 'snakes, crabs', description: 'I like unicorns the most!', avatar: 'https://image.flaticon.com/icons/svg/1624/1624482.svg', email: 'lily@gmail.com', age: '6', password: '333333')
 
-drawing4 = Drawing.create(name: 'untitled', image: '/assets/images/drawing4.png', kid: Lily)
+drawing4 = Drawing.create!(name: 'untitled', image: '/assets/images/drawing4.png', kid: Lily)
 
 Enzo = Kid.create!(first_name: 'Enzo', city: 'Shanghai', favourite_things: 'puppies, elephants, all animals', dislikes: 'cockroaches', description: 'when I grow up I want to be a doctor', avatar: 'https://image.flaticon.com/icons/svg/163/163823.svg', email: 'enzo@gmail.com', age: '6', password: '222222')
 
