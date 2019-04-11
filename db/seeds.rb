@@ -6,10 +6,39 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# seeds for drawings
+# seeds
+Collaboration.delete_all if Rails.env.development?
 Drawing.delete_all if Rails.env.development?
+Creator.delete_all if Rails.env.development?
 Kid.delete_all if Rails.env.development?
 
-kid1 = Kid.create!(city: 'Shanghai', favourite_things: 'chocolate', dislikes: 'spinach', description: 'stronger than Superman!', avatar: 'https://banner2.kisspng.com/20180403/pde/kisspng-child-computer-icons-avatar-user-avatar-5ac3a1f1da5b25.5067805715227704178944.jpg', email: 'sammy@superman.com', age: '7', password: '123123')
+Ethan = Kid.create!(city: 'Shanghai', favourite_things: 'chocolate, pizza', dislikes: 'spinach', description: 'stronger than Superman!', avatar: 'https://www.shareicon.net/data/128x128/2016/06/25/786536_people_512x512.png', email: 'ethan@gmail.com', age: '8', password: '123123')
 
-drawing1 = Drawing.create(status: 'pending', name: 'untitled', image_url: 'https://media.npr.org/assets/img/2014/08/19/child-drawing_custom-1fe8bd0f68eb05c8781bdb2a4d894c8653be0ae0-s1100-c15.jpg', upload_at: 't.strftime("Uploaded on %m/%d/%Y")', booking_at: 't.strftime("Booked on %m/%d/%Y")', kid: kid1)
+drawing1 = Drawing.create(name: 'untitled', image: '/assets/images/drawing1.png', kid: Ethan)
+
+Sammy = Kid.create!(city: 'Shanghai', favourite_things: 'ice cream', dislikes: 'injections', description: '', avatar: 'https://image.flaticon.com/icons/svg/1718/1718044.svg', email: 'sammy@gmail.com', age: '7', password: '111111')
+
+Leo = Kid.create!(city: 'Shanghai', favourite_things: 'french fries, pasta', dislikes: 'thunder, brussel sprouts', description: '', avatar: 'https://image.flaticon.com/icons/svg/163/163801.svg', email: 'leo@gmail.com', age: '5', password: '444444')
+
+drawing2 = Drawing.create(name: 'untitled', image: '/assets/images/drawing2.png', kid: Leo)
+drawing3 = Drawing.create(name: 'untitled', image: '/assets/images/drawing3.png', kid: Leo)
+
+Lily = Kid.create!(city: 'Shanghai', favourite_things: 'cotton candy', dislikes: 'cockroaches', description: 'I like unicorns', avatar: 'https://image.flaticon.com/icons/svg/1624/1624482.svg', email: 'lily@gmail.com', age: '6', password: '333333')
+
+drawing4 = Drawing.create(name: 'untitled', image: '/assets/images/drawing4.png', kid: Lily)
+
+Enzo = Kid.create!(city: 'Shanghai', favourite_things: 'cotton candy', dislikes: 'cockroaches', description: 'when I grow up I want to be a doctor', avatar: 'https://image.flaticon.com/icons/svg/163/163823.svg', email: 'enzo@gmail.com', age: '6', password: '222222')
+
+
+Helena = Creator.create!(city: 'Berlin', avatar: 'https://image.flaticon.com/icons/svg/702/702014.svg', age: '37', first_name: 'Helena', last_name: 'Schmidt', portfolio_url: 'www.helenaschmidt.com', email: 'helena@helenaschmidt.com', password: 'abcdef')
+
+# collab1 = Collaboration.create(image_url: '/assets/images/collab1.png', drawing: drawing1, creator_id: 1)
+# collab2 = Collaboration.create(image_url: '/assets/images/collab2.png', drawing: drawing2, creator_id: 1)
+
+Paulo = Creator.create!(city: 'Sao Paulo', avatar: 'https://image.flaticon.com/icons/svg/145/145842.svg', age: '66', first_name: 'Paulo', last_name: 'Moreira', portfolio_url: 'www.pmoreira.com.br', email: 'paulo@pmoreira.com', password: 'aabbcc')
+
+# collab3 = Collaboration.create(image_url: '/assets/images/collab3.png', drawing: drawing3, creator_id: 2)
+
+Lola = Creator.create!(city: 'Cape Town', avatar: 'https://image.flaticon.com/icons/svg/1597/1597166.svg', age: '23', first_name: 'Lola', last_name: '', portfolio_url: 'w.lolacreates.co.za', email: 'lola@lolacreate.com', password: 'a1b2c3')
+
+# collab4 = Collaboration.create(image_url: '/assets/images/collab4.png', drawing: drawing1, creator_id: 3)
