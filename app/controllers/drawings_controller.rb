@@ -1,7 +1,7 @@
 class DrawingsController < ApplicationController
   before_action :set_drawing, only: [:show, :destroy]
   def index
-    @drawings = policy_scope(Drawing).where(kid: current_user)
+    @drawings = policy_scope(Drawing).order(created_at: :desc)
   end
 
   def create
