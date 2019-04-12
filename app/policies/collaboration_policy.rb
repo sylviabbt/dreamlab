@@ -5,19 +5,19 @@ class CollaborationPolicy < ApplicationPolicy
     end
   end
 
-  def index
+  def index?
     true
   end
 
-  def show
+  def show?
     true
   end
 
-  def new
+  def new?
     true
   end
 
-  def create
+  def create?
     true
   end
 end

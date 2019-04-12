@@ -25,6 +25,8 @@ class DrawingsController < ApplicationController
   def show
     @user = current_user
     authorize @drawing
+    @collaboration = Collaboration.new
+    @collaboration.drawing = @drawing
   end
 
   def destroy
@@ -40,6 +42,6 @@ class DrawingsController < ApplicationController
   end
 
   def drawing_params
-    params.require(:drawing).permit(:name, :image)
+    params.require(:drawing).permit(:name, :image, :id)
   end
 end
