@@ -1,19 +1,22 @@
-<div class="container text-center">
-  <div class="btn btn-flat my-3 w-75">
-    <h1>My Drawing:</h1>
+<div class="container text-center col-sm-8 offset-sm-2 my-3 p-3">
+  <!-- <div class="my-3 w-70%"> -->
+  <h1>My Drawing:</h1>
+  <!-- </div> -->
+  <div class="drawing-image">
+    <p><%= cl_image_tag @drawing.image %></p>
   </div>
-  <p><%= @drawing.name %></p>
-  <p><%= cl_image_tag @drawing.image %></p>
+  <div class="container-edit">
+    <h3>Title: "<%= @drawing.name %>"</h3>
+    <h1>About the Artist</h1>
+    <%= cl_image_tag @drawing.kid.avatar, class:"avatar-bordered w-25 h-25 m-3 p-3" %>
+    <a>
+      <h3><%=link_to "#{@drawing.kid.first_name}, #{@drawing.kid.age}", kid_path(@drawing.kid)%></h3>
+    </a>
+  </div>
   <p class="card-text">
-
-  <%= simple_form_for [@collaboration.creator, @collaboration] do |c| %>
-    <%= c.input :creator_id, as: :hidden, input_html: { value: current_user.id } %>
-    <%= c.input :drawing_id, as: :hidden, input_html: { value: @drawing.id } %>
-    <%= c.submit "BOOK NOW!", class:"btn btn-primary my-3" %>
-  <% end %>
-
-    <%= link_to kid_drawing_path(@drawing.kid, @drawing),
-        method: :delete,
-        data: { confirm: "Are you sure?" } do %> <i class="fas fa-trash-alt"></i> <% end %> </p>
-</div>
-</div>
+    <%= simple_form_for [@collaboration.creator, @collaboration] do |c| %>
+      <%= c.input :creator_id, as: :hidden, input_html: { value: current_user.id } %>
+      <%= c.input :drawing_id, as: :hidden, input_html: { value: @drawing.id } %>
+      <%= c.submit "Choose #{@drawing.kid.first_name}'s Drawing!", class:"button-register my-3" %>
+    <% end %>
+  </div>
