@@ -2,6 +2,7 @@
   <div class="text-center col-md-6 col-sm-8 offset-sm-2">
     <%= cl_image_tag @kid.avatar, class:"avatar-bordered w-50 h-50 m-3" %>
     <h1><%= @kid.first_name %>, <%= @kid.age %></h2>
+    <%= link_to "Edit Profile", edit_kid_path(@kid), class:"mb-3" %>
     <h2>Location: <%= @kid.city %></h2>
     <h4>Favourite Things:</h4>
     <p><%= @kid.favourite_things %></p>
