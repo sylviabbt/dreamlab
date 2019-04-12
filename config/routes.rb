@@ -9,8 +9,10 @@ Rails.application.routes.draw do
 
   resources :drawings, only: [:index]
 
-  resources :creators, only: [:create, :new, :show, :edit, :update]
+  resources :creators, only: [:create, :new, :show, :edit, :update] do
+    resources :collaborations, only: [:show]
+  end
 
-  resources :collaborations, only: [:create, :index, :show, :new]
+  resources :collaborations, only: [:create, :index, :show, :update]
 
 end
