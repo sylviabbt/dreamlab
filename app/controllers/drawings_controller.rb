@@ -40,6 +40,6 @@ class DrawingsController < ApplicationController
   end
 
   def drawing_params
-    params.require(:drawing).permit(:name, :image)
+    params.require(:drawing).permit(:name, :image, :id)
   end
 end
