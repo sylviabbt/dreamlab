@@ -11,11 +11,18 @@
             <p><%= collab.drawing.name %> by <%= collab.drawing.kid.first_name %></p>
             <p>Created at: <%= collab.created_at %></p>
             <p>Date due: <%= collab.created_at + 7.days %></p>
+
+             <%= simple_form_for (collab) do |f| %>
+              <%= f.input :collab_upload %>
+              <%= f.input :collab_upload_cache, as: :hidden %>
+              <%= f.submit "Complete Collab!", class:"btn btn-primary my-3" %>
+              <% end %>
+            </div>
           </div>
+
           <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-collab-user avatar-bordered"/>
           <img src="#" class="card-collab-user avatar-bordered"/>
         </div>
       </div>
     </div>
   <% end %>
-</div>

@@ -1,26 +1,4 @@
-<h3>View Piece</h3>
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-6">
-      <div id="chatroom" class="rounded">
-        <h1>Let's chat</h1>
-        <form action="#" id="comment-form">
-          <div class="form-group">
-            <label for="your-message">Your message</label>
-            <textarea type="text" name="content" id="your-message" class="form-control" placeholder="Here is my message.."></textarea>
-          </div>
-          <div class="form-group">
-            <label for="your-name">From</label>
-            <input type="text" name="content" id="your-name" class="form-control" placeholder="Bob">
-          </div>
-          <input type="submit" value="Send" class="btn btn-primary">
-        </form>
-        <div id="messages">
-          <ul class="list-unstyled">
-            <li>A sample message (posted <span class="date">10 minutes ago</span>) by John</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+<h1>Finished Collab</h1>
   </div>
-</div>
+  <p><%= @collaboration.drawing.name %></p>
+  <p><%= cl_image_tag @collaboration.collab_upload %></p>
