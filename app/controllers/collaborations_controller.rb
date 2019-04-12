@@ -8,20 +8,20 @@ class CollaborationsController < ApplicationController
     @collaboration = Collaboration.find(params[:id])
   end
 
-  def new
-    @collaboration = Collaboration.new(collaboration_params)
-    @drawing = Drawing.find(params[:drawing_id])
-    @creator = Creator.find(params[:creator_id])
-  end
+  # def new
+  #   @collaboration = Collaboration.new(collaboration_params)
+  #   @drawing = Drawing.find(params[:drawing_id])
+  #   @creator = Creator.find(params[:creator_id])
+  # end
 
   def create
     @collaboration = Collaboration.new(collaboration_params)
     @collaboration.creator = current_user
-    @drawing = Drawing.find(params[:drawing_id])
-    @collaboration = current_user.collaborations.build(collaboration_params)
+    # @drawing = Drawing.find(params[:drawing_id])
 
     if @collaboration.save
-      CollaborationMailer.creation_confirmation(@collaboration).deliver_now
+      authorize @collaboration
+      # CollaborationMailer.creation_confirmation(current_user).deliver_now
       redirect_to collaborations_path, notice: "Collaboration was successfully created."
     else
       render :new
@@ -31,6 +31,6 @@ class CollaborationsController < ApplicationController
   private
 
   def collaboration_params
-    params.require(:collaboration).permit(:completed_at, :image_url)
+    params.require(:collaboration).permit(:completed_at, :image_url, :drawing_id, :creator_id)
   end
 end

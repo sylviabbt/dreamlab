@@ -5,6 +5,13 @@
   <p><%= @drawing.name %></p>
   <p><%= cl_image_tag @drawing.image %></p>
   <p class="card-text">
+
+  <%= simple_form_for [@collaboration.creator, @collaboration] do |c| %>
+    <%= c.input :creator_id, as: :hidden, input_html: { value: current_user.id } %>
+    <%= c.input :drawing_id, as: :hidden, input_html: { value: @drawing.id } %>
+    <%= c.submit "BOOK NOW!", class:"btn btn-primary my-3" %>
+  <% end %>
+
     <%= link_to kid_drawing_path(@drawing.kid, @drawing),
         method: :delete,
         data: { confirm: "Are you sure?" } do %> <i class="fas fa-trash-alt"></i> <% end %> </p>
