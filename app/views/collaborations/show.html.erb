@@ -1,4 +1,12 @@
-<h1>Finished Collab</h1>
+<div class="container text-center col-sm-8 offset-sm-2 my-3 p-3">
+  <h1>Finished Collab</h1>
+</div>
+<div class="together-card d-flex flex-column text-center col-sm-8 offset-sm-2 my-3 p-3">
+  <div class="drawing-image">
+    <p><%= cl_image_tag @collaboration.drawing.image %></p>
   </div>
-  <p><%= @collaboration.drawing.name %></p>
-  <p><%= cl_image_tag @collaboration.collab_upload %></p>
+  <div class="card-collab">
+    <h1>"<%= @collaboration.drawing.name %>"</h1>
+    <p><%= cl_image_tag @collaboration.collab_upload %></p>
+  </div>
+</div>
