@@ -5,12 +5,12 @@
   <%= @collaborations.each do |collab| %>
     <div class="col-4">
       <div class="card-collab">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
+          <%= cl_image_tag collab.drawing.image %>
         <div class="card-collab-infos">
           <div>
-            <h2><%= collab.drawing.name %> </h2>
-            <p><%= collab.kid.first_name %></p>
-            <p><%= collab.creator.first_name %></p>
+            <p><%= collab.drawing.name %> by <%= collab.drawing.kid.first_name %></p>
+            <p>Created at: <%= collab.created_at %></p>
+            <p>Date due: <%= collab.created_at + 7.days %></p>
           </div>
           <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-collab-user avatar-bordered"/>
           <img src="#" class="card-collab-user avatar-bordered"/>
