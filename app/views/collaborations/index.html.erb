@@ -1,26 +1,24 @@
-<!-- Index for ALL COLLABS -->
+<!-- Index for ALL FINISHED COLLABS   -->
 <div class="container mb-3">
-  <h1>Helena's Collaborations Gallery</h1>
+  <h1>DreamCo Gallery</h1>
 </div>
 <div class="row my-3 p-3">
   <% @collaborations.each do |collab| %>
-    <div class="col-4 mx-3">
+    <% if collab.collab_upload.filename != nil %>
+      <div class="col-4 mx-3">
       <div class="card-collab mx-3 my3">
         <%= cl_image_tag collab.drawing.image %>
+        <%= cl_image_tag collab.collab_upload %>
         <div class="card-collab-infos">
           <div>
-            <p><%= collab.drawing.name %> by <%= collab.drawing.kid.first_name %></p>
-            <p>Created at: <%= collab.created_at %></p>
-            <p>Date due: <%= collab.created_at + 7.days %></p>
-            <%= simple_form_for (collab) do |f| %>
-              <%= f.input :collab_upload %>
-              <%= f.input :collab_upload_cache, as: :hidden %>
-              <%= f.submit "Complete Collab!", class:"btn btn-primary my-3" %>
-              <%= cl_image_tag collab.creator.avatar, class:"card-collab-user avatar-bordered" %>
-            <% end %>
+            <p><%= collab.drawing.name %></p>
+            <p>inspired by <%= collab.drawing.kid.first_name %></p>
+            <p>brought to life by <%= collab.creator.first_name %></p>
           </div>
         </div>
       </div>
     </div>
+    <% end %>
   <% end %>
 </div>
+

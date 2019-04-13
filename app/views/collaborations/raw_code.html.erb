@@ -1,0 +1,31 @@
+<!-- Index for CREATOR SPECIFIC COLLABS -->
+<h1>Helena's Collaborations Gallery</h1>
+<% @collaborations.each do |collab| %>
+   <% if collab.collab_upload.nil?  %>
+    <%= cl_image_tag collab.drawing.image %>
+    <p><%= collab.drawing.name %> by <%= collab.drawing.kid.first_name %></p>
+    <p>Created at: <%= collab.created_at.strftime("%d / %m / %Y") %></p>
+    <p>Pending...</p>
+    <p>Date due: <%= (collab.created_at + 7.days).strftime("%d / %m / %Y") %></p>
+
+    <%= simple_form_for (collab) do |f| %>
+      <%= f.input :collab_upload %>
+      <%= f.input :collab_upload_cache, as: :hidden %>
+      <%= f.submit "Complete Collab!", class:"btn btn-primary my-3" %>
+      <%= cl_image_tag collab.creator.avatar, class:"card-collab-user avatar-bordered" %>
+    <% end %>
+  <% end %>
+
+  <% elsif collab.collab_upload.nil? == false %>
+   <%= cl_image_tag collab.collab_upload %>
+
+    <p><%= collab.drawing.name %> by <%= collab.drawing.kid.first_name %></p>
+    <p>Created at: <%= collab.created_at.strftime("%d / %m / %Y") %></p>
+    <p>COMPLETED</p>
+
+
+<% end %>
+
+
+
+
