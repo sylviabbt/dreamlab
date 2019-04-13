@@ -3,6 +3,7 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 30px auto;
+  object-fit: cover;
 }
 
 .container img {
@@ -18,6 +19,7 @@
   height: 600px !important;
   width: 710px !important;
   object-fit: cover;
+  margin-top: 20px;
 }
 
 .card-trip h2 {

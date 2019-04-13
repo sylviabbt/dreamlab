@@ -58,22 +58,23 @@
 
 }
 
-.mission-card, .gallery-card {
+.brand-card, .brand-card {
 margin: 0 auto;
 padding: 40px;
 border-bottom: 2px solid white;
 
 }
 
-.mission-card h1, .gallery-card h1 {
+.brand-card h1, .brand-card h1 {
   align-text: center;
   font-family: 'Shadows Into Light', cursive;
   color: #b9e1dc;
   font-size: 50px;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
-.mission-card p, .gallery-card p {
+.brand-card p, .brand-card p {
   font-family: 'Cutive Mono', monospace;
   color: #756c83;
   font-size: 20px;
@@ -85,10 +86,11 @@ border-bottom: 2px solid white;
   margin-top: 30px;
 
 .image {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 250px;
+  object-fit:cover;
   margin: 5px;
-  border: 2px solid  white;
+  border: 2px solid #756c83;
   box-shadow: 2px;
   border-radius: 5px;
 }
