@@ -29,6 +29,7 @@
             <div>
               <p><%= collab.drawing.name %> brought to life by <%= collab.creator.first_name %></p>
               <p>COMPLETED</p>
+              <p><%= link_to 'View Collaboration', kid_collaboration_path(collab.drawing.kid, collab)  %></p>
             </div>
           </div>
         </div>
