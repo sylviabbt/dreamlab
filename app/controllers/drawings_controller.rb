@@ -2,6 +2,11 @@ class DrawingsController < ApplicationController
   before_action :set_drawing, only: [:show, :destroy]
   def index
     @drawings = policy_scope(Drawing).order(created_at: :desc)
+    if current_user.type == "Creator"
+
+    elsif current_user.type == "Kid"
+      redirect_to new_kid_drawing_path(current_user)
+    end
   end
 
   def create
@@ -18,7 +23,7 @@ class DrawingsController < ApplicationController
   def new
     @drawing = Drawing.new
     @drawing.kid = current_user
-
+    @drawings = current_user.drawings
     authorize @drawing
   end
 
