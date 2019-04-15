@@ -18,6 +18,7 @@ class CreatorsController < ApplicationController
     authorize @creator
     #the correct fields were entered and saved
     if @creator.save
+      bypass_sign_in(@creator)
       redirect_to edit_creator_path(@creator)
     else
       render :new

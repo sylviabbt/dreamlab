@@ -7,16 +7,17 @@
 </div>
 <!-- DreamCoLab Register new user -->
 <div class="card-join-community text-center col-sm-8 offset-sm-2">
-  <h3>Join our community.</h3>
+  <%= image_tag "logo.png", class:"image-logo" %>
+  <h3>JOIN OUR COMMUNITY.</h3>
   <div class="d-flex justify-content-center col-sm-8 offset-sm-2">
-    <%= link_to "I'm a dreamer", new_kid_path(@kid), class:"button-user" %>
-    <%= link_to "I'm a creator", new_creator_path(@creator), class:"button-user" %>
+    <%= link_to "I'm a dreamer", new_kid_path(@kid) %>
+    <%= link_to "I'm a creator", new_creator_path(@creator)%>
   </div>
 </div>
 <!-- Our mission information -->
 <div class="brand-card col-sm-8 offset-sm-2 text-center">
-  <h1>our mission.</h1>
-  <p>dreamCo lab aims to bring hope, inspiration, and creativity to hospitalized children by connecting them with artists around the world to help bring their dreams to reality. </p>
+  <h1>OUR MISSION.</h1>
+  <p>dreamCo lab aims to bring hope, inspiration, and creativity to hospitalized children by connecting them with artists around the world to help bring their creations and dreams to reality. </p>
   <div class="row">
     <div class="image-card col-lg-4 col-md-6 col-sm-8">
       <p><%= image_tag 'childdraw.jpg', class:"image" %></p>
@@ -31,37 +32,19 @@
 </div>
 <!-- How it works section -->
 <div class="brand-card col-sm-8 offset-sm-2 text-center">
-  <h1>how it works.</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi natus dolores ullam quo fugiat magni, magnam molestiae, laborum autem vero quae voluptatum porro, voluptates cum perspiciatis tempore, aliquid deserunt facilis. </p>
+  <h1>HOW IT WORKS.</h1>
+  <p><strong>Our framework is designed to be as easy and user-friendly as possible!</strong></p>
+  <i class="fas fa-user-astronaut mr-3"></i><i class="fas fa-upload"></i>
+  <p>1. Our dreamers will upload their favourite drawings.</p>
+  <i class="fas fa-users mr-3"></i>  <i class="fas fa-hand-pointer"></i>
+  <p>2. Our creators around the world will browse an index of all drawings and pick one they would like to remaster and work on.</p>
+  <i class="fas fa-hand-holding-heart mr-3"></i>   <i class="fas fa-globe-americas"></i>
+  <p>3. About a week later, our dreamers will receive their finished piece and get to see their imagination and creations come to life! All pieces will be presented in our Dream Gallery, which is open for the world to see. </p>
+  <p></p>
 </div>
-<!-- Dream Gallery examples -->
+<!-- Dream Gallery section -->
 <div class="brand-card col-sm-8 offset-sm-2 text-center">
-  <h1>dream gallery.</h1>
+  <h1>DREAM GALLERY.</h1>
   <p >Our dream gallery is filled with creations and collaborations between dreamers and creators from all over the world! Take a look at some of our latest works.  </p>
-  <div class="row">
-    <div class="image-card col-md-6 col-sm-8">
-      <p><%= image_tag 'drawing2.png', class:"image" %></p>
-      <p><%= image_tag 'collab2.png', class:"image" %></p>
-    </div>
-    <div class="image-card col-md-6 col-sm-8">
-      <p><%= image_tag 'drawing4.png', class:"image" %></p>
-      <p><%= image_tag 'collab4.png', class:"image" %></p>
-    </div>
-    <div class="image-card col-md-6 col-sm-8">
-      <p><%= image_tag 'drawing1.png', class:"image" %></p>
-      <p><%= image_tag 'collab1.png', class:"image" %></p>
-    </div>
-    <div class="image-card col-md-6 col-sm-8">
-      <p><%= image_tag 'drawing3.png', class:"image" %></p>
-      <p><%= image_tag 'collab3.png', class:"image" %></p>
-    </div>
-  </div>
+  <%= render "collaborations/dream_gallery" %>
 </div>
-</div>
-
-
-
-
-
-
-<%= render "collaborations/dream_gallery" %>
