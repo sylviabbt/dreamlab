@@ -21,7 +21,7 @@ class CollaborationsController < ApplicationController
 
     if @collaboration.save
       authorize @collaboration
-      redirect_to creator_collaborations_path(@collaboration.creator), notice: "Collaboration was successfully created."
+      redirect_to collaborations_path(@collaboration.creator), notice: "Collaboration was successfully created."
     else
       render :new
     end

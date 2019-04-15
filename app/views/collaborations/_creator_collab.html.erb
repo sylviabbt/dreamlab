@@ -14,7 +14,7 @@
               <p><%= collab.drawing.name %> by <%= collab.drawing.kid.first_name %></p>
               <p>Created at: <%= collab.created_at.strftime("%d / %m / %Y") %></p>
               <p>Date due: <%= (collab.created_at + 7.days).strftime("%d / %m / %Y") %></p>
-              <%= simple_form_for (collab) do |f| %>
+              <%= simple_form_for [current_user, collab] do |f| %>
                 <%= f.input :collab_upload %>
                 <%= f.input :collab_upload_cache, as: :hidden %>
                 <%= f.submit "Complete Collab!", class:"btn btn-primary my-3" %>
