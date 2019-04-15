@@ -16,10 +16,11 @@
 
 
 .card-trip > img {
-  height: 600px !important;
-  width: 710px !important;
+  height: 300px;
+  width: 400px;
   object-fit: cover;
-  margin-top: 20px;
+  margin-top: 10px;
+  padding: 20px;
 }
 
 .card-trip h2 {
