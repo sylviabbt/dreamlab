@@ -1,0 +1,24 @@
+<!-- Index for ALL FINISHED COLLABS   -->
+<div class="container mb-3">
+  <h1>Dream Gallery</h1>
+</div>
+<div class="row my-3 p-3">
+  <% @collaborations.each do |collab| %>
+    <% if collab.collab_upload.filename != nil %>
+      <div class="col-4 mx-3">
+      <div class="card-collab mx-3 my3">
+        <%= cl_image_tag collab.drawing.image %>
+        <%= cl_image_tag collab.collab_upload %>
+        <div class="card-collab-infos">
+          <div>
+            <p><%= collab.drawing.name %></p>
+            <p>inspired by <%= collab.drawing.kid.first_name %></p>
+            <p>brought to life by <%= collab.creator.first_name %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+</div>
+
