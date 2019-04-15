@@ -3,7 +3,10 @@ class KidsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:new, :create, :show, :edit, :update]
 
   def show
+    p current_user
     #refer to private method set_kid, called through before_action ()top line)
+    @drawings = @kid.drawings
+    @collaborations = policy_scope(Collaboration).order(created_at: :desc)
   end
 
   def new
@@ -18,6 +21,7 @@ class KidsController < ApplicationController
     authorize @kid
     #the correct fields were entered and saved
     if @kid.save
+      bypass_sign_in(@kid)
       redirect_to edit_kid_path(@kid)
     else
       render :new
@@ -25,6 +29,8 @@ class KidsController < ApplicationController
   end
 
   def edit
+    #only current user can edit profile
+    # @kid = current_user
   end
 
   def update

@@ -1,9 +1,13 @@
 <div class='container-profile'>
   <div class="text-center col-lg-8 offset-lg-2 col-md-6 col-sm-8 offset-sm-2">
-    <%= cl_image_tag @kid.avatar, class:"avatar-bordered w-50 h-50 my-3" %>
+    <%= cl_image_tag @kid.avatar, class:"avatar-bordered w-25 h-25 my-3" %>
     <h1><%= @kid.first_name %>, <%= @kid.age %></h2>
     <h2>Location: <%= @kid.city %></h2>
-    <%= link_to "Edit Profile", edit_kid_path(@kid), class:"mb-3" %>
+    <% if current_user.id == @kid.id %>
+      <%= link_to "Edit Profile", edit_kid_path(@kid), class:"mb-3" %>
+    <% else %>
+      <%= '' %>
+    <% end %>
     <h4>Favourite Things:</h4>
     <p><%= @kid.favourite_things %></p>
     <h4>Dislikes: </h4>
@@ -13,33 +17,30 @@
   </div>
 </div>
 <!-- My artwork -->
+<h1>My Drawings</h1>
 <div class="my-art-card text-center col-lg-8 offset-lg-2 col-md-6 col-sm-8 offset-sm-2">
+
   <h1>My Drawings</h1>
   <div class="row">
-    <div class="image-card col-md-4 col-sm-8">
-      <p><%= image_tag 'drawing2.png', class:"image" %></p>
-    </div>
-    <div class="image-card col-md-4 col-sm-8">
-      <p><%= image_tag 'drawing4.png', class:"image" %></p>
-    </div>
-    <div class="image-card col-md-4 col-sm-8">
-      <p><%= image_tag 'drawing3.png', class:"image" %></p>
-    </div>
+    <% @kid.drawings.each do |drawing| %>
+      <div class="image-card col-md-4 col-sm-8">
+        <p><%= cl_image_tag drawing.image %></p>
+      </div>
+    <% end %>
   </div>
   <p><%= link_to "Add a new drawing!", new_kid_drawing_path(@kid) %></p>
+
 </div>
 <!-- My collabs -->
+<h1>My Collaborations</h1>
 <div class="my-art-card text-center col-lg-8 offset-lg-2 col-md-6 col-sm-8 offset-sm-2">
   <h1>My Collaborations</h1>
   <div class="row">
-    <div class="image-card col-md-4 col-sm-8">
-      <p><%= image_tag 'collab2.png', class:"image" %></p>
-    </div>
-    <div class="image-card col-md-4 col-sm-8">
-      <p><%= image_tag 'collab4.png', class:"image" %></p>
-    </div>
-    <div class="image-card col-md-4 col-sm-8">
-      <p><%= image_tag 'collab3.png', class:"image" %></p>
-    </div>
+    <% @collaborations.each do |collab| %>
+      <div class="image-card col-md-4 col-sm-8">
+        <p><%= cl_image_tag collab.collab_upload %></p>
+      </div>
+    <%end%>
   </div>
+
 </div>

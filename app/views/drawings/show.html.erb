@@ -13,10 +13,12 @@
       <h3><%=link_to "#{@drawing.kid.first_name}, #{@drawing.kid.age}", kid_path(@drawing.kid)%></h3>
     </a>
   </div>
+  <% if current_user.type == "Creator" %>
   <p class="card-text">
     <%= simple_form_for [@collaboration.creator, @collaboration] do |c| %>
       <%= c.input :creator_id, as: :hidden, input_html: { value: current_user.id } %>
       <%= c.input :drawing_id, as: :hidden, input_html: { value: @drawing.id } %>
       <%= c.submit "Choose #{@drawing.kid.first_name}'s Drawing!", class:"button-register my-3" %>
     <% end %>
+  <% end %>
   </div>

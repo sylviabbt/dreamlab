@@ -1,6 +1,9 @@
-<div class="container">
-  <h1>Drawing List</h1>
+<div class="title text-center">
+  <h1>Drawings Feed</h1>
+</div>
+<div class="drawing-card col-md-6 col-sm-8 col-lg-4 p-3">
   <% @drawings.each do |drawing| %>
+    <% if drawing.booked? == false %>
     <div class="card-trip col-md-6 col-sm-8 col-lg-8 p-3">
       <%= cl_image_tag drawing.image %>
       <div class="card-trip-infos">
@@ -16,5 +19,6 @@
         </div>
       </div>
     </div>
+    <% end %>
   <% end %>
 </div>
