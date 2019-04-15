@@ -35,6 +35,7 @@
               <p><%= collab.drawing.name %> by <%= collab.drawing.kid.first_name %></p>
               <p>Created at: <%= collab.created_at.strftime("%d / %m / %Y") %></p>
               <p>COMPLETED</p>
+               <p><%= link_to 'View Collaboration', creator_collaboration_path(collab.creator, collab)  %></p>
             </div>
           </div>
         </div>
