@@ -4,6 +4,8 @@ class KidsController < ApplicationController
 
   def show
     #refer to private method set_kid, called through before_action ()top line)
+    @drawings = @kid.drawings
+    @collaborations = policy_scope(Collaboration).order(created_at: :desc)
   end
 
   def new
@@ -25,6 +27,8 @@ class KidsController < ApplicationController
   end
 
   def edit
+    #only current user can edit profile
+    # @kid = current_user
   end
 
   def update
