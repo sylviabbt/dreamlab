@@ -19,18 +19,16 @@
 <!-- My artwork -->
 <h1>My Drawings</h1>
 <div class="my-art-card text-center col-lg-8 offset-lg-2 col-md-6 col-sm-8 offset-sm-2">
-
   <h1>My Drawings</h1>
   <div class="row">
-    <% @kid.drawings.each do |drawing| %>
-      <div class="image-card col-md-4 col-sm-8">
+    <div class="image-card col-md-4 col-sm-8">
+      <% @kid.drawings.each do |drawing| %>
         <p><%= cl_image_tag drawing.image %></p>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
   <% if current_user.type == "Kid" %>
   <p><%= link_to "Add a new drawing!", new_kid_drawing_path(@kid) %></p>
-  <% end %>
 
 </div>
 <!-- My collabs -->
@@ -38,11 +36,11 @@
 <div class="my-art-card text-center col-lg-8 offset-lg-2 col-md-6 col-sm-8 offset-sm-2">
   <h1>My Collaborations</h1>
   <div class="row">
-    <% @collaborations.each do |collab| %>
-      <div class="image-card col-md-4 col-sm-8">
+    <div class="image-card col-md-4 col-sm-8">
+      <% @collaborations.each do |collab| %>
         <p><%= cl_image_tag collab.collab_upload %></p>
-      </div>
-    <%end%>
+      <%end%>
+    </div>
   </div>
-
 </div>
+
