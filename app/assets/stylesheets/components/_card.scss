@@ -4,6 +4,14 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  overflow: hidden;
+  width: 400px;
+  }
+
+.my-art-card {
+  // display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .card-collab > img {

@@ -1,18 +1,22 @@
-<div class="container">
-  <h1>Drawing List</h1>
+<div class="title text-center">
+  <h1>Drawings Feed</h1>
+</div>
+<div class="drawing-card col-md-6 col-sm-8 col-lg-4 p-3">
   <% @drawings.each do |drawing| %>
-    <div class="card-trip col-md-6 col-sm-8 col-lg-8 p-3">
-      <%= cl_image_tag drawing.image %>
-      <div class="card-trip-infos">
-        <div>
-          <h2><%= drawing.name %></h2>
-          <p>
-            <%= link_to 'View drawing', kid_drawing_path(drawing.kid, drawing)  %>
-          </p>
-        </div>
-        <h2 class="card-trip-pricing"><%= drawing.kid.first_name %></h2>
-        <div class="card-trip-user avatar avatar-bordered" id="kid-avatar">
-          <%= cl_image_tag drawing.kid.avatar %>
+    <div class="row">
+      <div class="card-trip p-3">
+        <%= cl_image_tag drawing.image %>
+        <div class="card-trip-infos p-3">
+          <div>
+            <h2><%= drawing.name %></h2>
+            <p>
+              <%= link_to 'View drawing', kid_drawing_path(drawing.kid, drawing)  %>
+            </p>
+          </div>
+          <h2 class="card-trip-pricing"><%= drawing.kid.first_name %></h2>
+          <div class="card-trip-user avatar avatar-bordered" id="kid-avatar">
+            <%= cl_image_tag drawing.kid.avatar %>
+          </div>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
 // Banner Top
 .banner {
-  height: 89vh;
+  height: 100vh;
   background-size: cover;
   background-position: center;
 }
@@ -28,26 +28,25 @@
 }
 
 
-
-
 // DreamCoLab Intro
 .card-join-community {
   align-items: center;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #b9e1dc;
 }
 
 .card-join-community h3 {
   font-family: 'Shadows Into Light', cursive;
   font-weight: bold;
-  color: #b9e1dc;
+  color: #756c83;
   font-size: 50px;
-  margin-top: 40px;
+  margin-top: 10px;
   margin-bottom: 40px;
 }
 
 .card-join-community a {
-  background-color: #756c83;
+  background-color: #f38181;
   color: white;
+  font-weight: bold;
   padding: 10px;
   border-radius: 10px;
   margin-left: 10px;
@@ -58,31 +57,37 @@
 
 }
 
-.brand-card, .brand-card {
+.brand-card {
 margin: 0 auto;
-padding: 40px;
-border-bottom: 2px solid white;
+padding: 20px;
+border-bottom: 2px solid  #b9e1dc;
 
 }
 
-.brand-card h1, .brand-card h1 {
+.brand-card h1 {
   align-text: center;
   font-family: 'Shadows Into Light', cursive;
-  color: #b9e1dc;
-  font-size: 50px;
+  color: #756c83;
   margin-bottom: 20px;
+  margin-top: 20px;
   font-weight: bold;
 }
 
-.brand-card p, .brand-card p {
+.brand-card p {
   font-family: 'Cutive Mono', monospace;
-  color: #756c83;
+  color: black;
   font-size: 20px;
+}
+
+.brand-card i {
+  color: #f38181;
+  font-size: 30px;
+  margin-top: 30px;
 }
 
 .image-card {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 30px;
 
 .image {
@@ -94,4 +99,16 @@ border-bottom: 2px solid white;
   box-shadow: 2px;
   border-radius: 5px;
 }
+}
+
+.image-logo {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+body {
+  background-image: url('background2.jpg');
+  background-size: cover;
 }
