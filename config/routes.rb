@@ -5,14 +5,15 @@ Rails.application.routes.draw do
 
   resources :kids, only: [:create, :new, :show, :edit, :update] do
     resources :drawings, only: [:create, :new, :show, :destroy]
+    resources :collaborations, only: [:index, :show]
   end
 
   resources :drawings, only: [:index]
 
   resources :creators, only: [:create, :new, :show, :edit, :update] do
-    resources :collaborations, only: [:show]
+    resources :collaborations, only: [:create, :show, :index, :edit, :update]
   end
 
-  resources :collaborations, only: [:create, :index, :show, :update]
+  resources :collaborations, only: [:create, :index, :show, :edit, :update]
 
 end
