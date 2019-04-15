@@ -28,7 +28,9 @@
       </div>
     <% end %>
   </div>
+  <% if current_user.type == "Kid" %>
   <p><%= link_to "Add a new drawing!", new_kid_drawing_path(@kid) %></p>
+  <% end %>
 
 </div>
 <!-- My collabs -->
