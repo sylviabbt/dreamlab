@@ -1,9 +1,12 @@
-.card-trip {
+.art-card {
   overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background: #fbfbfb;
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
   margin: 30px auto;
   object-fit: cover;
+  height: 500px;
+  width: 450px;
+
 }
 
 .container img {
@@ -15,38 +18,46 @@
 }
 
 
-.card-trip > img {
-  height: 300px;
-  width: 400px;
+.art-card img {
+  height: 400px;
+  width: 100%;
   object-fit: cover;
   margin-top: 10px;
   padding: 20px;
 }
 
-.card-trip h2 {
+.art-card h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-.card-trip p {
+.art-card p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
 }
 
-
-.card-trip .card-trip-infos {
+// This flexes the title and kid info
+.art-card .art-card-infos {
   padding: 16px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   position: relative;
+  margin-bottom: 6px;
 }
 
-.card-trip-infos .card-trip-user {
+// this makes the avatar sit ontop of the name
+.art-card-infos .art-card-user {
   position: absolute;
   right: 16px;
   top: -15px;
   width: 40px;
+}
+
+// Kid's name on art card
+.art-card-name {
+  font-family: 'Cutive Mono', monospace;
+  font-weight: bold;
 }
