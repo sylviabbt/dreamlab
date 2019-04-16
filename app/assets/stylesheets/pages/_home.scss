@@ -70,6 +70,11 @@
 margin: 0 auto;
 padding: 20px;
 border-bottom: 2px solid  #b9e1dc;
+}
+
+.brand-card-gallery {
+      display: flex;
+    justify-content: center;
 
 }
 
@@ -108,6 +113,7 @@ border-bottom: 2px solid  #b9e1dc;
     box-shadow: 2px;
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
 }
 }
 
