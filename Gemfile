@@ -20,7 +20,7 @@ gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
-
+gem 'acts_as_votable', '~> 0.12.0'
 # added gems
 gem 'acts-as-taggable-on', '~> 6.0'
 gem 'pg_search'
