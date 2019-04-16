@@ -26,6 +26,7 @@ gem 'acts-as-taggable-on', '~> 6.0'
 gem 'pg_search'
 gem 'geocoder'
 gem 'pundit'
+gem 'letter_opener', group: :development
 # image upload
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
