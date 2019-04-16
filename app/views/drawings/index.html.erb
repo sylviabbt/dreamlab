@@ -1,23 +1,30 @@
-<div class="title text-center">
-  <h1>Drawings Feed</h1>
-</div>
-<div class="drawing-card col-md-6 col-sm-8 col-lg-4 p-3">
-  <% @drawings.each do |drawing| %>
-    <% if drawing.booked? == false %>
-      <div class="card-trip col-md-6 col-sm-8 col-lg-8 p-3">
-        <%= link_to kid_drawing_path(drawing.kid, drawing) do %>
-          <%= cl_image_tag drawing.image %>
-        <% end %>
-        <div class="card-trip-infos">
-          <div>
-            <h2><%= drawing.name %></h2>
-          </div>
-          <h2 class="card-trip-pricing"><%= drawing.kid.first_name %></h2>
-          <div class="card-trip-user avatar avatar-bordered" id="kid-avatar">
-            <%= cl_image_tag drawing.kid.avatar %>
+<section style="height: 100vh; margin: 0 2em;">
+  <div class="title text-center">
+    <h1>Drawings Feed</h1>
+  </div>
+  <div class="row">
+    <% 3.times do %>
+      <div class="col-lg-4 col-md-6 col-sm-8">
+        <div style="margin: 3em 5em;">
+          <div class="art-card" style="height: 500px; width: 450px;">
+            <div style="background: url('http://res.cloudinary.com/dreamcolab/image/upload/v1555326419/mudfsfgqwsk4cyk5rrtm.png'); background-size: cover; background-position: top; height: 280px; border-top-left-radius: 5px; border-top-right-radius: 5px;"></div>
+            <div style="background: white; padding: 1.5em; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>My first drawing</div>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                  <div style="text-align: center; width: 30px; height: 30px; background: url('http://res.cloudinary.com/dreamcolab/image/upload/v1555326413/mrqwotwjueem9ozcdbnb.svg'); background-size: cover; background-position: center; margin-bottom: 7px; border: 2px solid #000; border-radius: 50%;"></div>
+                  <div style="font-weight: 800">Alex Ohan</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     <% end %>
-  <% end %>
-</div>
+  </div>
+</section>
+<!-- <div class="col-md-6 col-sm-8 col-lg-4 p-3">
+  <div class="card-trip col-md-6 col-sm-8 col-lg-8 p-3">
+
+  </div>
+</div> -->

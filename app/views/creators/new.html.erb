@@ -1,26 +1,28 @@
-<div class="container d-flex justify-content-between">
-  <div class="sub-image col-xs-12">
-    <%= image_tag 'artistphoto.jpeg', class:'image' %>
-  </div>
-  <div class='container-login col-xs-12 col-sm-4' >
-    <h1>I'm a Creator.</h1>
-    <!-- <div class='row'> -->
-    <!-- <div class='col'> -->
-    <%= simple_form_for @creator do |f| %>
-      <%= f.input :email,
+<section style="height: 100vh">
+  <div class="container d-flex justify-content-between">
+    <div class="sub-image col-xs-12">
+      <%= image_tag 'artistphoto.jpeg', class:'image' %>
+    </div>
+    <div class='container-login col-xs-12 col-sm-4' >
+      <h1>I'm a Creator.</h1>
+      <!-- <div class='row'> -->
+      <!-- <div class='col'> -->
+      <%= simple_form_for @creator do |f| %>
+        <%= f.input :email,
                       required: true,
                       autofocus: true,
                       input_html: { autocomplete: "email" }%>
-      <%= f.input :password,
+        <%= f.input :password,
                       required: true,
                       hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                       input_html: { autocomplete: "new-password" } %>
-      <%= f.input :password_confirmation,
+        <%= f.input :password_confirmation,
                       required: true,
                       input_html: { autocomplete: "new-password" } %>
-      <%= f.submit 'Submit!', class: 'button-register mb-5' %>
-    <% end %>
-    <!-- </div> -->
-    <!-- </div> -->
+        <%= f.submit 'Submit!', class: 'button-register mb-5' %>
+      <% end %>
+      <!-- </div> -->
+      <!-- </div> -->
+    </div>
   </div>
-</div>
+</section>
