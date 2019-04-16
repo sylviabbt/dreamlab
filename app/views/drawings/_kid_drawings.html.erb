@@ -1,18 +1,16 @@
-<div class="container mb-3">
-<h1><%= current_user.first_name %>'s  Drawings Gallery</h1>
+<div class="title text-center my-3">
+  <h1><%= current_user.first_name %>'s  Drawings Gallery</h1>
 </div>
-
 <div class="row my-3 p-3">
   <% @drawings.each do |drawing| %>
     <% if current_user.id == drawing.kid_id %>
-      <div class="col-4 mx-3">
-        <div class="card-drawing mx-3 my3">
+      <div class="drawing-card col-md-6 col-sm-8 col-lg-4">
+        <div class="art-card">
           <%= cl_image_tag drawing.image %>
-          <div class="card-drawing-infos">
-            <div>
+          <div class="art-card-infos ml-3 mr-3">
+            <div class="title">
               <p><%= drawing.name %></p>
               <p>Created at: <%= drawing.created_at.strftime("%d / %m / %Y") %></p>
-
               <% if drawing.booked?%>
                 <p>BOOKED on <%= drawing.collaboration.created_at.strftime("%d / %m / %Y") %></p>
                 <p>Date due: <%= (drawing.collaboration.created_at + 7.days).strftime("%d / %m / %Y")  %></p>

@@ -6,7 +6,7 @@
     <p><%= cl_image_tag @drawing.image %></p>
   </div>
   <div class="container-edit">
-    <h3>Title: "<%= @drawing.name %>"</h3>
+    <h3><strong>Title: "<%= @drawing.name %>"</strong></h3>
     <h1>About the Artist</h1>
     <%= cl_image_tag @drawing.kid.avatar, class:"avatar-bordered w-25 h-25 m-3 p-3" %>
     <a>
@@ -14,11 +14,11 @@
     </a>
   </div>
   <% if current_user.type == "Creator" %>
-  <p class="card-text">
-    <%= simple_form_for [@collaboration.creator, @collaboration] do |c| %>
-      <%= c.input :creator_id, as: :hidden, input_html: { value: current_user.id } %>
-      <%= c.input :drawing_id, as: :hidden, input_html: { value: @drawing.id } %>
-      <%= c.submit "Choose #{@drawing.kid.first_name}'s Drawing!", class:"button-register my-3" %>
+    <p class="card-text">
+      <%= simple_form_for [@collaboration.creator, @collaboration] do |c| %>
+        <%= c.input :creator_id, as: :hidden, input_html: { value: current_user.id } %>
+        <%= c.input :drawing_id, as: :hidden, input_html: { value: @drawing.id } %>
+        <%= c.submit "Choose #{@drawing.kid.first_name}'s Drawing!", class:"button-register my-3" %>
+      <% end %>
     <% end %>
-  <% end %>
   </div>
