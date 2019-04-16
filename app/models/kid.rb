@@ -3,4 +3,5 @@ class Kid < User
   has_many :collaborations, through: :drawings
 
   mount_uploader :avatar, PhotoUploader
+
 end

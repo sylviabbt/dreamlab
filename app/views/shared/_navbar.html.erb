@@ -8,13 +8,59 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if current_user.present? %>
-        <li class="nav-item active">
+        <li class="nav-item active" style="padding-left: 60vw">
           <%= link_to "Home", drawings_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
           <%= link_to "Dream Gallery", "#", class: "nav-link" %>
         </li>
-        <li class="nav-item dropdown">
+        <!-- notification -->
+        <!--         <li>
+          <button class="btn btn-lg btn-link">
+            <span class="glyphicon glyphicon-envelope"></span>
+            <span class="badge badge-notify">3</span>
+          </button>
+        </li> -->
+        <div class="btn-group dropleft dropdown-notifications sw-open" style="margin-top: 10px">
+          <button class="btn btn-lg btn-link" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-envelope"></span>
+            <span class="badge badge-notify">2</span>
+          </button>
+          <div class="dropdown-container">
+            <ul class="dropdown-menu" style="width: 30vw">
+              <ul class="notifications">
+                <!-- SOME RUBY .EACH -->
+                <li class="notification">
+                  <div class="media">
+                    <div class="media-body">
+                      <strong class="notification-title">You've been matched with an artist!</p>
+                      <div class="notification-meta">
+                        <small class="timestamp">27. 4. 2019, 15:00</small>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!-- end of Each -->
+                <li class="notification">
+                  <div class="media">
+                    <div class="media-body">
+                      <strong class="notification-title">Your artist has finished the collaboration!</strong>
+                      <div class="notification-meta">
+                        <small class="timestamp">27. 4. 2019, 08:00</small>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </ul>
+            <!-- /dropdown-footer -->
+          </div>
+          <!-- /dropdown-container -->
+        </li>
+        <!-- /dropdown -->
+      </ul>
+      <div cl>
+        <li class="nav-item dropdown" style="list-style-type: none">
           <%= cl_image_tag current_user.avatar, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <% if current_user.type == "Kid" %>
@@ -31,6 +77,9 @@
           <%= link_to "Login", new_user_session_path, class: "nav-link p-3" %>
         </li>
       <% end %>
-    </ul>
-  </div>
+    </div>
+    <!-- notification -->
+  </ul>
+</div>
+</div>
 </div>

@@ -15,7 +15,6 @@ class Collaboration < ApplicationRecord
   def finish_notifications
     # WHAT CONDITION should this be created on??
     if collab_upload.image.present?
-      Notification.create(kid_id: drawings.kid_id, creator_id: creator_id,  content: "Your artist has finished the collaboration!", receiver: "creator")
       Notification.create(kid_id: drawings.kid_id, creator_id: creator_id,  content: "Your artist has finished the collaboration!", receiver: "kid")
     end
   end
