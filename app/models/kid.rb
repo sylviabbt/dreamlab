@@ -8,5 +8,5 @@ class Kid < User
   acts_as_voter
 
   acts_as_taggable
-  acts_as_taggable_on :favourite_things, :dislikes
+  acts_as_taggable_on :favourite_things, :worst_things
 end

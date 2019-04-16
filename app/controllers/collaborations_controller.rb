@@ -43,7 +43,7 @@ class CollaborationsController < ApplicationController
 
   def upvote
     authorize @collaboration
-    @collaboration.vote_by voter:
+    @collaboration.vote_by voter: current_user
       redirect_back(fallback_location: root_path)
   end
 
