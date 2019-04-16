@@ -19,6 +19,7 @@ class CollaborationsController < ApplicationController
     @collaboration.creator = current_user
 
     if @collaboration.save
+      UserMailer.booked(@collaboration.drawing.kid).deliver_now
       authorize @collaboration
       redirect_to collaborations_path(@collaboration.creator), notice: "Collaboration was successfully created."
     else
@@ -32,6 +33,7 @@ class CollaborationsController < ApplicationController
   def update
     @collaboration.creator = current_user
     if @collaboration.update(collaboration_params)
+      UserMailer.completed(@collaboration.drawing.kid).deliver_now
       authorize @collaboration
       redirect_to creator_collaboration_path(@collaboration.creator, @collaboration)
     else

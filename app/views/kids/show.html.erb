@@ -9,9 +9,19 @@
       <%= '' %>
     <% end %>
     <h4>Favourite Things:</h4>
-    <p><%= @kid.favourite_things %></p>
+    <div class="tagging"><i class="fas fa-tag"></i>
+      <% @kid.favourite_things.each do |t| %>
+        <span class="tag-box"><%= t %></span>
+      <% end %>
+    </div>
+
     <h4>Dislikes: </h4>
-    <p><%= @kid.dislikes %></p>
+    <div class="tagging"><i class="fas fa-tag"></i>
+      <% @kid.dislikes.each do |t| %>
+        <span class="tag-box"><%= t %></span>
+      <% end %>
+    </div>
+
     <h4>Description: </h4>
     <p><%= @kid.description %></p>
   </div>
@@ -29,20 +39,20 @@
     </div>
   </div>
   <% if current_user.type == "Kid" %>
-
     <p><%= link_to "Add a new drawing!", new_kid_drawing_path(@kid) %></p>
+    <% end %>
   </div>
   <!-- My collabs -->
-  <h1>My Collaborations</h1>
-  <div class="my-art-card text-center col-lg-8 offset-lg-2 col-md-6 col-sm-8 offset-sm-2">
-    <div class="row">
-      <% @collaborations.each do |collab| %>
-        <% if current_user.id == collab.drawing.kid_id %>
-          <div class="image-card col-md-4 col-sm-8">
-            <p><%= cl_image_tag collab.collab_upload %></p>
-          </div>
-        <% end %>
-      <%end%>
+  <div class="title text-center">
+    <h1>My Collaborations</h1>
+    <div class="my-art-card text-center col-lg-8 offset-lg-2 col-md-6 col-sm-8 offset-sm-2">
+      <div class="row">
+        <% @kid.collaborations.each do |collab| %>
+            <div class="image-card col-md-4 col-sm-8">
+              <p><%= cl_image_tag collab.collab_upload %></p>
+            </div>
+        <%end%>
+      </div>
     </div>
   </div>
 
