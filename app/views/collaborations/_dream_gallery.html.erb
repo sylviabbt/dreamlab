@@ -11,6 +11,7 @@
               </div>
               <div class="flip-card-back" style="background-image: url('<%= cl_image_path collab.collab_upload %>')">
 
+
               </div>
             </div>
           </div>
@@ -18,13 +19,13 @@
             <h5>"<%= collab.drawing.name %>"</h5>
             <p> <strong><em>inspired by</em></strong> <%= collab.drawing.kid.first_name %></p>
             <p><strong><em>brought to life by</em></strong> <%= collab.creator.first_name %></p>
+            <%= link_to collaboration_upvote_path(collab) do %> <i class="far fa-heart"></i>  <%= "#{collab.votes_for.size}" %>
+            <% end %> 
           </div>
         </div>
       </div>
     <% end %>
   <% end %>
 </div>
-
-
 
 
