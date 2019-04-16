@@ -17,7 +17,7 @@ Kid.delete_all if Rails.env.development?
 
 #kids and drawings
 urlkid1 = 'https://www.shareicon.net/data/128x128/2016/06/25/786536_people_512x512.png'
-kid1 = Kid.new(first_name: 'Ethan', city: 'Shanghai', favourite_things: ['chocolate', 'pizza'], dislikes: ['spinach'], description: 'stronger than Superman!', email: 'ethan@gmail.com', age: '8', password: '123123')
+kid1 = Kid.new(first_name: 'Ethan', city: 'Shanghai', favourite_thing_list: ['chocolate', 'pizza'], dislike_list: ['spinach'], description: 'stronger than Superman!', email: 'ethan@gmail.com', age: '8', password: '123123')
 kid1.remote_avatar_url = urlkid1
 kid1.save
 
@@ -27,12 +27,12 @@ drawing1.remote_image_url = url1
 drawing1.save
 
 urlkid2 = 'https://image.flaticon.com/icons/svg/1718/1718044.svg'
-kid2 = Kid.new(first_name: 'Sammy', city: 'Shanghai', favourite_things: ['ice cream'], dislikes: ['injections'], description: '', email: 'sammy@gmail.com', age: '7', password: '111111')
+kid2 = Kid.new(first_name: 'Sammy', city: 'Shanghai', favourite_thing_list: ['ice cream'], dislike_list: ['injections'], description: '', email: 'sammy@gmail.com', age: '7', password: '111111')
 kid2.remote_avatar_url = urlkid2
 kid2.save
 
 urlkid3 = 'https://image.flaticon.com/icons/svg/163/163801.svg'
-kid3 = Kid.new(first_name: 'Leo', city: 'Shanghai', favourite_things: ['french fries', 'pasta'], dislikes: ['thunder', 'brussel sprouts'], description: '', email: 'leo@gmail.com', age: '5', password: '444444')
+kid3 = Kid.new(first_name: 'Leo', city: 'Shanghai', favourite_thing_list: ['french fries', 'pasta'], dislike_list: ['thunder', 'brussel sprouts'], description: '', email: 'leo@gmail.com', age: '5', password: '444444')
 kid3.remote_avatar_url = urlkid3
 kid3.save
 
@@ -46,7 +46,7 @@ drawing3.remote_image_url = url3
 drawing3.save
 
 urlkid4 = 'https://image.flaticon.com/icons/svg/1624/1624482.svg'
-kid4 = Kid.new(first_name: 'Lily', city: 'Shanghai', favourite_things: ['cotton candy', 'balloons'], dislikes: ['snakes', 'crabs'], description: 'I like unicorns the most!', email: 'lily@gmail.com', age: '6', password: '333333')
+kid4 = Kid.new(first_name: 'Lily', city: 'Shanghai', favourite_thing_list: ['cotton candy', 'balloons'], dislike_list: ['snakes', 'crabs'], description: 'I like unicorns the most!', email: 'lily@gmail.com', age: '6', password: '333333')
 kid4.remote_avatar_url = urlkid4
 kid4.save
 
@@ -56,7 +56,7 @@ drawing4.remote_image_url = url4
 drawing4.save
 
 urlkid5 = 'https://image.flaticon.com/icons/svg/163/163823.svg'
-kid5 = Kid.new(first_name: 'Enzo', city: 'Shanghai', favourite_things: ['puppies', 'elephants', 'all animals'], dislikes: ['cockroaches'], description: 'when I grow up I want to be a doctor', email: 'enzo@gmail.com', age: '6', password: '222222')
+kid5 = Kid.new(first_name: 'Enzo', city: 'Shanghai', favourite_thing_list: ['puppies', 'elephants', 'all animals'], dislike_list: ['cockroaches'], description: 'when I grow up I want to be a doctor', email: 'enzo@gmail.com', age: '6', password: '222222')
 kid5.remote_avatar_url = urlkid5
 kid5.save
 
