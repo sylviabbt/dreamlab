@@ -21,6 +21,10 @@
                   <p>"<%= collab.drawing.name %>"</p>
                   <p><strong><em>brought to life by</em></strong> <%= collab.creator.first_name %></p>
                 </div>
+                <div class="card-collab-infos">
+                  <%= link_to collaboration_upvote_path(collab) do %> <i class="far fa-heart"></i>  <%= "#{collab.votes_for.size}" %>
+                  <% end %>
+                </div>
               </div>
             </div>
           </div>

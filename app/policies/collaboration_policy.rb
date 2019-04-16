@@ -24,4 +24,8 @@ class CollaborationPolicy < ApplicationPolicy
   def update?
     true
   end
+
+  def upvote?
+    true
+  end
 end

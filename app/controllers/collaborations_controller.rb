@@ -1,7 +1,6 @@
 class CollaborationsController < ApplicationController
-  before_action :set_collaboration, only: [:show, :edit, :update]
+  before_action :set_collaboration, only: [:show, :edit, :update, :upvote]
   skip_after_action :verify_authorized, only: [:show]
-
 
   def index
     @collaborations = policy_scope(Collaboration).order(created_at: :desc)
@@ -42,10 +41,16 @@ class CollaborationsController < ApplicationController
     end
   end
 
+  def upvote
+    authorize @collaboration
+    @collaboration.vote_by voter:
+      redirect_back(fallback_location: root_path)
+  end
+
   private
 
   def set_collaboration
-    @collaboration = Collaboration.find(params[:id])
+    @collaboration = Collaboration.find((params[:id] || params[:collaboration_id]))
   end
 
   def collaboration_params

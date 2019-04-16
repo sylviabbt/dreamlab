@@ -4,6 +4,9 @@ class Kid < User
 
   mount_uploader :avatar, PhotoUploader
 
-   acts_as_taggable
-   acts_as_taggable_on :favourite_things, :dislikes
+
+  acts_as_voter
+
+  acts_as_taggable
+  acts_as_taggable_on :favourite_things, :dislikes
 end
