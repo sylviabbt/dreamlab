@@ -3,33 +3,29 @@
   <% @collaborations.each do |collab| %>
     <% if collab.collab_upload.filename != nil %>
       <div class="col-lg-4 col-md-6 col-sm-12">
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <div class="card-collab my-3">
-                <%= cl_image_tag collab.drawing.image %>
-                <div class="card-collab-infos">
-                  <p>"<%= collab.drawing.name %>"</p>
-                  <p> <strong><em>inspired by</em></strong> <%= collab.drawing.kid.first_name %></p>
-                </div>
+        <div class="card-collab my-3">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" style="background-image: url('<%= cl_image_path collab.drawing.image %>')">
+
+              </div>
+              <div class="flip-card-back" style="background-image: url('<%= cl_image_path collab.collab_upload %>')">
+
+
               </div>
             </div>
-            <div class="flip-card-back">
-              <div class="card-collab my-3">
-                <%= cl_image_tag collab.collab_upload %>
-                <div class="card-collab-infos">
-                  <p>"<%= collab.drawing.name %>"</p>
-                  <p><strong><em>brought to life by</em></strong> <%= collab.creator.first_name %></p>
-                </div>
-                <div class="card-collab-infos">
-                  <%= link_to collaboration_upvote_path(collab) do %> <i class="far fa-heart"></i>  <%= "#{collab.votes_for.size}" %>
-                  <% end %>
-                </div>
-              </div>
-            </div>
+          </div>
+          <div class="card-collab-infos">
+            <h5>"<%= collab.drawing.name %>"</h5>
+            <p> <strong><em>inspired by</em></strong> <%= collab.drawing.kid.first_name %></p>
+            <p><strong><em>brought to life by</em></strong> <%= collab.creator.first_name %></p>
+            <%= link_to collaboration_upvote_path(collab) do %> <i class="far fa-heart"></i>  <%= "#{collab.votes_for.size}" %>
+            <% end %> 
           </div>
         </div>
       </div>
     <% end %>
   <% end %>
 </div>
+
+
