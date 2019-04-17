@@ -11,21 +11,30 @@
   </div>
 </div>
 <!-- New customized collabs -->
-<div class="title text-center">
-  <h1>My Collaborations</h1>
-</div>
-<div class="my-art-card text-center col-lg-8 offset-lg-2 col-md-6 col-sm-8 offset-sm-2">
-  <!-- <h1>My Collaborations</h1> -->
-  <% @creator.collaborations.each do |collab| %>
-    <div class="card-row">
-      <div class="card-collab">
-        <%= cl_image_tag collab.drawing.image %>
-        <%= cl_image_tag collab.collab_upload %>
-        <div class="card-collab-infos">
-          <p><%= collab.drawing.name %></p>
-          <p>inspired by <%= collab.drawing.kid.first_name %></p>
+   <div class="collab-sectioning">
+    <h1>My Collaborations Gallery</h1>
+      <div class="row my-3 p-3">
+        <% completed = @collaborations.select{|x| x.collab_upload.filename != nil}%>
+        <% completed.each do |collab| %>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card-collab my-3">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front" style="background-image: url('<%= cl_image_path collab.drawing.image %>')">
+                </div>
+                <div class="flip-card-back" style="background-image: url('<%= cl_image_path collab.collab_upload %>')">
+                </div>
+              </div>
+            </div>
+            <div class="card-collab-infos">
+              <h5>"<%= collab.drawing.name %>"</h5>
+              <p> <strong><em>inspired by</em></strong> <%= collab.drawing.kid.first_name %></p>
+              <p><strong><em>brought to life by</em></strong> <%= collab.creator.first_name %></p>
+              <%= link_to collaboration_upvote_path(collab) do %> <i class="far fa-heart"></i>  <%= "#{collab.votes_for.size}" %>
+              <% end %>
+            </div>
+          </div>
         </div>
-      </div>
+      <% end %>
     </div>
-  <% end %>
-</div>
+  </div>

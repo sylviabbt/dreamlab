@@ -40,9 +40,10 @@
 <!-- Dream Gallery section -->
 <div class="brand-card col-sm-8 offset-sm-2 text-center">
   <h1>DREAM GALLERY.</h1>
-  <p >Our dream gallery is filled with creations and collaborations between dreamers and creators from all over the world! Take a look at some of our latest works:  </p>
-  <%= render "collaborations/dream_gallery" %>
+  <p >Our dream gallery is filled with creations and collaborations between dreamers and creators from all over the world! Take a look at some of our latest works: </p>
+  <label><%= link_to "Visit our full Dream Gallery", dream_gallery_path  %></label>
 </div>
+  <%= render "dream_gallery", limit: 3 %>
 <!-- Run carousel partial -->
 <script>
   $('.carousel').carousel()
