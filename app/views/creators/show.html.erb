@@ -14,18 +14,3 @@
 <div class="title text-center">
   <h1>My Collaborations</h1>
 </div>
-<div class="my-art-card text-center col-lg-8 offset-lg-2 col-md-6 col-sm-8 offset-sm-2">
-  <!-- <h1>My Collaborations</h1> -->
-  <% @creator.collaborations.each do |collab| %>
-    <div class="card-row">
-      <div class="card-collab">
-        <%= cl_image_tag collab.drawing.image %>
-        <%= cl_image_tag collab.collab_upload %>
-        <div class="card-collab-infos">
-          <p><%= collab.drawing.name %></p>
-          <p>inspired by <%= collab.drawing.kid.first_name %></p>
-        </div>
-      </div>
-    </div>
-  <% end %>
-</div>
