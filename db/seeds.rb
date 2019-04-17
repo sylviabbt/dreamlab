@@ -17,51 +17,49 @@ Kid.delete_all if Rails.env.development?
 
 #kids and drawings
 urlkid1 = 'https://www.shareicon.net/data/128x128/2016/06/25/786536_people_512x512.png'
-kid1 = Kid.new(first_name: 'Ethan', city: 'Shanghai', favourite_thing_list: ['chocolate', 'pizza'], worst_thing_list: ['spinach'], description: 'stronger than Superman!', email: 'ethan@gmail.com', age: '8', password: '123123')
+kid1 = Kid.new(first_name: '奕恺', city: 'Shanghai', favourite_thing_list: ['drawings', 'playing with the cooking set', 'color green'], worst_thing_list: [''], description: '', email: 'ethan@gmail.com', age: '5', password: '123123')
 kid1.remote_avatar_url = urlkid1
 kid1.save
 
-url1 = image_path + '/drawing1.png'
-drawing1 = Drawing.new(name: 'my first drawing', kid: kid1)
+url1 = image_path + '/kid1-tall-man-in-sunny-garden.jpg'
+drawing1 = Drawing.new(name: 'tall man in sunny garden', kid: kid1)
 drawing1.remote_image_url = url1
 drawing1.save
 
-urlkid2 = 'https://image.flaticon.com/icons/svg/1718/1718044.svg'
-kid2 = Kid.new(first_name: 'Sammy', city: 'Shanghai', favourite_thing_list: ['ice cream'], worst_thing_list: ['injections'], description: '', email: 'sammy@gmail.com', age: '7', password: '111111')
+urlkid2 = 'https://image.flaticon.com/icons/svg/163/163823.svg'
+kid2 = Kid.new(first_name: '佳俊', city: 'Shanghai', favourite_thing_list: ['lions and tigers and ultman (奥特曼), chicken leg, hide and seek'], worst_thing_list: ['onions'], description: '', email: 'sammy@gmail.com', age: '4', password: '111111')
 kid2.remote_avatar_url = urlkid2
 kid2.save
 
+url2 = image_path + '/kid2-lion-in-my-castle.jpg'
+drawing2 = Drawing.new(name: 'lion in my castle', kid: kid2)
+drawing2.remote_image_url = url2
+drawing2.save
+
 urlkid3 = 'https://image.flaticon.com/icons/svg/163/163801.svg'
-kid3 = Kid.new(first_name: 'Leo', city: 'Shanghai', favourite_thing_list: ['french fries', 'pasta'], worst_thing_list: ['thunder', 'brussel sprouts'], description: '', email: 'leo@gmail.com', age: '5', password: '444444')
+kid3 = Kid.new(first_name: '天浩', city: 'Shanghai', favourite_thing_list: ['lego', 'apples', 'strawberry biscuits'], worst_thing_list: ['nothing'], description: '', email: 'leo@gmail.com', age: '6', password: '444444')
 kid3.remote_avatar_url = urlkid3
 kid3.save
 
-url2 = image_path + '/drawing2.png'
-drawing2 = Drawing.new(name: 'my first drawing', kid: kid3)
-drawing2.remote_image_url = url2
-drawing2.save
-url3 = image_path + '/drawing3.png'
-drawing3 = Drawing.new(name: 'my second drawing', kid: kid3)
+url3 = image_path + '/kid3-the-giraffe-and-the-apple-tree.png'
+drawing3 = Drawing.new(name: 'the giraffe and the apple tree', kid: kid3)
 drawing3.remote_image_url = url3
 drawing3.save
 
 urlkid4 = 'https://image.flaticon.com/icons/svg/1624/1624482.svg'
-kid4 = Kid.new(first_name: 'Lily', city: 'Shanghai', favourite_thing_list: ['cotton candy', 'balloons'], worst_thing_list: ['snakes', 'crabs'], description: 'I like unicorns the most!', email: 'lily@gmail.com', age: '6', password: '333333')
+kid4 = Kid.new(first_name: '依蓓', city: 'Shanghai', favourite_thing_list: ['manga', 'singing', 'drawing'], worst_thing_list: ['exams'], description: 'I will go to art school and be an artist when I grow up!', email: 'lily@gmail.com', age: '13', password: '333333')
 kid4.remote_avatar_url = urlkid4
 kid4.save
 
-url4 = image_path + '/drawing4.png'
-drawing4 = Drawing.new(name: 'my first drawing', kid: kid4)
+url4 = image_path + '/kid4-autoportrait.jpg'
+drawing4 = Drawing.new(name: 'autopotrait', kid: kid4)
 drawing4.remote_image_url = url4
 drawing4.save
 
-urlkid5 = 'https://image.flaticon.com/icons/svg/163/163823.svg'
-kid5 = Kid.new(first_name: 'Enzo', city: 'Shanghai', favourite_thing_list: ['puppies', 'elephants', 'all animals'], worst_thing_list: ['cockroaches'], description: 'when I grow up I want to be a doctor', email: 'enzo@gmail.com', age: '6', password: '222222')
-kid5.remote_avatar_url = urlkid5
-kid5.save
+
 
 #creators and collabs
-urlcreator1 = 'https://image.flaticon.com/icons/svg/702/702014.svg'
+urlcreator1 = image_path + '/helenapic.png'
 creator1 = Creator.new(city: 'Berlin',  age: '37', first_name: 'Helena', last_name: 'Schmidt', portfolio_url: 'www.helenaschmidt.com', email: 'helena@helenaschmidt.com', password: 'abcdef', description: 'What do I want to say with my art? Celebrate the human, the marks people make on the world. Treasure the local, the small-scale, the eccentric, the ordinary: whatever is made out of caring. Respect what people have built for themselves')
 creator1.remote_avatar_url = urlcreator1
 creator1.save
