@@ -6,8 +6,10 @@ class CollaborationsController < ApplicationController
   def index
     @collaborations = policy_scope(Collaboration).order(created_at: :desc)
     if current_user.type == "Creator"
+      @collaborations = current_user.collaborations
       render '_creator_collab'
     elsif current_user.type == "Kid"
+      @collaborations = current_user.collaborations
       render '_kid_collab'
     end
   end
