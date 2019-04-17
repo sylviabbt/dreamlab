@@ -1,8 +1,9 @@
 <div class="title text-center my-3">
-  <h1><%= current_user.first_name %>'s  Drawings Gallery</h1>
+  <h1>My Drawings Gallery</h1>
 </div>
 <div class="row my-3 p-3">
-  <% @drawings.each do |drawing| %>
+  <% drawings = limit.present? ? @drawings.first(limit) : @drawings  %>
+  <% drawings.each do |drawing| %>
     <div class="col-lg-4 col-md-6 col-sm-12">
       <div class="card-collab upload my3">
         <%= cl_image_tag drawing.image %>
