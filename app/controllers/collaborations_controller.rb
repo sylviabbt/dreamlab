@@ -2,6 +2,7 @@ class CollaborationsController < ApplicationController
   before_action :set_collaboration, only: [:show, :edit, :update, :upvote]
   skip_after_action :verify_authorized, only: [:show]
   skip_before_action :verify_authenticity_token, except: [:upvote]
+  skip_before_action :authenticate_user!, only: [:upvote]
 
   def index
     @collaborations = policy_scope(Collaboration).order(created_at: :desc)
@@ -43,18 +44,15 @@ class CollaborationsController < ApplicationController
   end
 
   def upvote
-    p "==================="
-    p @collaboration
     authorize @collaboration
-    p "===#{user_sign_in?}"
-    if user_sign_in?
-      p "sign in"
+    if user_signed_in?
       @collaboration.vote_by voter: current_user
       redirect_back(fallback_location: root_path)
     else
-      p "===========not"
-      session[:upvote_id] = request.remote_ip
-      voter = Upvote.find_or_create_by_ip(session[:upvote_id])
+      session[:vote_id] = request.remote_ip
+      guest = Upvote.find_or_create_by(ip: session[:vote_id])
+      @collaboration.vote_by voter: guest
+      redirect_back(fallback_location: root_path)
     end
   end
 
