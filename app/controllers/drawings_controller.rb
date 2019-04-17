@@ -4,7 +4,7 @@ class DrawingsController < ApplicationController
     @drawings = policy_scope(Drawing).order(created_at: :desc)
 
     if current_user.type == "Creator"
-       @drawings = Drawing.all
+      @drawings = Drawing.all
     elsif current_user.type == "Kid"
       @drawings = current_user.drawings
       redirect_to new_kid_drawing_path(current_user)
