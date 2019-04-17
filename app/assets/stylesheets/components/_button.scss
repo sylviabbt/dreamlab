@@ -8,6 +8,7 @@
 
 }
 
+
 .btn-view-more {
   border-radius: 24px;
   padding: 10px;
@@ -15,4 +16,19 @@
   color: black;
   font-family: 'Cutive Mono', monospace;
   font-weight: bold;
+}
+
+// simple form submit button "collab complete"
+
+
+.complete-collab-button {
+  background-color: #f38181;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+  font-family: 'Cutive Mono', monospace;
+  font-size: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
