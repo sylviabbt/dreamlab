@@ -2,6 +2,7 @@ class DrawingsController < ApplicationController
   before_action :set_drawing, only: [:show, :destroy]
   def index
     @drawings = policy_scope(Drawing).order(created_at: :desc)
+    @drawings = current_user.drawings
     if current_user.type == "Creator"
 
     elsif current_user.type == "Kid"
