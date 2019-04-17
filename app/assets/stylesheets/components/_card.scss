@@ -4,12 +4,11 @@
   overflow: hidden;
   background: #fbfbfb;
   box-shadow: 0 0 25px rgba(0,0,0,0.4);
-  overflow: hidden;
   margin: 30px auto;
   width: 450px;
   padding: 15px;
-
   }
+
 
 .my-art-card {
   // display: flex;
@@ -53,8 +52,9 @@
   width: 40px;
 }
 
-.card-collab-infos h5 {
+.card-collab-infos h2 {
   font-family: 'Cutive Mono', monospace;
+  font-weight: bold;
 }
 
 // TEST flip card CSS
@@ -109,6 +109,29 @@
   transform: rotateY(180deg);
 
 }
+
+// collabs show page large card
+.together-card {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: auto;
+
+}
+
+.drawing-image img, .finished-collab-image img {
+  height: 650px;
+  width: auto;
+  max-width: 800px;
+  object-fit: cover;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 25px;
+}
+
+
 
 
 // Unfinished upload cards format buttons and card

@@ -3,6 +3,7 @@ class CreatorsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:new, :create, :show, :edit, :update]
 
   def show
+    @collaborations = @creator.collaborations
     #refer to private method set_creator, called through before_action ()top line)
   end
 
