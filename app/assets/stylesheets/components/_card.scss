@@ -111,8 +111,52 @@
 }
 
 
+// Unfinished upload cards format buttons and card
 
+.card-collab.upload > img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  padding: 0px;
+}
 
+.card-collab-infos-upload {
+  padding: 15px;
+  margin: 0px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}
 
+.card-collab-infos-upload p {
+  font-family: 'Cutive Mono', monospace;
+  font-size: 20px;
+  color: #0E0000;
+  font-weight: 500;
+}
 
-// Drawings Index Cards
+form.simple_form.edit_collaboration{
+  height: 120px;
+  display: table-caption;
+
+}
+
+.card-collab-user.avatar-bordered.upload {
+  margin-top: 20px;
+  margin-right: 5px;
+}
+
+.collaboration-dates p {
+  margin-left:5px;
+  font-family: "Open Sans", "Helvetica", "sans-serif";
+  font-size: 12px;
+  color: #0E0000;
+}
+
+label.file.required {
+ display: none;
+}
+
+.form-control-file, .form-control-range {
+padding-top: 10px
+}
