@@ -9,15 +9,17 @@ Rails.application.routes.draw do
     resources :collaborations, only: [:show]
   end
 
-  resources :drawings, only: [:index]
+  resources :drawings, only: [:index] do
+    get '/download' => 'drawings#download'
+  end
 
   resources :creators, only: [:create, :new, :show, :edit, :update] do
     resources :collaborations, only: [:show, :edit, :update]
-    get '/download' => 'collaborations#download'
   end
 
   resources :collaborations, only: [:index, :create] do
     # new path =>  /collaborations/23/upvote
+    get '/download' => 'collaborations#download'
     get '/upvote' => 'collaborations#upvote'
   end
 

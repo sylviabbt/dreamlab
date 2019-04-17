@@ -1,7 +1,7 @@
 class CollaborationsController < ApplicationController
-  before_action :set_collaboration, only: [:show, :edit, :update, :upvote]
+  before_action :set_collaboration, only: [:show, :edit, :update, :upvote, :download]
   skip_after_action :verify_authorized, only: [:show]
-  skip_before_action :authenticate_user!, only: [:upvote]
+  skip_before_action :authenticate_user!, only: [:upvote, :download]
 
   def index
     @collaborations = policy_scope(Collaboration).order(created_at: :desc)
@@ -60,9 +60,12 @@ class CollaborationsController < ApplicationController
   def download
     require 'open-uri'
     authorize @collaboration
-    url = cloudinary.url("@collaboration.original_filename", {width: 100, height: 150, crop: "fill"})
-    send_file :filename=>"photo.jpg"
-    send_file('url', { width: 100, height: 150, crop: "fill" })
+
+    img = @collaboration.drawing.image
+    url = img.url
+    # drawing.image.url
+    # collab.collab_upload.url
+    send_file(open(url), filename: img.file.filename)
   end
 
   private
