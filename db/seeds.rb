@@ -17,7 +17,7 @@ Kid.delete_all if Rails.env.development?
 
 #REAL kids and drawings
 urlkid1 = 'https://i0.wp.com/orig01.deviantart.net/6e69/f/2012/236/1/1/avatar_aang_by_kirin_48-d5cb7h3.png'
-kid1 = Kid.new(first_name: 'Yi Kai 奕恺', city: 'Shanghai', favourite_thing_list: ['drawings', 'playing with the cooking set', 'color green'], worst_thing_list: [''], description: '', email: 'yikai@gmail.com', age: '5', password: '123123')
+kid1 = Kid.new(first_name: 'Yi Kai', city: 'Shanghai', favourite_thing_list: ['drawings', 'playing with the cooking set', 'color green'], worst_thing_list: [''], description: '', email: 'yikai@gmail.com', age: '5', password: '123123')
 kid1.remote_avatar_url = urlkid1
 kid1.save
 
@@ -27,7 +27,7 @@ drawing1.remote_image_url = url1
 drawing1.save
 
 urlkid2 = 'https://images.vexels.com/media/users/3/128175/isolated/preview/626b073e740b18d826291258d98b4e90-lion-cartoon-circle-icon-by-vexels.png'
-kid2 = Kid.new(first_name: 'Jia Jun 佳俊', city: 'Shanghai', favourite_thing_list: ['lions and tigers and ultman (奥特曼), chicken leg, hide and seek'], worst_thing_list: ['onions'], description: '', email: 'jiajun@gmail.com', age: '4', password: '111111')
+kid2 = Kid.new(first_name: 'Jia Jun', city: 'Shanghai', favourite_thing_list: ['lions and tigers and ultman (奥特曼), chicken leg, hide and seek'], worst_thing_list: ['onions'], description: '', email: 'jiajun@gmail.com', age: '4', password: '111111')
 kid2.remote_avatar_url = urlkid2
 kid2.save
 
@@ -37,7 +37,7 @@ drawing2.remote_image_url = url2
 drawing2.save
 
 urlkid3 = 'https://png.pngtree.com/element_pic/16/12/18/c7bde342798e69d52b7341e8a233ec86.jpg'
-kid3 = Kid.new(first_name: 'TianHao 天浩', city: 'Shanghai', favourite_thing_list: ['lego', 'apples', 'strawberry biscuits'], worst_thing_list: ['nothing'], description: '', email: 'tianhao@gmail.com', age: '6', password: '444444')
+kid3 = Kid.new(first_name: 'TianHao', city: 'Shanghai', favourite_thing_list: ['lego', 'apples', 'strawberry biscuits'], worst_thing_list: ['nothing'], description: '', email: 'tianhao@gmail.com', age: '6', password: '444444')
 kid3.remote_avatar_url = urlkid3
 kid3.save
 
@@ -47,7 +47,7 @@ drawing3.remote_image_url = url3
 drawing3.save
 
 urlkid4 = 'https://www.clipartmax.com/png/middle/68-686733_pikachu-with-hat-drawing-pikachu-wallpaper-hd.png'
-kid4 = Kid.new(first_name: 'YiBei 依蓓', city: 'Shanghai', favourite_thing_list: ['manga', 'singing', 'drawing'], worst_thing_list: ['exams'], description: 'I will go to art school and be an artist when I grow up!', email: 'yibei@gmail.com', age: '13', password: '333333')
+kid4 = Kid.new(first_name: 'YiBei', city: 'Shanghai', favourite_thing_list: ['manga', 'singing', 'drawing'], worst_thing_list: ['exams'], description: 'I will go to art school and be an artist when I grow up!', email: 'yibei@gmail.com', age: '13', password: '333333')
 kid4.remote_avatar_url = urlkid4
 kid4.save
 
@@ -63,7 +63,7 @@ kid5.remote_avatar_url = urlkid5
 kid5.save
 
 url5 = image_path + '/drawing1.png'
-drawing5 = Drawing.new(name: 'my first drawing', kid: kid5)
+drawing5 = Drawing.new(name: 'sunny day at the park', kid: kid5)
 drawing5.remote_image_url = url1
 drawing5.save
 
@@ -78,12 +78,12 @@ kid7.remote_avatar_url = urlkid7
 kid7.save
 
 url6 = image_path + '/drawing2.png'
-drawing6 = Drawing.new(name: 'my first drawing', kid: kid7)
+drawing6 = Drawing.new(name: 'giant robot', kid: kid7)
 drawing6.remote_image_url = url6
 drawing6.save
 
 url7 = image_path + '/drawing3.png'
-drawing7 = Drawing.new(name: 'my second drawing', kid: kid7)
+drawing7 = Drawing.new(name: 'girl hero', kid: kid7)
 drawing7.remote_image_url = url7
 drawing7.save
 
