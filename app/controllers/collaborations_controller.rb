@@ -1,7 +1,6 @@
 class CollaborationsController < ApplicationController
   before_action :set_collaboration, only: [:show, :edit, :update, :upvote]
   skip_after_action :verify_authorized, only: [:show]
-  skip_before_action :verify_authenticity_token, except: [:upvote]
   skip_before_action :authenticate_user!, only: [:upvote]
 
   def index
