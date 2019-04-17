@@ -1,39 +1,41 @@
 <!-- Index for ALL COLLABS FOR SPECIFIC KID -->
-<div class="container mb-3">
-<h1><%= current_user.first_name %>'s  Collaborations Gallery</h1>
-</div>
-<div class="row my-3 p-3">
-  <% @collaborations.each do |collab| %>
-    <% if current_user.id == collab.drawing.kid_id %>
-      <% if collab.collab_upload.filename == nil %>
-      <div class="col-4 mx-3">
-        <div class="card-collab mx-3 my3">
-          <%= cl_image_tag collab.drawing.image %>
-          <div class="card-collab-infos">
-            <div>
-              <p><%= collab.drawing.name %></p>
-              <p>Created at: <%= collab.created_at.strftime("%d / %m / %Y") %></p>
-              <p>Date due: <%= (collab.created_at + 7.days).strftime("%d / %m / %Y") %></p>
-              <p>STATUS PENDING</p>
+<div class="full-height-page">
+  <div class="title text-center mb-3">
+    <h1><%= current_user.first_name %>'s  Collaborations Gallery</h1>
+  </div>
+  <div class="row my-3 p-3">
+    <% @collaborations.each do |collab| %>
+      <% if current_user.id == collab.drawing.kid_id %>
+        <% if collab.collab_upload.filename == nil %>
+          <div class="col-4 mx-3">
+            <div class="card-collab mx-3 my3">
+              <%= cl_image_tag collab.drawing.image %>
+              <div class="card-collab-infos">
+                <div>
+                  <p><%= collab.drawing.name %></p>
+                  <p>Created at: <%= collab.created_at.strftime("%d / %m / %Y") %></p>
+                  <p>Date due: <%= (collab.created_at + 7.days).strftime("%d / %m / %Y") %></p>
+                  <p>STATUS PENDING</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <% elsif collab.collab_upload.filename != nil %>
-        <div class="col-4 mx-3">
-        <div class="card-collab mx-3 my3">
-          <%= cl_image_tag collab.drawing.image %>
-          <%= cl_image_tag collab.collab_upload %>
-          <div class="card-collab-infos">
-            <div>
-              <p><%= collab.drawing.name %> brought to life by <%= collab.creator.first_name %></p>
-              <p>COMPLETED</p>
+        <% elsif collab.collab_upload.filename != nil %>
+          <div class="col-4 mx-3">
+            <div class="card-collab mx-3 my3">
+              <%= cl_image_tag collab.drawing.image %>
+              <%= cl_image_tag collab.collab_upload %>
+              <div class="card-collab-infos">
+                <div>
+                  <p><%= collab.drawing.name %> brought to life by <%= collab.creator.first_name %></p>
+                  <p>COMPLETED</p>
+                  <p><%= link_to 'View Collaboration', kid_collaboration_path(collab.drawing.kid, collab)  %></p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        <% end %>
       <% end %>
     <% end %>
-  <% end %>
+  </div>
 </div>

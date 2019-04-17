@@ -1,8 +1,8 @@
 <div class="container-drawing col-8 offset-2 my-3 p-3">
   <h1>Upload your new awesome drawing!</h1>
-  <%= simple_form_for [@drawing.kid, @drawing] do |d| %>
+  <%= simple_form_for [@drawing.kid, @drawing],  html: {novalidate: false} do |d| %>
     <%= d.input :name, label: "Title" %>
-    <%= d.input :image %>
+    <%= d.input :image, :required => true %>
     <%= d.input :image_cache, as: :hidden %>
     <%= d.submit "Upload Now!", class:"btn btn-primary my-3" %>
   <% end %>

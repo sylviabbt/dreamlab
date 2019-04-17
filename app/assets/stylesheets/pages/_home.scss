@@ -4,15 +4,17 @@
   height: 100vh;
   background-size: cover;
   background-position: center;
+  position: absolute;
 }
 
 .banner h1 {
   margin: 0;
   font-family: 'Covered By Your Grace', cursive;
-  color: #b9e1dc;
+  color: #50C878;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 60px;
+  font-size: 70px;
   font-weight: bold;
+  text-shadow: 1px 1px 2px;
 }
 
 .banner p {
@@ -25,8 +27,13 @@
 .container-homepage {
   margin-left: 40px;
   padding: 40px;
+  z-index: 100;
 }
 
+// Home carousel
+#home-carousel {
+  position: relative;
+}
 
 // DreamCoLab Intro
 .card-join-community {
@@ -41,6 +48,7 @@
   font-size: 50px;
   margin-top: 10px;
   margin-bottom: 40px;
+  text-shadow: 1px 1px 2px;
 }
 
 .card-join-community a {
@@ -54,6 +62,7 @@
   font-family: 'Cutive Mono', monospace;
   font-size: 20px;
   margin-bottom: 50px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 
 }
 
@@ -71,6 +80,7 @@ border-bottom: 2px solid  #b9e1dc;
   margin-bottom: 20px;
   margin-top: 20px;
   font-weight: bold;
+  text-shadow: 1px 1px 2px;
 }
 
 .brand-card p {
@@ -90,14 +100,14 @@ border-bottom: 2px solid  #b9e1dc;
   justify-content: space-between;
   margin-top: 30px;
 
-.image {
-  width: 100%;
-  height: 250px;
-  object-fit:cover;
-  margin: 5px;
-  border: 2px solid #756c83;
-  box-shadow: 2px;
-  border-radius: 5px;
+  .image {
+    width: 100%;
+    height: 250px;
+    object-fit:cover;
+    margin: 5px;
+    box-shadow: 2px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 }
 

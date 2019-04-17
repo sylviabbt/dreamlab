@@ -18,4 +18,5 @@ class Collaboration < ApplicationRecord
       Notification.create(kid_id: drawings.kid_id, creator_id: creator_id,  content: "Your artist has finished the collaboration!", receiver: "kid")
     end
   end
+
 end

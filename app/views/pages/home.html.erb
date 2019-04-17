@@ -1,10 +1,5 @@
 <!-- Banner Top -->
-<div class="banner d-flex flex-column" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://blogs.rch.org.au/news/files/2013/03/00067006-leadimage.jpg);">
-  <div class="container-homepage">
-    <h1 class="mt-3 p-3"> dreamCo Lab</h1>
-    <p>keeping hope alive.</p>
-  </div>
-</div>
+<%= render 'homepage_carousel' %>
 <!-- DreamCoLab Register new user -->
 <div class="card-join-community text-center col-sm-8 offset-sm-2">
   <%= image_tag "logo.png", class:"image-logo" %>
@@ -35,16 +30,20 @@
   <h1>HOW IT WORKS.</h1>
   <p><strong>Our framework is designed to be as easy and user-friendly as possible!</strong></p>
   <i class="fas fa-user-astronaut mr-3"></i><i class="fas fa-upload"></i>
-  <p>1. Our dreamers will upload their favourite drawings.</p>
+  <p>Our dreamers will upload their favourite drawings.</p>
   <i class="fas fa-users mr-3"></i>  <i class="fas fa-hand-pointer"></i>
-  <p>2. Our creators around the world will browse an index of all drawings and pick one they would like to remaster and work on.</p>
+  <p>Our creators around the world will browse an index of all drawings and pick one they would like to remaster and work on.</p>
   <i class="fas fa-hand-holding-heart mr-3"></i>   <i class="fas fa-globe-americas"></i>
-  <p>3. About a week later, our dreamers will receive their finished piece and get to see their imagination and creations come to life! All pieces will be presented in our Dream Gallery, which is open for the world to see. </p>
+  <p>About a week later, our dreamers will receive their finished piece and get to see their imagination and creations come to life! All pieces will be represented in our Dream Gallery, which is open for the world to see. </p>
   <p></p>
 </div>
 <!-- Dream Gallery section -->
 <div class="brand-card col-sm-8 offset-sm-2 text-center">
   <h1>DREAM GALLERY.</h1>
-  <p >Our dream gallery is filled with creations and collaborations between dreamers and creators from all over the world! Take a look at some of our latest works.  </p>
+  <p >Our dream gallery is filled with creations and collaborations between dreamers and creators from all over the world! Take a look at some of our latest works:  </p>
   <%= render "collaborations/dream_gallery" %>
 </div>
+<!-- Run carousel partial -->
+<script>
+  $('.carousel').carousel()
+</script>

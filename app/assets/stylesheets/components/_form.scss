@@ -1,6 +1,6 @@
 .session-form {
   margin: 0 auto;
-  border: 2px solid white;
+  // border: 2px solid white;
   padding: 30px;
   margin-top: 20px;
   h2 {
@@ -10,13 +10,15 @@
   }
 }
 
+// Upload your new drawing here!
 .container-drawing h1 {
   font-family: 'Shadows Into Light', cursive;
   font-weight: bold;
   font-size: 50px;
-  color: #756c83;
+  color: #50C878;
   margin-top: 30px;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 label {
@@ -29,4 +31,9 @@ label {
 .container-edit h3 {
   font-family: 'Cutive Mono', monospace;
   color: black;
+}
+
+// This makes the footer at the bottom of shorter pages
+.full-height-page {
+  height: 100vh;
 }

@@ -13,6 +13,8 @@ class DrawingsController < ApplicationController
     @drawing = Drawing.new(drawing_params)
     @drawing.kid = current_user
     authorize @drawing
+
+
     if @drawing.save
       redirect_to drawings_path, notice: 'Thank you! Your drawing was successfully uploaded'
     else

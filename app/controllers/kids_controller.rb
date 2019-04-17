@@ -3,7 +3,6 @@ class KidsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:new, :create, :show, :edit, :update]
 
   def show
-    p current_user
     #refer to private method set_kid, called through before_action ()top line)
     @drawings = @kid.drawings
     @collaborations = policy_scope(Collaboration).order(created_at: :desc)
@@ -31,6 +30,8 @@ class KidsController < ApplicationController
   def edit
     #only current user can edit profile
     # @kid = current_user
+    # @user.tag_list.add(:tag_list, parse: true)
+    # @user.tag_list.remove(:tag_list, parse: true)
   end
 
   def update
@@ -50,6 +51,6 @@ class KidsController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def kid_params
-    params.require(:kid).permit(:email, :password, :first_name, :age, :avatar, :city, :description, :favourite_things, :dislikes)
+    params.require(:kid).permit(:email, :password, :first_name, :age, :avatar, :city, :description, :favourite_thing_list, :dislike_list, :tag_list)
   end
 end

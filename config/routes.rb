@@ -15,6 +15,9 @@ Rails.application.routes.draw do
     resources :collaborations, only: [:show, :edit, :update]
   end
 
-  resources :collaborations, only: [:index, :create]
+  resources :collaborations, only: [:index, :create] do
+    # new path =>  /collaborations/23/upvote
+    get '/upvote' => 'collaborations#upvote'
+  end
 
 end

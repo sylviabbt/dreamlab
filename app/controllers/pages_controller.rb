@@ -1,8 +1,8 @@
 class PagesController < ApplicationController
-  # skip_before_action :authenticate_user!, only: [:home]
+  skip_before_action :authenticate_user!, only: [:home, :dream_gallery]
 
   def home
-    @collaborations = policy_scope(Collaboration).order(created_at: :desc)
+    @collaborations = Collaboration.all.order(created_at: :desc)
     @home = true
   end
 
