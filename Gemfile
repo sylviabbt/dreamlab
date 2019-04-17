@@ -4,6 +4,8 @@ ruby '2.5.3'
 gem 'letter_opener', group: :development
 gem 'postmark-rails'
 
+gem 'bourbon', '~> 5.0'
+gem 'twilio-ruby'
 
 
 gem 'bootsnap', require: false

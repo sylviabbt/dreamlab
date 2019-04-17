@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
+  resources :tokens, only: [:create]
+
+
   get "/dream-gallery" => "pages#dream_gallery"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   resources :kids, only: [:create, :new, :show, :edit, :update] do
     resources :drawings, only: [:create, :new, :show, :destroy]
+    get '/chat' => 'chats#show'
     resources :collaborations, only: [:show]
   end
 
