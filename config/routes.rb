@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   resources :creators, only: [:create, :new, :show, :edit, :update] do
     resources :collaborations, only: [:show, :edit, :update]
+    get '/download' => 'collaborations#download'
   end
 
   resources :collaborations, only: [:index, :create] do

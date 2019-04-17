@@ -57,6 +57,14 @@ class CollaborationsController < ApplicationController
     end
   end
 
+  def download
+    require 'open-uri'
+    authorize @collaboration
+    url = cloudinary.url("@collaboration.original_filename", {width: 100, height: 150, crop: "fill"})
+    send_file :filename=>"photo.jpg"
+    send_file('url', { width: 100, height: 150, crop: "fill" })
+  end
+
   private
 
   def set_collaboration
