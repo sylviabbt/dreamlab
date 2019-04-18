@@ -48,11 +48,8 @@ class DrawingsController < ApplicationController
   def download
     require 'open-uri'
     authorize @drawing
-
     img = @drawing.image
     url = @drawing.image.url
-    # drawing.image.url
-    # collab.collab_upload.url
     send_file(open(url), filename: img.file.filename)
   end
 

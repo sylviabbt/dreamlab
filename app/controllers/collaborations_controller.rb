@@ -60,11 +60,8 @@ class CollaborationsController < ApplicationController
   def download
     require 'open-uri'
     authorize @collaboration
-
     img = @collaboration.drawing.image
     url = @collaboration.collab_upload.url
-    # drawing.image.url
-    # collab.collab_upload.url
     send_file(open(url), filename: img.file.filename)
   end
 
