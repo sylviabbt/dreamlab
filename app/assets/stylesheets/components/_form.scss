@@ -21,19 +21,36 @@
   text-align: center;
 }
 
-label {
-  font-family: 'Shadows Into Light', cursive;
-  font-weight: bold;
-  font-size: 20px;
-  color: #f38181;
-}
-
 .container-edit h3 {
   font-family: 'Cutive Mono', monospace;
   color: black;
 }
 
 // This makes the footer at the bottom of shorter pages
-.full-height-page {
-  height: 100vh;
+// .full-height-page {
+//   min-height: 100vh;
+// }
+
+.container-edit h2 {
+  font-family: 'Shadows Into Light', cursive;
+  color: #50C878;
+  font-size: 50px;
+  margin-top: 30px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px;
+}
+
+.container-edit {
+  display: flex;
+  flex-direction: column;
+  padding: 80px;
+  align-content: center;
+}
+
+// drawing show page flexed
+.drawing-show-all {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+
 }

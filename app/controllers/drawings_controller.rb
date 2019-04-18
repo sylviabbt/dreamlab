@@ -35,7 +35,7 @@ class DrawingsController < ApplicationController
   def show
     @user = current_user
     authorize @drawing
-    @collaboration = Collaboration.new
+    @collaboration = @drawing.collaboration || Collaboration.new
     @collaboration.drawing = @drawing
   end
 

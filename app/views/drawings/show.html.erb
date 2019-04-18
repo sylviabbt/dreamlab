@@ -1,25 +1,36 @@
-<div class="container text-center col-sm-8 offset-sm-2 my-3 p-3">
+<div class="title text-center col-sm-8 offset-sm-2 my-3 p-3">
   <!-- <div class="my-3 w-70%"> -->
-  <h1>My Drawing:</h1>
-  <!-- </div> -->
+  <h2><strong>Title: "<%= @drawing.name %>"</strong></h2>
+</div>
+<!-- </div> -->
+<div class="drawing-show-all">
   <div class="drawing-image">
     <p><%= cl_image_tag @drawing.image %></p>
   </div>
   <div class="container-edit">
     <h3><strong>Title: "<%= @drawing.name %>"</strong></h3>
-    <h1>About the Artist</h1>
-    <%= cl_image_tag @drawing.kid.avatar, class:"avatar-bordered w-25 h-25 m-3 p-3" %>
-    <a>
-      <h3><%=link_to "#{@drawing.kid.first_name}, #{@drawing.kid.age}", kid_path(@drawing.kid)%></h3>
-    </a>
-  </div>
-  <% if current_user.type == "Creator" %>
-    <p class="card-text">
+    <% if current_user.type == "Creator" %>
+      <h1>About the Dreamer</h1>
+      <%= cl_image_tag @drawing.kid.avatar, class:"avatar-bordered w-25 h-25 m-3 p-3" %>
+      <a>
+        <h3><%=link_to "#{@drawing.kid.first_name}, #{@drawing.kid.age}", kid_path(@drawing.kid)%></h3>
+      </a>
+    </div>
+    <div class="card-text">
       <%= simple_form_for [@collaboration.creator, @collaboration] do |c| %>
         <%= c.input :creator_id, as: :hidden, input_html: { value: current_user.id } %>
         <%= c.input :drawing_id, as: :hidden, input_html: { value: @drawing.id } %>
         <%= c.submit "Choose #{@drawing.kid.first_name}'s Drawing!", class:"button-register my-3" %>
       <% end %>
+    <% elsif (current_user.type == "Kid") && (@drawing.collaboration.creator == nil) %>
+      <h3> NOT YET BOOKED </h3>
+    <% elsif (current_user.type == "Kid") && (@drawing.booked?) %>
+      <h1>About the Creator who booked your drawing</h1>
+      <%= cl_image_tag @drawing.collaboration.creator.avatar, class:"avatar-bordered w-25 h-25 m-3 p-3" %>
+      <a>
+        <h3><%=link_to "#{@drawing.collaboration.creator.first_name}", creator_path(@collaboration.creator)%></h3>
+      </a>
     <% end %>
+    <<<<<<< HEAD
     <%= render 'drawings/download' %>
   </div>
