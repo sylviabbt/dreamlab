@@ -21,7 +21,7 @@ kid1 = Kid.new(first_name: 'Jia Jun', city: 'Shanghai', favourite_thing_list: ['
 kid1.remote_avatar_url = urlkid1
 kid1.save
 
-url1 = image_path + '/kid2-lion-in-my-castle.jpg'
+url1 = image_path + '/lioncastle.jpg'
 drawing1 = Drawing.new(name: 'lion in castle', kid: kid1)
 drawing1.remote_image_url = url1
 drawing1.save
@@ -31,7 +31,7 @@ kid2 = Kid.new(first_name: 'Yi Kai', city: 'Shanghai', favourite_thing_list: ['d
 kid2.remote_avatar_url = urlkid2
 kid2.save
 
-url2 = image_path + '/kid1-tall-man-in-sunny-garden.jpg'
+url2 = image_path + '/sunnygarden.jpg'
 drawing2 = Drawing.new(name: 'tall man in sunny garden', kid: kid2)
 drawing2.remote_image_url = url2
 drawing2.save
@@ -41,7 +41,7 @@ kid3 = Kid.new(first_name: 'TianHao', city: 'Shanghai', favourite_thing_list: ['
 kid3.remote_avatar_url = urlkid3
 kid3.save
 
-url3 = image_path + '/kid3-the-giraffe-and-the-apple-tree.png'
+url3 = image_path + '/giraffeandtrees.jpg'
 drawing3 = Drawing.new(name: 'Giraffe & Trees', kid: kid3)
 drawing3.remote_image_url = url3
 drawing3.save
@@ -51,7 +51,7 @@ kid4 = Kid.new(first_name: 'YiBei', city: 'Shanghai', favourite_thing_list: ['ma
 kid4.remote_avatar_url = urlkid4
 kid4.save
 
-url4 = image_path + '/kid4-autoportrait.jpg'
+url4 = image_path + '/sweetcupid.jpg'
 drawing4 = Drawing.new(name: 'autopotrait', kid: kid4)
 drawing4.remote_image_url = url4
 drawing4.save
@@ -105,7 +105,7 @@ kid9.save
 
 
 # REAL creator
-urlcreator1 = image_path + '/dezio.jpg'
+urlcreator1 = image_path + '/dezio.png'
 creator1 = Creator.new(city: 'Shanghai', age: '39', first_name: 'Paul', last_name: 'Dezio', portfolio_url: '', email: 'paul@dezio.com', password: 'aabbcc', description: 'Dezio is a french graffiti artist who has been living in China since 2006. He started his graffiti career in Paris in 1994 and in the past 20 years has left his mark all across Europe, Asia, and North America; gaining global recognition for his own distinct style of lettering and approach to graffiti art, and leading him to be featured in numerous different medias (books, magazines, tv shows, graffiti competitions, movies, websites). He moved to Shanghai in 2007, and is widely regarded as one of the doyen of China’s graffiti scene, earning him the nickname “Lao Du”, influencing local artists all over China and playing host to many of the big international names that have passed through.')
 creator1.remote_avatar_url = urlcreator1
 creator1.save
