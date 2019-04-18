@@ -13,7 +13,8 @@
           <%= cl_image_tag collab.drawing.image %>
           <div class="card-collab-infos-upload" style="position: relative;">
             <div>
-              <p>"<%= collab.drawing.name %>" by <%= collab.drawing.kid.first_name %></p>
+              <p>"<%= collab.drawing.name %>"</p>
+              <p>by <%= collab.drawing.kid.first_name %></p>
               <div class="collaboration-dates">
                 <p><strong><em>Booked on: </em></strong> <%= collab.created_at.strftime("%d / %m / %Y") %></em></strong></p>
                 <p><strong><em>Date due: </em></strong> <%= (collab.created_at + 7.days).strftime("%d / %m / %Y") %></em></strong></p>

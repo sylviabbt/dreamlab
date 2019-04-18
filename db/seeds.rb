@@ -42,7 +42,7 @@ kid3.remote_avatar_url = urlkid3
 kid3.save
 
 url3 = image_path + '/kid3-the-giraffe-and-the-apple-tree.png'
-drawing3 = Drawing.new(name: 'the giraffe and the apple tree', kid: kid3)
+drawing3 = Drawing.new(name: 'Giraffe & Trees', kid: kid3)
 drawing3.remote_image_url = url3
 drawing3.save
 
