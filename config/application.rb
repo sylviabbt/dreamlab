@@ -5,7 +5,6 @@ require 'rails/all'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
-DEFAULT_META = YAML.load_file("#{Rails.root}/config/meta.yml")
 
 module Dreamlab
   class Application < Rails::Application
