@@ -18,6 +18,8 @@
         <%= c.input :drawing_id, as: :hidden, input_html: { value: @drawing.id } %>
         <%= c.submit "Choose #{@drawing.kid.first_name}'s Drawing!", class:"button-register my-3" %>
       <% end %>
+    <% elsif (current_user.type == "Kid") && (@drawing.collaboration.creator == nil) %>
+      <h3> NOT YET BOOKED </h3>
     <% elsif (current_user.type == "Kid") && (@drawing.booked?) %>
       <h1>About the Creator who booked your drawing</h1>
       <%= cl_image_tag @drawing.collaboration.creator.avatar, class:"avatar-bordered w-25 h-25 m-3 p-3" %>
