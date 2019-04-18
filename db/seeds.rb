@@ -109,10 +109,10 @@ creator1 = Creator.new(city: 'Berlin',  age: '37', first_name: 'Helena', last_na
 creator1.remote_avatar_url = urlcreator1
 creator1.save
 
-urlcreator2 = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkbv6BRBlNdvShncOQCkjmddW93fYvV3-3lG-sOhBHtBO1TcgMEg'
-creator2 = Creator.new(city: 'Sao Paulo', age: '66', first_name: 'Paulo', last_name: 'Moreira', portfolio_url: 'www.pmoreira.com.br', email: 'paulo@pmoreira.com', password: 'aabbcc', description: 'Getting outside is good for the soul. Through my artwork, I try to bring the outside in. While I make no attempt to portray actual plants or animals, I do want my creations to look like they could have lived or grown somewhere. Living with beautiful objects that pay tribute to the natural world reminds us to slow down and helps us reconnect with nature.')
-creator2.remote_avatar_url = urlcreator2
-creator2.save
+# urlcreator2 = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkbv6BRBlNdvShncOQCkjmddW93fYvV3-3lG-sOhBHtBO1TcgMEg'
+# creator2 = Creator.new(city: 'Sao Paulo', age: '66', first_name: 'Paulo', last_name: 'Moreira', portfolio_url: 'www.pmoreira.com.br', email: 'paulo@pmoreira.com', password: 'aabbcc', description: 'Getting outside is good for the soul. Through my artwork, I try to bring the outside in. While I make no attempt to portray actual plants or animals, I do want my creations to look like they could have lived or grown somewhere. Living with beautiful objects that pay tribute to the natural world reminds us to slow down and helps us reconnect with nature.')
+# creator2.remote_avatar_url = urlcreator2
+# creator2.save
 
 urlcreator3 = 'https://rwwcomplaw.com/wp-content/uploads/2015/01/Lam-Vincci-Square-Crop-low-res.jpg'
 creator3 = Creator.new(city: 'Cape Town', age: '23', first_name: 'Lola', last_name: 'Chan', portfolio_url: 'www.lolacreates.co.za', email: 'lola@lolacreate.com', password: 'a1b2c3', description: 'Capturing the light is everything! As a plein air painter, it is always the light that I remember most about any location. It is my inspiration. Its elusive quality can transform a figure or a landscape in just a matter of seconds. I strive to convey that sense of place by capturing its fleeting magic.')
