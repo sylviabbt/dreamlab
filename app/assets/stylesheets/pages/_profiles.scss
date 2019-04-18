@@ -1,5 +1,5 @@
 // Profile Information
-.container-profile {
+.container-profile, .container-profile-creator {
   border-bottom: 2px solid white;
 }
 
@@ -19,11 +19,11 @@
   text-shadow: 1px 1px 1px;
 }
 
-.container-profile h2, .container-profile-creator h2 {
+.container-profile h4, .container-profile-creator h4 {
   font-family: 'Cutive Mono', monospace;
 }
 
-.container-profile h4, .container-profile-creator h4 {
+.container-profile h2, .container-profile-creator h2 {
   font-family: 'Shadows Into Light', cursive;
   color: #f38181;
   margin-top: 30px;
