@@ -9,15 +9,18 @@
   </div>
   <div class="container-edit text-center">
     <% if current_user.type == "Creator" %>
-    <h2>About the Dreamer</h2>
-    <%= cl_image_tag @drawing.kid.avatar, class:"avatar-bordered-large" %>
-      <a><h3><%=link_to "#{@drawing.kid.first_name}, #{@drawing.kid.age}", kid_path(@drawing.kid)%></h3></a>
+      <h2>About the Dreamer</h2>
+      <%= cl_image_tag @drawing.kid.avatar, class:"avatar-bordered-large" %>
+      <a>
+        <h3><%=link_to "#{@drawing.kid.first_name}, #{@drawing.kid.age}", kid_path(@drawing.kid)%></h3>
+      </a>
       <div class="card-text">
         <%= simple_form_for [@collaboration.creator, @collaboration] do |c| %>
           <%= c.input :creator_id, as: :hidden, input_html: { value: current_user.id } %>
           <%= c.input :drawing_id, as: :hidden, input_html: { value: @drawing.id } %>
           <%= c.submit "Choose #{@drawing.kid.first_name}'s Drawing!", class:"button-register my-3" %>
         <% end %>
+        <div><%= render 'drawings/download' %></div>
       </div>
     <% elsif (current_user.type == "Kid") && (@drawing.collaboration.creator == nil) %>
       <h3> NOT YET BOOKED </h3>
@@ -28,5 +31,4 @@
         <h3><%=link_to "#{@drawing.collaboration.creator.first_name}", creator_path(@collaboration.creator)%></h3>
       </a>
     <% end %>
-    <%= render 'drawings/download' %>
   </div>
