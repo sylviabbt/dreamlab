@@ -1,7 +1,6 @@
 import "bootstrap";
 
 
-
 // const batch = 236; // change to your own batch id
 // const baseUrl = "https://wagon-chat.herokuapp.com/236/messages";
 

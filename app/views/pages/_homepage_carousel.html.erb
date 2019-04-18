@@ -1,4 +1,4 @@
-<div id="home-carousel" class="carousel slide" data-ride="carousel" data-interval="4000" data-pause="false">
+<div id="home-carousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="false">
   <!-- set ouside to relative, then new div w/ navbar absolute -->
   <!-- End of banner classes -->
   <ol class="carousel-indicators">
@@ -16,10 +16,11 @@
     </div>
     <%= render 'shared/homenav' %>
     <% picture_slides = ['leadkid.png', 'childpainting.jpg', 'homeart5.jpg', 'homeart4.png'].each_with_index do |pic, i| %>
-      <div class="carousel-item <%= 'active' if i == 0 %>" style="background: #000, linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)); max-height: 100vh; overflow: hidden; height: 100vh;">
+      <div class="carousel-item <%= 'active' if i == 0 %>" style="background: #000, linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)); max-height: 100vh; overflow: hidden; height: 100vh;" >
         <img class="d-block w-100" src="<%= image_path pic %>" alt="First slide" style="min-height: 100vh;">
         <div style="position: absolute; width: 100vw; height: 100vh; background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)); max-height: 100vh; top: 0; left: 0"></div>
       </div>
     <% end %>
   </div>
 </div>
+<!-- onclick="$('home-carousel').carousel('pause');" -->
