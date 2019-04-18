@@ -42,7 +42,7 @@ kid3.remote_avatar_url = urlkid3
 kid3.save
 
 url3 = image_path + '/kid3-the-giraffe-and-the-apple-tree.png'
-drawing3 = Drawing.new(name: 'giraffe and apple tree', kid: kid3)
+drawing3 = Drawing.new(name: 'Giraffe & Trees', kid: kid3)
 drawing3.remote_image_url = url3
 drawing3.save
 ##############
@@ -116,6 +116,7 @@ creator2 = Creator.new(city: 'Berlin',  age: '37', first_name: 'Helena', last_na
 creator2.remote_avatar_url = urlcreator2
 creator2.save
 ##############
+
 urlcreator3 = 'https://rwwcomplaw.com/wp-content/uploads/2015/01/Lam-Vincci-Square-Crop-low-res.jpg'
 creator3 = Creator.new(city: 'Cape Town', age: '23', first_name: 'Lola', last_name: 'Chan', portfolio_url: 'www.lolacreates.co.za', email: 'lola@lolacreate.com', password: 'a1b2c3', description: 'Capturing the light is everything! As a plein air painter, it is always the light that I remember most about any location. It is my inspiration. Its elusive quality can transform a figure or a landscape in just a matter of seconds. I strive to convey that sense of place by capturing its fleeting magic.')
 creator3.remote_avatar_url = urlcreator3
