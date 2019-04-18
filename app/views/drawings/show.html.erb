@@ -30,4 +30,5 @@
         <h3><%=link_to "#{@drawing.collaboration.creator.first_name}", creator_path(@collaboration.creator)%></h3>
       </a>
     <% end %>
+    <%= render 'drawings/download' %>
   </div>

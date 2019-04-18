@@ -21,6 +21,10 @@ class CollaborationPolicy < ApplicationPolicy
     true
   end
 
+  def download?
+    true
+  end
+
   def update?
     true
   end
