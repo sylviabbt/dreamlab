@@ -10,14 +10,16 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
-  <body style="background-image: url('<%= image_path "background2.jpg" %>')">
-    <%= render 'shared/flashes' %>
-    <% if @home %>
-      <%= render 'shared/homenav' %>
-    <% else %>
-      <%= render 'shared/navbar' %>
-    <% end %>
-    <%= yield %>
+  <body style="background-image: url('<%= image_path "background2.jpg" %>');" >
+    <main>
+      <%= render 'shared/flashes' %>
+      <% if @home %>
+        <%= render 'shared/homenav' %>
+      <% else %>
+        <%= render 'shared/navbar' %>
+      <% end %>
+      <%= yield %>
+    </main>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
     <%= render 'shared/footer' %>
