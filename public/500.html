@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>We're sorry, but something went wrong (500)</title>
+  <title>Whoopsie Daisies!</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
   .rails-default-error-page {
@@ -31,6 +31,12 @@
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   }
 
+  .rails-default-error-page {
+     background-size: 100%;
+     background-repeat: no-repeat;
+
+  }
+
   .rails-default-error-page h1 {
     font-size: 100%;
     color: #730E15;
@@ -38,6 +44,7 @@
   }
 
   .rails-default-error-page div.dialog > p {
+    font-family: 'Cutive Mono', monospace;
     margin: 0 0 1em;
     padding: 1em;
     background-color: #F7F7F7;
@@ -54,13 +61,13 @@
   </style>
 </head>
 
-<body class="rails-default-error-page">
+<body class="rails-default-error-page" style="background-image: url('/images/500img.jpg')">
   <!-- This file lives in public/500.html -->
   <div class="dialog">
     <div>
-      <h1>We're sorry, but something went wrong.</h1>
+      <h1>We're so sorry, but it seems like something went wrong here.</h1>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
+    <p>If you own this awesome site, please check your logs.</p>
   </div>
 </body>
 </html>
