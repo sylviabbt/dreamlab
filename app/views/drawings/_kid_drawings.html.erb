@@ -10,21 +10,21 @@
         <div class="card-collab-infos-upload" style="position: relative;">
           <div>
             <p>"<%= drawing.name %>"</p>
-              <div class="collaboration-dates">
-                <% if drawing.booked?%>
-                  <div>
-                  <p><strong><em>Booked by: </em></strong> <%= drawing.collaboration.creator.first_name %></p>
-                  <p><strong><em>Booked on: </em></strong> <%= drawing.collaboration.created_at.strftime("%d / %m / %Y") %></em></strong></p>
-                  <p><strong><em>Date due: </em></strong> <%= (drawing.collaboration.created_at + 7.days).strftime("%d / %m / %Y") %></em></strong></p>
-                  </div>
-                  <div>
-                  <%= cl_image_tag drawing.collaboration.creator.avatar, class:"card-collab-user avatar-bordered drawing" %>
-                  </div>
-                <% else %>
-                  <p><strong><em>Created at: </em></strong><%= drawing.created_at.strftime("%d / %m / %Y") %></p>
-                  <p><strong><em>NOT YET BOOKED</p>
-                <% end %>
-              </div>
+            <div class="collaboration-dates">
+              <% if drawing.booked?%>
+                <div>
+                <p><strong><em>Booked by: </em></strong> <%= drawing.collaboration.creator.first_name %></p>
+                <p><strong><em>Booked on: </em></strong> <%= drawing.collaboration.created_at.strftime("%d / %m / %Y") %></p>
+                <p><strong><em>Date due: </em></strong> <%= (drawing.collaboration.created_at + 7.days).strftime("%d / %m / %Y") %></p>
+                </div>
+                <div>
+                <%= cl_image_tag drawing.collaboration.creator.avatar, class:"card-collab-user avatar-bordered drawing" %>
+                </div>
+              <% else %>
+                <p><strong><em>Created at: </em></strong><%= drawing.created_at.strftime("%d / %m / %Y") %></p>
+                <p><strong><em>NOT YET BOOKED</em></strong></p>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
