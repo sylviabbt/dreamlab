@@ -4,11 +4,13 @@
   <h1>My Drawings Gallery</h1>
 </div>
 <div class="row my-3 p-3">
-  <% if @drawing.booked? == false %>
     <% @drawings.each do |drawing| %>
+      <% if drawing.booked? == false %>
       <div class="col-lg-4 col-md-6 col-sm-12">
         <div class="card-collab upload my3">
-          <%= cl_image_tag drawing.image %>
+          <%= link_to kid_drawing_path(drawing.kid, drawing) do %>
+            <%= cl_image_tag drawing.image %>
+          <% end %>
           <div class="card-collab-infos-upload" style="position: relative;">
             <div>
               <p>"<%= drawing.name %>"</p>

@@ -1,5 +1,6 @@
 class DrawingsController < ApplicationController
-  before_action :set_drawing, only: [:show, :destroy]
+  before_action :set_drawing, only: [:show, :destroy, :download]
+  skip_before_action :authenticate_user!, only: [:download]
   def index
     @drawings = policy_scope(Drawing).order(created_at: :desc)
 
@@ -44,10 +45,18 @@ class DrawingsController < ApplicationController
     redirect_to drawings_path
   end
 
+  def download
+    require 'open-uri'
+    authorize @drawing
+    img = @drawing.image
+    url = @drawing.image.url
+    send_file(open(url), filename: img.file.filename)
+  end
+
   private
 
   def set_drawing
-    @drawing = Drawing.find(params[:id])
+    @drawing = Drawing.find((params[:id] || params[:drawing_id]))
   end
 
   def drawing_params
