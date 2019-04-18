@@ -32,3 +32,16 @@
   font-size: 15px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
+
+// download
+
+.fa-cloud-download-alt {
+    font-size: 50px;
+    color: #50C878;
+    opacity: 0.5;
+  &:hover{
+    opacity: 1;
+  }
+}
+
+
