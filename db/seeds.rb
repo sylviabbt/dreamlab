@@ -64,7 +64,7 @@ kid5.save
 
 url5 = image_path + '/drawing1.png'
 drawing5 = Drawing.new(name: 'sunny day at the park', kid: kid5)
-drawing5.remote_image_url = url1
+drawing5.remote_image_url = url5
 drawing5.save
 
 urlkid6 = 'https://image.flaticon.com/icons/svg/1718/1718044.svg'
@@ -94,7 +94,7 @@ kid8.save
 
 url8 = image_path + '/drawing4.png'
 drawing8 = Drawing.new(name: 'my first drawing', kid: kid8)
-drawing8.remote_image_url = url4
+drawing8.remote_image_url = url8
 drawing8.save
 
 urlkid9 = 'https://image.flaticon.com/icons/svg/163/163823.svg'
@@ -103,18 +103,18 @@ kid9.remote_avatar_url = urlkid9
 kid9.save
 
 
-#creators and collabs
+#creators
 urlcreator1 = image_path + '/helenapic.png'
 creator1 = Creator.new(city: 'Berlin',  age: '37', first_name: 'Helena', last_name: 'Schmidt', portfolio_url: 'www.helenaschmidt.com', email: 'helena@helenaschmidt.com', password: 'abcdef', description: 'What do I want to say with my art? Celebrate the human, the marks people make on the world. Treasure the local, the small-scale, the eccentric, the ordinary: whatever is made out of caring. Respect what people have built for themselves')
 creator1.remote_avatar_url = urlcreator1
 creator1.save
 
-urlcreator2 = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkbv6BRBlNdvShncOQCkjmddW93fYvV3-3lG-sOhBHtBO1TcgMEg'
-creator2 = Creator.new(city: 'Sao Paulo', age: '66', first_name: 'Paulo', last_name: 'Moreira', portfolio_url: 'www.pmoreira.com.br', email: 'paulo@pmoreira.com', password: 'aabbcc', description: 'Getting outside is good for the soul. Through my artwork, I try to bring the outside in. While I make no attempt to portray actual plants or animals, I do want my creations to look like they could have lived or grown somewhere. Living with beautiful objects that pay tribute to the natural world reminds us to slow down and helps us reconnect with nature.')
+urlcreator2 = ''
+creator2 = Creator.new(city: 'Shanghai', age: '39', first_name: 'Paul', last_name: 'Dezio', portfolio_url: 'www.pmoreira.com.br', email: 'paul@dezio.com', password: 'aabbcc', description: 'Getting outside is good for the soul. Through my artwork, I try to bring the outside in. While I make no attempt to portray actual plants or animals, I do want my creations to look like they could have lived or grown somewhere. Living with beautiful objects that pay tribute to the natural world reminds us to slow down and helps us reconnect with nature.')
 creator2.remote_avatar_url = urlcreator2
 creator2.save
 
-urlcreator3 = 'https://rwwcomplaw.com/wp-content/uploads/2015/01/Lam-Vincci-Square-Crop-low-res.jpg'
-creator3 = Creator.new(city: 'Cape Town', age: '23', first_name: 'Lola', last_name: 'Chan', portfolio_url: 'www.lolacreates.co.za', email: 'lola@lolacreate.com', password: 'a1b2c3', description: 'Capturing the light is everything! As a plein air painter, it is always the light that I remember most about any location. It is my inspiration. Its elusive quality can transform a figure or a landscape in just a matter of seconds. I strive to convey that sense of place by capturing its fleeting magic.')
-creator3.remote_avatar_url = urlcreator3
-creator3.save
+# urlcreator3 = 'https://rwwcomplaw.com/wp-content/uploads/2015/01/Lam-Vincci-Square-Crop-low-res.jpg'
+# creator3 = Creator.new(city: 'Cape Town', age: '23', first_name: 'Lola', last_name: 'Chan', portfolio_url: 'www.lolacreates.co.za', email: 'lola@lolacreate.com', password: 'a1b2c3', description: 'Capturing the light is everything! As a plein air painter, it is always the light that I remember most about any location. It is my inspiration. Its elusive quality can transform a figure or a landscape in just a matter of seconds. I strive to convey that sense of place by capturing its fleeting magic.')
+# creator3.remote_avatar_url = urlcreator3
+# creator3.save
