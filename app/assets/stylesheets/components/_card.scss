@@ -206,3 +206,10 @@ padding-top: 10px
   top: 0px;
 
 }
+
+.card-collab.upload a img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  padding: 0px;
+}
