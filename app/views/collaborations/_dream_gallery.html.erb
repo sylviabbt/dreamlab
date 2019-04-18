@@ -20,7 +20,9 @@
             <%= link_to collaboration_upvote_path(collab) do %> <i class="far fa-heart"></i>  <%= "#{collab.votes_for.size}" %>
             <% end %>
           </div>
+           <div class="text-center mb-3">
           <%= link_to "View Full Collab", creator_collaboration_path(collab.creator, collab), class:"btn-view-more" %>
+          </div>
         </div>
       </div>
     <% end %>
