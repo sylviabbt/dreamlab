@@ -33,7 +33,7 @@
   <h1>My Collaborations</h1>
 </div>
 <div class="row my-3 p-3">
-  <% completed = current_user.collaborations.select{|x| x.collab_upload.filename != nil}%>
+  <% completed = @kid.collaborations.select{|x| x.collab_upload.filename != nil}%>
   <% completed.each do |collab| %>
     <div class="col-lg-4 col-md-6 col-sm-12">
       <div class="card-collab my-3">
