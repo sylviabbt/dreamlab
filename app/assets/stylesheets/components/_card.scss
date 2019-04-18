@@ -119,6 +119,7 @@
 .together-card {
   background-color: transparent;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   width: 80%;
   height: auto;
@@ -128,7 +129,7 @@
 .drawing-image img, .finished-collab-image img {
   height: 650px;
   width: auto;
-  max-width: 800px;
+  max-width: 850px;
   object-fit: cover;
   margin-left: 20px;
   margin-right: 20px;

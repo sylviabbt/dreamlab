@@ -6,7 +6,7 @@ gem 'postmark-rails'
 
 
 
-gem 'bootsnap', require: false
+gem 'bootsnap', '~>1.4.3',require: false
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 0.21'
