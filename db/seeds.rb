@@ -64,7 +64,7 @@ kid5.save
 
 url5 = image_path + '/drawing1.png'
 drawing5 = Drawing.new(name: 'sunny day at the park', kid: kid5)
-drawing5.remote_image_url = url1
+drawing5.remote_image_url = url5
 drawing5.save
 
 urlkid6 = 'https://image.flaticon.com/icons/svg/1718/1718044.svg'

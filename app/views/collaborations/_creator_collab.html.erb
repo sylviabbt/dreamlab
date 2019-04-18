@@ -5,46 +5,42 @@
   </div>
   <div class="collab-sectioning">
     <h1>Booked Collaborations</h1>
-      <div class="row my-3 p-3">
-        <% booked = @collaborations.select{|x| x.collab_upload.filename == nil} %>
-        <% booked.each do |collab| %>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="card-collab upload my3">
-                <%= cl_image_tag collab.drawing.image %>
-                <div class="card-collab-infos-upload" style="position: relative;">
-                  <div>
-                    <p>"<%= collab.drawing.name %>" by <%= collab.drawing.kid.first_name %></p>
-                    <div class="collaboration-dates">
-                      <p><strong><em>Booked on: </em></strong> <%= collab.created_at.strftime("%d / %m / %Y") %></em></strong></p>
-                      <p><strong><em>Date due: </em></strong> <%= (collab.created_at + 7.days).strftime("%d / %m / %Y") %></em></strong></p>
-                    </div>
-                    <%= simple_form_for [current_user, collab], html: {novalidate: false} do |f| %>
-                      <%= f.input :collab_upload, :required => true %>
-                      <%= f.input :collab_upload_cache, as: :hidden %>
-                      <%= f.submit "Complete Collaboration!", class:"complete-collab-button" %>
-                    <% end %>
-                    </div>
-                  <%= cl_image_tag collab.drawing.kid.avatar, class:"card-collab-user avatar-bordered upload" %>
-                </div>
+    <div class="row my-3 p-3">
+      <% booked = @collaborations.select{|x| x.collab_upload.filename == nil} %>
+      <% booked.each do |collab| %>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card-collab upload my3">
+          <%= cl_image_tag collab.drawing.image %>
+          <div class="card-collab-infos-upload" style="position: relative;">
+            <div>
+              <p>"<%= collab.drawing.name %>" by <%= collab.drawing.kid.first_name %></p>
+              <div class="collaboration-dates">
+                <p><strong><em>Booked on: </em></strong> <%= collab.created_at.strftime("%d / %m / %Y") %></em></strong></p>
+                <p><strong><em>Date due: </em></strong> <%= (collab.created_at + 7.days).strftime("%d / %m / %Y") %></em></strong></p>
               </div>
+              <%= simple_form_for [current_user, collab], html: {novalidate: false} do |f| %>
+                <%= f.input :collab_upload, :required => true %>
+                <%= f.input :collab_upload_cache, as: :hidden %>
+                <%= f.submit "Complete Collaboration!", class:"complete-collab-button" %>
+              <% end %>
+              </div>
+            <%= cl_image_tag collab.drawing.kid.avatar, class:"card-collab-user avatar-bordered upload" %>
             </div>
-          <% end %>
+          </div>
         </div>
+      <% end %>
       </div>
-  </div>
-  <div class="collab-sectioning">
-    <h1>Completed collaborations</h1>
-      <div class="row my-3 p-3">
-        <% completed = @collaborations.select{|x| x.collab_upload.filename != nil}%>
-        <% completed.each do |collab| %>
+    </div>
+    <h1>Completed  collaborations</h1>
+    <div class="row my-3 p-3">
+      <% completed = @collaborations.select{|x| x.collab_upload.filename != nil}%>
+      <% completed.each do |collab| %>
         <div class="col-lg-4 col-md-6 col-sm-12">
           <div class="card-collab my-3">
             <div class="flip-card">
               <div class="flip-card-inner">
-                <div class="flip-card-front" style="background-image: url('<%= cl_image_path collab.drawing.image %>')">
-                </div>
-                <div class="flip-card-back" style="background-image: url('<%= cl_image_path collab.collab_upload %>')">
-                </div>
+                <div class="flip-card-front" style="background-image: url('<%= cl_image_path collab.drawing.image %>')"></div>
+                <div class="flip-card-back" style="background-image: url('<%= cl_image_path collab.collab_upload %>')"></div>
               </div>
             </div>
             <div class="card-collab-infos">
