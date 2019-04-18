@@ -10,7 +10,9 @@
       <% booked.each do |collab| %>
         <div class="col-lg-4 col-md-6 col-sm-12">
           <div class="card-collab upload my3">
+            <%= link_to kid_drawing_path(collab.drawing.kid, collab.drawing) do %>
             <%= cl_image_tag collab.drawing.image %>
+            <% end %>
             <div class="card-collab-infos-upload" style="position: relative;">
               <div>
                 <p>"<%= collab.drawing.name %>"</p>
