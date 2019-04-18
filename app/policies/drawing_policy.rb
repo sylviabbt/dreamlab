@@ -24,4 +24,8 @@ class DrawingPolicy < ApplicationPolicy
   def destroy?
     true
   end
+
+  def download?
+    true
+  end
 end
