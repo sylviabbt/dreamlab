@@ -1,24 +1,25 @@
-<div class="container text-center col-sm-8 offset-sm-2 my-3 p-3">
+<div class="title text-center col-sm-8 offset-sm-2 my-3 p-3">
   <!-- <div class="my-3 w-70%"> -->
-  <h1>My Drawing:</h1>
-  <!-- </div> -->
+  <h2><strong>Title: "<%= @drawing.name %>"</strong></h2>
+</div>
+<!-- </div> -->
+<div class="drawing-show-all">
   <div class="drawing-image">
     <p><%= cl_image_tag @drawing.image %></p>
   </div>
-  <div class="container-edit">
-    <h3><strong>Title: "<%= @drawing.name %>"</strong></h3>
-    <h1>About the Artist</h1>
-    <%= cl_image_tag @drawing.kid.avatar, class:"avatar-bordered w-25 h-25 m-3 p-3" %>
+  <div class="container-edit text-center">
+    <h2>About the Artist</h2>
+    <%= cl_image_tag @drawing.kid.avatar, class:"avatar-bordered-large" %>
     <a>
       <h3><%=link_to "#{@drawing.kid.first_name}, #{@drawing.kid.age}", kid_path(@drawing.kid)%></h3>
     </a>
-  </div>
-  <% if current_user.type == "Creator" %>
-    <p class="card-text">
-      <%= simple_form_for [@collaboration.creator, @collaboration] do |c| %>
-        <%= c.input :creator_id, as: :hidden, input_html: { value: current_user.id } %>
-        <%= c.input :drawing_id, as: :hidden, input_html: { value: @drawing.id } %>
-        <%= c.submit "Choose #{@drawing.kid.first_name}'s Drawing!", class:"button-register my-3" %>
+    <% if current_user.type == "Creator" %>
+      <p class="card-text">
+        <%= simple_form_for [@collaboration.creator, @collaboration] do |c| %>
+          <%= c.input :creator_id, as: :hidden, input_html: { value: current_user.id } %>
+          <%= c.input :drawing_id, as: :hidden, input_html: { value: @drawing.id } %>
+          <%= c.submit "Choose #{@drawing.kid.first_name}'s Drawing!", class:"button-register my-3" %></p>
       <% end %>
     <% end %>
   </div>
+</div>

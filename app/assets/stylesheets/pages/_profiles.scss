@@ -3,19 +3,27 @@
   border-bottom: 2px solid white;
 }
 
-.container-profile h1 {
+.container-profile-creator h1 {
  font-family: 'Shadows Into Light', cursive;
+  color: #756c83;
+  font-weight: bold;
+  font-size: 50px;
+  text-shadow: 1px 1px 1px;
+}
+
+.container-profile h1 {
+  font-family: 'Shadows Into Light', cursive;
   color: #50C878;
   font-weight: bold;
   font-size: 50px;
   text-shadow: 1px 1px 1px;
 }
 
-.container-profile h2 {
+.container-profile h2, .container-profile-creator h2 {
   font-family: 'Cutive Mono', monospace;
 }
 
-.container-profile h4 {
+.container-profile h4, .container-profile-creator h4 {
   font-family: 'Shadows Into Light', cursive;
   color: #f38181;
   margin-top: 30px;
