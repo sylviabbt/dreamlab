@@ -1,7 +1,7 @@
 <!-- Index for ALL COLLABS FOR SPECIFIC CREATOR -->
 <div class="full-height-page">
   <div class="title text-center mb-3">
-    <h1><%= current_user.first_name %>'s  Collaborations Gallery</h1>
+    <h1>My Collaborations Gallery</h1>
   </div>
   <div class="collab-sectioning">
     <h1>Booked Collaborations</h1>
@@ -48,7 +48,7 @@
               </div>
             </div>
             <div class="card-collab-infos">
-              <h5>COMPLETED: "<%= collab.drawing.name %>"</h5>
+              <h5>"<%= collab.drawing.name %>"</h5>
               <p> <strong><em>inspired by</em></strong> <%= collab.drawing.kid.first_name %></p>
               <p><strong><em>brought to life by</em></strong> <%= collab.creator.first_name %></p>
               <%= link_to collaboration_upvote_path(collab) do %> <i class="far fa-heart"></i>  <%= "#{collab.votes_for.size}" %>

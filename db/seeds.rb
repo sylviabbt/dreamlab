@@ -15,9 +15,9 @@ Drawing.delete_all if Rails.env.development?
 Creator.delete_all if Rails.env.development?
 Kid.delete_all if Rails.env.development?
 
-#kids and drawings
-urlkid1 = 'https://www.shareicon.net/data/128x128/2016/06/25/786536_people_512x512.png'
-kid1 = Kid.new(first_name: '奕恺', city: 'Shanghai', favourite_thing_list: ['drawings', 'playing with the cooking set', 'color green'], worst_thing_list: [''], description: '', email: 'ethan@gmail.com', age: '5', password: '123123')
+#REAL kids and drawings
+urlkid1 = 'https://i0.wp.com/orig01.deviantart.net/6e69/f/2012/236/1/1/avatar_aang_by_kirin_48-d5cb7h3.png'
+kid1 = Kid.new(first_name: 'Yi Kai', city: 'Shanghai', favourite_thing_list: ['drawings', 'playing with the cooking set', 'color green'], worst_thing_list: [''], description: '', email: 'yikai@gmail.com', age: '5', password: '123123')
 kid1.remote_avatar_url = urlkid1
 kid1.save
 
@@ -26,8 +26,8 @@ drawing1 = Drawing.new(name: 'tall man in sunny garden', kid: kid1)
 drawing1.remote_image_url = url1
 drawing1.save
 
-urlkid2 = 'https://image.flaticon.com/icons/svg/163/163823.svg'
-kid2 = Kid.new(first_name: '佳俊', city: 'Shanghai', favourite_thing_list: ['lions and tigers and ultman (奥特曼), chicken leg, hide and seek'], worst_thing_list: ['onions'], description: '', email: 'sammy@gmail.com', age: '4', password: '111111')
+urlkid2 = 'https://images.vexels.com/media/users/3/128175/isolated/preview/626b073e740b18d826291258d98b4e90-lion-cartoon-circle-icon-by-vexels.png'
+kid2 = Kid.new(first_name: 'Jia Jun', city: 'Shanghai', favourite_thing_list: ['lions and tigers and ultman (奥特曼), chicken leg, hide and seek'], worst_thing_list: ['onions'], description: '', email: 'jiajun@gmail.com', age: '4', password: '111111')
 kid2.remote_avatar_url = urlkid2
 kid2.save
 
@@ -36,8 +36,8 @@ drawing2 = Drawing.new(name: 'lion in my castle', kid: kid2)
 drawing2.remote_image_url = url2
 drawing2.save
 
-urlkid3 = 'https://image.flaticon.com/icons/svg/163/163801.svg'
-kid3 = Kid.new(first_name: '天浩', city: 'Shanghai', favourite_thing_list: ['lego', 'apples', 'strawberry biscuits'], worst_thing_list: ['nothing'], description: '', email: 'leo@gmail.com', age: '6', password: '444444')
+urlkid3 = 'https://png.pngtree.com/element_pic/16/12/18/c7bde342798e69d52b7341e8a233ec86.jpg'
+kid3 = Kid.new(first_name: 'TianHao', city: 'Shanghai', favourite_thing_list: ['lego', 'apples', 'strawberry biscuits'], worst_thing_list: ['nothing'], description: '', email: 'tianhao@gmail.com', age: '6', password: '444444')
 kid3.remote_avatar_url = urlkid3
 kid3.save
 
@@ -46,8 +46,8 @@ drawing3 = Drawing.new(name: 'the giraffe and the apple tree', kid: kid3)
 drawing3.remote_image_url = url3
 drawing3.save
 
-urlkid4 = 'https://image.flaticon.com/icons/svg/1624/1624482.svg'
-kid4 = Kid.new(first_name: '依蓓', city: 'Shanghai', favourite_thing_list: ['manga', 'singing', 'drawing'], worst_thing_list: ['exams'], description: 'I will go to art school and be an artist when I grow up!', email: 'lily@gmail.com', age: '13', password: '333333')
+urlkid4 = 'https://www.clipartmax.com/png/middle/68-686733_pikachu-with-hat-drawing-pikachu-wallpaper-hd.png'
+kid4 = Kid.new(first_name: 'YiBei', city: 'Shanghai', favourite_thing_list: ['manga', 'singing', 'drawing'], worst_thing_list: ['exams'], description: 'I will go to art school and be an artist when I grow up!', email: 'yibei@gmail.com', age: '13', password: '333333')
 kid4.remote_avatar_url = urlkid4
 kid4.save
 
@@ -56,6 +56,51 @@ drawing4 = Drawing.new(name: 'autopotrait', kid: kid4)
 drawing4.remote_image_url = url4
 drawing4.save
 
+#FAKE kids and drawings
+urlkid5 = 'https://www.shareicon.net/data/128x128/2016/06/25/786536_people_512x512.png'
+kid5 = Kid.new(first_name: 'Ethan', city: 'Shanghai', favourite_thing_list: ['chocolate', 'pizza'], worst_thing_list: ['spinach'], description: 'stronger than Superman!', email: 'ethan@gmail.com', age: '8', password: '123123')
+kid5.remote_avatar_url = urlkid5
+kid5.save
+
+url5 = image_path + '/drawing1.png'
+drawing5 = Drawing.new(name: 'sunny day at the park', kid: kid5)
+drawing5.remote_image_url = url1
+drawing5.save
+
+urlkid6 = 'https://image.flaticon.com/icons/svg/1718/1718044.svg'
+kid6 = Kid.new(first_name: 'Sammy', city: 'Shanghai', favourite_thing_list: ['ice cream'], worst_thing_list: ['injections'], description: '', email: 'sammy@gmail.com', age: '7', password: '111111')
+kid6.remote_avatar_url = urlkid6
+kid6.save
+
+urlkid7 = 'https://image.flaticon.com/icons/svg/163/163801.svg'
+kid7 = Kid.new(first_name: 'Leo', city: 'Shanghai', favourite_thing_list: ['french fries', 'pasta'], worst_thing_list: ['thunder', 'brussel sprouts'], description: '', email: 'leo@gmail.com', age: '5', password: '444444')
+kid7.remote_avatar_url = urlkid7
+kid7.save
+
+url6 = image_path + '/drawing2.png'
+drawing6 = Drawing.new(name: 'giant robot', kid: kid7)
+drawing6.remote_image_url = url6
+drawing6.save
+
+url7 = image_path + '/drawing3.png'
+drawing7 = Drawing.new(name: 'girl hero', kid: kid7)
+drawing7.remote_image_url = url7
+drawing7.save
+
+urlkid8 = 'https://image.flaticon.com/icons/svg/1624/1624482.svg'
+kid8 = Kid.new(first_name: 'Lily', city: 'Shanghai', favourite_thing_list: ['cotton candy', 'balloons'], worst_thing_list: ['snakes', 'crabs'], description: 'I like unicorns the most!', email: 'lily@gmail.com', age: '6', password: '333333')
+kid8.remote_avatar_url = urlkid8
+kid8.save
+
+url8 = image_path + '/drawing4.png'
+drawing8 = Drawing.new(name: 'my first drawing', kid: kid8)
+drawing8.remote_image_url = url4
+drawing8.save
+
+urlkid9 = 'https://image.flaticon.com/icons/svg/163/163823.svg'
+kid9 = Kid.new(first_name: 'Enzo', city: 'Shanghai', favourite_thing_list: ['puppies', 'elephants', 'all animals'], worst_thing_list: ['cockroaches'], description: 'when I grow up I want to be a doctor', email: 'enzo@gmail.com', age: '6', password: '222222')
+kid9.remote_avatar_url = urlkid9
+kid9.save
 
 
 #creators and collabs
@@ -64,19 +109,12 @@ creator1 = Creator.new(city: 'Berlin',  age: '37', first_name: 'Helena', last_na
 creator1.remote_avatar_url = urlcreator1
 creator1.save
 
-# collab1 = Collaboration.create(image_url: '/assets/images/collab1.png', drawing: drawing1, creator_id: 1)
-# collab2 = Collaboration.create(image_url: '/assets/images/collab2.png', drawing: drawing2, creator_id: 1)
+# urlcreator2 = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkbv6BRBlNdvShncOQCkjmddW93fYvV3-3lG-sOhBHtBO1TcgMEg'
+# creator2 = Creator.new(city: 'Sao Paulo', age: '66', first_name: 'Paulo', last_name: 'Moreira', portfolio_url: 'www.pmoreira.com.br', email: 'paulo@pmoreira.com', password: 'aabbcc', description: 'Getting outside is good for the soul. Through my artwork, I try to bring the outside in. While I make no attempt to portray actual plants or animals, I do want my creations to look like they could have lived or grown somewhere. Living with beautiful objects that pay tribute to the natural world reminds us to slow down and helps us reconnect with nature.')
+# creator2.remote_avatar_url = urlcreator2
+# creator2.save
 
-urlcreator2 = 'https://image.flaticon.com/icons/svg/145/145842.svg'
-creator2 = Creator.new(city: 'Sao Paulo', age: '66', first_name: 'Paulo', last_name: 'Moreira', portfolio_url: 'www.pmoreira.com.br', email: 'paulo@pmoreira.com', password: 'aabbcc', description: 'Getting outside is good for the soul. Through my artwork, I try to bring the outside in. While I make no attempt to portray actual plants or animals, I do want my creations to look like they could have lived or grown somewhere. Living with beautiful objects that pay tribute to the natural world reminds us to slow down and helps us reconnect with nature.')
-creator2.remote_avatar_url = urlcreator2
-creator2.save
-
-# collab3 = Collaboration.create(image_url: '/assets/images/collab3.png', drawing: drawing3, creator_id: 2)
-
-urlcreator3 = 'https://image.flaticon.com/icons/svg/1597/1597166.svg'
-creator3 = Creator.new(city: 'Cape Town', age: '23', first_name: 'Lola', last_name: 'Manger', portfolio_url: 'www.lolacreates.co.za', email: 'lola@lolacreate.com', password: 'a1b2c3', description: 'Capturing the light is everything! As a plein air painter, it is always the light that I remember most about any location. It is my inspiration. Its elusive quality can transform a figure or a landscape in just a matter of seconds. I strive to convey that sense of place by capturing its fleeting magic.')
+urlcreator3 = 'https://rwwcomplaw.com/wp-content/uploads/2015/01/Lam-Vincci-Square-Crop-low-res.jpg'
+creator3 = Creator.new(city: 'Cape Town', age: '23', first_name: 'Lola', last_name: 'Chan', portfolio_url: 'www.lolacreates.co.za', email: 'lola@lolacreate.com', password: 'a1b2c3', description: 'Capturing the light is everything! As a plein air painter, it is always the light that I remember most about any location. It is my inspiration. Its elusive quality can transform a figure or a landscape in just a matter of seconds. I strive to convey that sense of place by capturing its fleeting magic.')
 creator3.remote_avatar_url = urlcreator3
 creator3.save
-
-# collab4 = Collaboration.create(image_url: '/assets/images/collab4.png', drawing: drawing1, creator_id: 3)

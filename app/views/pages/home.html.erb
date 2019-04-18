@@ -43,9 +43,7 @@
   <p >Our dream gallery is filled with creations and collaborations between dreamers and creators from all over the world! Take a look at some of our latest works: </p>
   <label><%= link_to "Visit our full Dream Gallery", dream_gallery_path  %></label>
 </div>
-<div class="brand-card-gallery">
   <%= render "dream_gallery", limit: 3 %>
-</div>
 <!-- Run carousel partial -->
 <script>
   $('.carousel').carousel()

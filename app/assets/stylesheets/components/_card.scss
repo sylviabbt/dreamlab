@@ -59,6 +59,11 @@
 
 // TEST flip card CSS
 
+.card-collab-infos h5 {
+  font-family: 'Cutive Mono', monospace;
+  font-weight: bold;
+}
+
 .flip-card {
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   height: 400px;
@@ -191,4 +196,13 @@ padding-top: 10px
   color: #50C878;
   padding: 10px;
   text-align: center;
+}
+
+.card-collab-user.avatar-bordered.drawing {
+  margin-top: 20px;
+  margin-right: 5px;
+  position: absolute;
+  right: 5px;
+  top: 0px;
+
 }
