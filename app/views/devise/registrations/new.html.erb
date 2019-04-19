@@ -1,3 +1,27 @@
+<div class="brand-card col-sm-8 offset-sm-2 text-center">
+  <div class="card-join-community text-center col-sm-8 offset-sm-2">
+    <h3>JOIN OUR COMMUNITY.</h3>
+    <%= image_tag "logo.png", class:"image-logo" %>
+  </div>
+  <p>dreamCo lab brings hope, inspiration, and creativity to hospitalized children by connecting them with artists around the world to help bring their creations and dreams to reality. </p>
+  <div class="row">
+    <div class="image-card col-lg-4 col-md-6 col-sm-8">
+      <p><%= image_tag 'childdraw.jpg', class:"image" %></p>
+    </div>
+    <div class="image-card col-lg-4 col-md-6 col-sm-8">
+      <p><%= image_tag 'childhosp1.jpg', class:"image" %></p>
+    </div>
+    <div class="image-card col-lg-4 col-md-6 col-sm-8">
+      <p><%= image_tag 'childhosp2.png', class:"image" %></p>
+    </div>
+  </div>
+</div>
+<div class="card-join-community text-center col-sm-8 offset-sm-2">
+  <div class="d-flex justify-content-center col-sm-8 offset-sm-2">
+    <%= link_to "I'm a dreamer", new_kid_path(@kid) %>
+    <%= link_to "I'm a creator", new_creator_path(@creator)%>
+  </div>
+</div>
 <!-- <div class="container">
   <div class="row">
     <div class="col-sm-4 col-sm-offset-4">
