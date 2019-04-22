@@ -1,6 +1,6 @@
 <div class='container-profile'>
   <div class="text-center col-lg-8 offset-lg-2 col-md-6 col-sm-8 offset-sm-2">
-    <%= cl_image_tag @kid.avatar, class:"avatar-bordered w-25 h-25" %>
+    <%= cl_image_tag @kid.avatar, class:"avatar-bordered-xl" %>
     <h1><%= @kid.first_name %>, <%= @kid.age %></h2>
     <h4>Location: <%= @kid.city %></h4>
     <% if current_user.id == @kid.id %>
@@ -26,28 +26,28 @@
 </div>
 <!-- My artwork -->
 <div>
- <div class="row my-3 p-3">
+  <div class="row my-3 p-3">
     <% @drawings.each do |drawing| %>
       <% if drawing.booked? == false %>
-      <div class="col-lg-4 col-md-6 col-sm-12">
-        <div class="card-collab upload my3">
-          <%= link_to kid_drawing_path(drawing.kid, drawing) do %>
-            <%= cl_image_tag drawing.image %>
-          <% end %>
-          <div class="card-collab-infos-upload" style="position: relative;">
-            <div>
-              <p>"<%= drawing.name %>"</p>
-              <div class="collaboration-dates">
-                <p><strong><em>Created at: </em></strong><%= drawing.created_at.strftime("%d / %m / %Y") %></p>
-                <p><strong><em>NOT YET BOOKED</em></strong></p>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card-collab upload my3">
+            <%= link_to kid_drawing_path(drawing.kid, drawing) do %>
+              <%= cl_image_tag drawing.image %>
+            <% end %>
+            <div class="card-collab-infos-upload" style="position: relative;">
+              <div>
+                <p>"<%= drawing.name %>"</p>
+                <div class="collaboration-dates">
+                  <p><strong><em>Created at: </em></strong><%= drawing.created_at.strftime("%d / %m / %Y") %></p>
+                  <p><strong><em>NOT YET BOOKED</em></strong></p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
-  <% end %>
-</div>
+  </div>
 </div>
 <!-- My collabs -->
 <div class="title text-center">
