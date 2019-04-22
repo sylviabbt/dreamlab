@@ -58,52 +58,6 @@ drawing4.save
 
 
 #FAKE kids and drawings
-urlkid5 = 'https://www.shareicon.net/data/128x128/2016/06/25/786536_people_512x512.png'
-kid5 = Kid.new(first_name: 'Ethan', city: 'Shanghai', favourite_thing_list: ['chocolate', 'pizza'], worst_thing_list: ['spinach'], description: 'stronger than Superman!', email: 'ethan@gmail.com', age: '8', password: '123123')
-kid5.remote_avatar_url = urlkid5
-kid5.save
-
-url5 = image_path + '/drawing1.png'
-drawing5 = Drawing.new(name: 'sunny day at the park', kid: kid5)
-drawing5.remote_image_url = url5
-drawing5.save
-##############
-urlkid6 = 'https://image.flaticon.com/icons/svg/1718/1718044.svg'
-kid6 = Kid.new(first_name: 'Sammy', city: 'Shanghai', favourite_thing_list: ['ice cream'], worst_thing_list: ['injections'], description: '', email: 'sammy@gmail.com', age: '7', password: '111111')
-kid6.remote_avatar_url = urlkid6
-kid6.save
-##############
-urlkid7 = 'https://image.flaticon.com/icons/svg/163/163801.svg'
-kid7 = Kid.new(first_name: 'Leo', city: 'Shanghai', favourite_thing_list: ['french fries', 'pasta'], worst_thing_list: ['thunder', 'brussel sprouts'], description: '', email: 'leo@gmail.com', age: '5', password: '444444')
-kid7.remote_avatar_url = urlkid7
-kid7.save
-
-url6 = image_path + '/drawing2.png'
-drawing6 = Drawing.new(name: 'giant robot', kid: kid7)
-drawing6.remote_image_url = url6
-drawing6.save
-
-url7 = image_path + '/drawing3.png'
-drawing7 = Drawing.new(name: 'girl hero', kid: kid7)
-drawing7.remote_image_url = url7
-drawing7.save
-##############
-urlkid8 = 'https://image.flaticon.com/icons/svg/1624/1624482.svg'
-kid8 = Kid.new(first_name: 'Lily', city: 'Shanghai', favourite_thing_list: ['cotton candy', 'balloons'], worst_thing_list: ['snakes', 'crabs'], description: 'I like unicorns the most!', email: 'lily@gmail.com', age: '6', password: '333333')
-kid8.remote_avatar_url = urlkid8
-kid8.save
-
-url8 = image_path + '/drawing4.png'
-drawing8 = Drawing.new(name: 'my first drawing', kid: kid8)
-drawing8.remote_image_url = url8
-drawing8.save
-##############
-urlkid9 = 'https://image.flaticon.com/icons/svg/163/163823.svg'
-kid9 = Kid.new(first_name: 'Enzo', city: 'Shanghai', favourite_thing_list: ['puppies', 'elephants', 'all animals'], worst_thing_list: ['cockroaches'], description: 'when I grow up I want to be a doctor', email: 'enzo@gmail.com', age: '6', password: '222222')
-kid9.remote_avatar_url = urlkid9
-kid9.save
-
-
 # REAL creator
 urlcreator1 = image_path + '/dezio.png'
 creator1 = Creator.new(city: 'Shanghai', age: '39', first_name: 'Paul', last_name: 'Dezio', portfolio_url: '', email: 'paul@dezio.com', password: 'aabbcc', description: 'Dezio is a french graffiti artist who has been living in China since 2006. He started his graffiti career in Paris in 1994 and in the past 20 years has left his mark all across Europe, Asia, and North America; gaining global recognition for his own distinct style of lettering and approach to graffiti art, and leading him to be featured in numerous different medias (books, magazines, tv shows, graffiti competitions, movies, websites). He moved to Shanghai in 2007, and is widely regarded as one of the doyen of China’s graffiti scene, earning him the nickname “Lao Du”, influencing local artists all over China and playing host to many of the big international names that have passed through.')
@@ -111,13 +65,3 @@ creator1.remote_avatar_url = urlcreator1
 creator1.save
 
 #FAKE creators
-urlcreator2 = image_path + '/helenapic.png'
-creator2 = Creator.new(city: 'Berlin',  age: '37', first_name: 'Helena', last_name: 'Schmidt', portfolio_url: 'www.helenaschmidt.com', email: 'helena@helenaschmidt.com', password: 'abcdef', description: 'What do I want to say with my art? Celebrate the human, the marks people make on the world. Treasure the local, the small-scale, the eccentric, the ordinary: whatever is made out of caring. Respect what people have built for themselves')
-creator2.remote_avatar_url = urlcreator2
-creator2.save
-##############
-
-urlcreator3 = 'https://rwwcomplaw.com/wp-content/uploads/2015/01/Lam-Vincci-Square-Crop-low-res.jpg'
-creator3 = Creator.new(city: 'Cape Town', age: '23', first_name: 'Lola', last_name: 'Chan', portfolio_url: 'www.lolacreates.co.za', email: 'lola@lolacreate.com', password: 'a1b2c3', description: 'Capturing the light is everything! As a plein air painter, it is always the light that I remember most about any location. It is my inspiration. Its elusive quality can transform a figure or a landscape in just a matter of seconds. I strive to convey that sense of place by capturing its fleeting magic.')
-creator3.remote_avatar_url = urlcreator3
-creator3.save

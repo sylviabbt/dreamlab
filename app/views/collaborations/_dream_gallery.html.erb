@@ -1,6 +1,6 @@
 <!-- Index for ALL FINISHED COLLABS   -->
 <div class="row my-3 p-3">
-  <% collabs = limit.present? ? @collaborations.first(limit) : @collaborations  %>
+  <% collabs = limit.present? ? @collaborations.last(limit) : @collaborations  %>
   <% collabs.each do |collab| %>
     <% if collab.collab_upload.filename != nil %>
       <div class="col-lg-4 col-md-6 col-sm-12">
@@ -19,10 +19,9 @@
             <p><strong><em>brought to life by</em></strong> <%= collab.creator.first_name %></p>
             <%= link_to collaboration_upvote_path(collab) do %> <i class="far fa-heart"></i>  <%= "#{collab.votes_for.size}" %>
             <% end %>
-
           </div>
-           <div class="text-center mb-3">
-          <%= link_to "View Full Collab", creator_collaboration_path(collab.creator, collab), class:"btn-view-more" %>
+          <div class="text-center mb-3">
+            <%= link_to "View Full Collab", creator_collaboration_path(collab.creator, collab), class:"btn-view-more" %>
           </div>
         </div>
       </div>

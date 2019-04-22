@@ -119,17 +119,19 @@
 .together-card {
   background-color: transparent;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  width: 80%;
+  flex-wrap: wrap;
+  width: 100%;
   height: auto;
 
 }
 
 .drawing-image img, .finished-collab-image img {
-  height: 650px;
+  height: auto;
+  max-height: 650px;
   width: auto;
-  max-width: 850px;
+  max-width: 1000px;
   object-fit: cover;
   margin-left: 20px;
   margin-right: 20px;
