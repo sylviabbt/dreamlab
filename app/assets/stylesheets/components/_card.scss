@@ -132,12 +132,13 @@
 
 .drawing-image img, .finished-collab-image img {
   height: auto;
-  max-height: 100%;
+  max-height: 80%;
   width: auto;
-  max-width: 100%;
+  max-width: 80%;
   object-fit: cover;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 0 auto;
+  // margin-left: 20px;
+  // margin-right: 20px;
   border-radius: 20px;
   box-shadow: 1px 1px 25px;
 }
@@ -155,9 +156,9 @@
 
 .card-collab-infos-upload {
   height: auto;
-  max-height: 100%;
+  max-height: 80%;
   width: auto;
-  max-width: 100%;
+  max-width: 80%;
   padding: 15px;
   margin: 0px;
   display: flex;
