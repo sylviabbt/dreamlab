@@ -2,26 +2,34 @@
   <div class="text-center col-lg-8 offset-lg-2 col-md-6 col-sm-8 offset-sm-2">
     <%= cl_image_tag @kid.avatar, class:"avatar-bordered-xl" %>
     <h1><%= @kid.first_name %>, <%= @kid.age %></h2>
-    <h4>Location: <%= @kid.city %></h4>
+    <% if @kid.city.present? %>
+      <h4>Location: <%= @kid.city %></h4>
+    <% end %>
     <% if current_user.id == @kid.id %>
       <%= link_to "Edit Profile", edit_kid_path(@kid), class:"mb-3" %>
     <% else %>
       <%= '' %>
     <% end %>
-    <h2>Favourite Things:</h2>
-    <div class="tagging"><i class="fas fa-tag"></i>
-      <% @kid.favourite_things.each do |t| %>
-        <span class="tag-box"><%= t %></span>
-      <% end %>
-    </div>
-    <h2>Dislikes: </h2>
-    <div class="tagging"><i class="fas fa-tag"></i>
-      <% @kid.worst_things.each do |t| %>
-        <span class="tag-box"><%= t %></span>
-      <% end %>
-    </div>
-    <h2>Description: </h2>
-    <h4 class="mb-3"><%= @kid.description %></h4>
+    <% if @kid.favourite_things.present? %>
+      <h2>Favourite Things:</h2>
+      <div class="tagging"><i class="fas fa-tag"></i>
+        <% @kid.favourite_things.each do |t| %>
+          <span class="tag-box"><%= t %></span>
+        <% end %>
+      </div>
+    <% end %>
+    <% if @kid.worst_things.present? %>
+      <h2>Dislikes: </h2>
+      <div class="tagging"><i class="fas fa-tag"></i>
+        <% @kid.worst_things.each do |t| %>
+          <span class="tag-box"><%= t %></span>
+        <% end %>
+      </div>
+    <% end %>
+    <% if @kid.description.present?  %>
+      <h2>Description: </h2>
+      <h4 class="mb-3"><%= @kid.description %></h4>
+    <% end %>
   </div>
 </div>
 <!-- My artwork -->
