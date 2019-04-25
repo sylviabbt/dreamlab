@@ -56,12 +56,8 @@ drawing4 = Drawing.new(name: 'autopotrait', kid: kid4)
 drawing4.remote_image_url = url4
 drawing4.save
 
-
-#FAKE kids and drawings
 # REAL creator
 urlcreator1 = image_path + '/dezio.png'
 creator1 = Creator.new(city: 'Shanghai', age: '39', first_name: 'Paul', last_name: 'Dezio', portfolio_url: '', email: 'paul@dezio.com', password: 'aabbcc', description: 'Dezio is a french graffiti artist who has been living in China since 2006. He started his graffiti career in Paris in 1994 and in the past 20 years has left his mark all across Europe, Asia, and North America; gaining global recognition for his own distinct style of lettering and approach to graffiti art, and leading him to be featured in numerous different medias (books, magazines, tv shows, graffiti competitions, movies, websites). He moved to Shanghai in 2007, and is widely regarded as one of the doyen of China’s graffiti scene, earning him the nickname “Lao Du”, influencing local artists all over China and playing host to many of the big international names that have passed through.')
 creator1.remote_avatar_url = urlcreator1
 creator1.save
-
-#FAKE creators
