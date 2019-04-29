@@ -1,6 +1,11 @@
 class CreatorsController < ApplicationController
   before_action :set_creator, only: [:show, :edit, :update]
-  skip_before_action :authenticate_user!, only: [:new, :create, :show, :edit, :update]
+  skip_before_action :authenticate_user!, only: [:index, :new, :create, :show, :edit, :update]
+
+
+  def index
+    @creators = policy_scope(Creator).all.order(created_at: :desc)
+  end
 
   def show
     @collaborations = @creator.collaborations
