@@ -5,7 +5,9 @@
     <% if @creator.city.present? %>
       <h4>Location: <%= @creator.city %></h4>
     <% end %>
-    <%= link_to "Edit Profile", edit_creator_path(@creator), class:"mb-3" %>
+    <% if current_user == @creator %>
+      <%= link_to "Edit Profile", edit_creator_path(@creator), class:"mb-3" %>
+    <% end %>
     <% if @creator.description.present? %>
       <h2>Description: </h2>
       <h4><%= @creator.description %></h4>

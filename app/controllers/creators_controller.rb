@@ -1,5 +1,5 @@
 class CreatorsController < ApplicationController
-  before_action :set_creator, only: [:show, :edit, :update]
+  before_action :set_creator, only: [:show]
   skip_before_action :authenticate_user!, only: [:index, :new, :create, :show, :edit, :update]
 
 
@@ -32,11 +32,15 @@ class CreatorsController < ApplicationController
   end
 
   def edit
+    @creator = Creator.find(params[:id])
+    # raise
+    authorize current_user if current_user == @creator
   end
 
   def update
-    if @creator.update(creator_params)
-      redirect_to creator_path(@creator)
+    authorize current_user
+    if current_user.update(creator_params)
+      redirect_to creator_path(current_user)
     else
       render :edit
     end
