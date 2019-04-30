@@ -17,7 +17,7 @@
 <div class="card-collab-infos text-center mb-3">
   <p> <strong><em>inspired by</em></strong> <%= link_to @collaboration.drawing.kid.first_name, kid_path(@collaboration.drawing.kid), class:"text-primary ml-3" %></p>
   <p><strong><em>brought to life by</em></strong> <%= link_to @collaboration.creator.first_name, creator_path(@collaboration.creator), class:"text-primary ml-3" %></p>
-  <% if current_user.type == "Kid" %>
+  <% if current_user == @collaboration.drawing.kid %>
     <%= render 'collaborations/download_collab' %>
   <% end %>
 </div>
