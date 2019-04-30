@@ -5,11 +5,11 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   resources :kids, only: [:create, :new, :show, :edit, :update] do
-    resources :drawings, only: [:create, :new, :show, :destroy]
+    resources :drawings, only: [:create, :new, :show]
     resources :collaborations, only: [:show]
   end
 
-  resources :drawings, only: [:index] do
+  resources :drawings, only: [:index, :destroy] do
     get '/download' => 'drawings#download'
   end
 

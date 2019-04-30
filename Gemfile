@@ -3,10 +3,7 @@ ruby '2.5.3'
 
 gem 'letter_opener', group: :development
 gem 'postmark-rails'
-
-
-
-gem 'bootsnap', '~>1.4.3',require: false
+gem 'bootsnap', '~>1.4.3', require: false
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 0.21'
@@ -26,7 +23,6 @@ gem 'acts-as-taggable-on', '~> 6.0'
 gem 'pg_search'
 gem 'geocoder'
 gem 'pundit'
-# gem 'letter_opener', group: :development
 # image upload
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
