@@ -29,6 +29,7 @@
       </div>
       <%= cl_image_tag collab.drawing.kid.avatar, class:"card-collab-user avatar-bordered upload" %>
     </div>
+    <%= link_to "delete", creator_collaboration_path(collab.creator, collab), method: :delete %>
   </div>
 </div>
 <% end %>

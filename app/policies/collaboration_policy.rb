@@ -32,4 +32,8 @@ class CollaborationPolicy < ApplicationPolicy
   def upvote?
     true
   end
+
+  def destroy?
+    true
+  end
 end

@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   end
 
   resources :creators, only: [:index, :create, :new, :show, :edit, :update] do
-    resources :collaborations, only: [:show, :edit, :update]
+    resources :collaborations, only: [:show, :edit, :update, :destroy]
   end
 
   resources :collaborations, only: [:index, :create] do
