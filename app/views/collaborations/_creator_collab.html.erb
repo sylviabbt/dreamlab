@@ -29,7 +29,7 @@
       </div>
       <%= cl_image_tag collab.drawing.kid.avatar, class:"card-collab-user avatar-bordered upload" %>
     </div>
-    <%= link_to creator_collaboration_path(collab.creator, collab), method: :delete, data: { confirm: "OH NO! A child's dream will be crushed ☹                              Click 'ok' to undo collaboration" } do%><i class="fas fa-trash-alt"></i>
+    <%= link_to creator_collaboration_path(collab.creator, collab), method: :delete, data: { confirm: "OH NO! A child's dream will be crushed ☹" } do%><i class="fas fa-trash-alt"></i>
     <% end %>
   </div>
 </div>
