@@ -222,3 +222,13 @@ padding-top: 10px
   object-fit: cover;
   padding: 0px;
 }
+
+.fa-trash-alt {
+  text-decoration: none;
+  color: #756c83;
+  opacity: 0.4;
+  font-size: 20px;
+  &:hover {
+   opacity: 1;
+  }
+}
