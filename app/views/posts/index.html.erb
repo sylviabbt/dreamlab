@@ -1,0 +1,18 @@
+<div class="title text-center">
+  <h1> FEED OF ALL RECENT ACTIVITIES</h1>
+</div>
+
+<% if current_user.admin %>
+  <%= link_to "Add a post", new_post_path(@post)%>
+<% end %>
+
+<% @posts.each do |post| %>
+  <%= link_to post_path(post) do %>
+    <h4><em><%= post.title %></em></h4>
+  <% end %>
+  <%= cl_image_tag post.main_image_upload  %>
+  <p><%= post.content %></p>
+<% end %>
+
+
+

@@ -1,5 +1,6 @@
 class Creator < User
   has_many :collaborations
+  has_many :posts
 
   mount_uploader :avatar, PhotoUploader
 
