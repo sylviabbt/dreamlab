@@ -47,9 +47,7 @@ class CollaborationsController < ApplicationController
   def destroy
     @collaboration = Collaboration.find(params[:id])
     authorize @collaboration
-    # @collaboration.creator_id = current_user.id
     @collaboration.destroy
-    # raise
     redirect_to collaborations_path
   end
 
