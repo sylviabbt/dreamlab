@@ -3,31 +3,35 @@
   <div class="title text-center mb-3">
     <h1>My Collaborations Gallery</h1>
   </div>
-  <div class="collab-sectioning">
+  <div class="collab-sectioning text-center">
     <h1>Booked Collaborations</h1>
-    <div class="row my-3">
-      <% booked = @collaborations.select{|x| x.collab_upload.filename == nil} %>
-      <% booked.each do |collab| %>
-        <div class="col-lg-4 col-md-6 col-sm-12">
-          <div class="card-collab upload my-3">
-            <%= link_to kid_drawing_path(collab.drawing.kid, collab.drawing) do %>
-              <%= cl_image_tag collab.drawing.image %>
-            <% end %>
-            <div class="card-collab-infos-upload" style="position: relative;">
-              <div>
-                <p>"<%= collab.drawing.name %>"</p>
-                <p>by <%= collab.drawing.kid.first_name %></p>
-                <div class="collaboration-dates">
-                  <p><strong><em>Booked on: </em></strong> <%= collab.created_at.strftime("%d / %m / %Y") %></em></strong></p>
-              <p><strong><em>Date due: </em></strong> <%= (collab.created_at + 7.days).strftime("%d / %m / %Y") %></em></strong></p>
+    <% booked = @collaborations.select{|x| x.collab_upload.filename == nil} %>
+    <% if booked.present? == false %>
+      <label>You currently do not have any bookings. Check out our <%= link_to "drawings page", drawings_path %> to book one now!</label>
+      <div class="row my-3">
+    <% else %>
+        <% booked.each do |collab| %>  
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card-collab upload my-3">
+              <%= link_to kid_drawing_path(collab.drawing.kid, collab.drawing) do %>
+                <%= cl_image_tag collab.drawing.image %>
+              <% end %>
+              <div class="card-collab-infos-upload" style="position: relative;">
+                <div>
+                  <p>"<%= collab.drawing.name %>"</p>
+                  <p>by <%= collab.drawing.kid.first_name %></p>
+                  <div class="collaboration-dates">
+                    <p><strong><em>Booked on: </em></strong> <%= collab.created_at.strftime("%d / %m / %Y") %></em></strong></p>
+                <p><strong><em>Date due: </em></strong> <%= (collab.created_at + 7.days).strftime("%d / %m / %Y") %></em></strong></p>
+          </div>
+          <%= simple_form_for [current_user, collab], html: {novalidate: false} do |f| %>
+            <%= f.input :collab_upload, :required => true %>
+            <%= f.input :collab_upload_cache, as: :hidden %>
+            <%= f.submit "Complete Collaboration!", class:"complete-collab-button" %>
+          <% end %>
         </div>
-        <%= simple_form_for [current_user, collab], html: {novalidate: false} do |f| %>
-          <%= f.input :collab_upload, :required => true %>
-          <%= f.input :collab_upload_cache, as: :hidden %>
-          <%= f.submit "Complete Collaboration!", class:"complete-collab-button" %>
-        <% end %>
+        <%= cl_image_tag collab.drawing.kid.avatar, class:"card-collab-user avatar-bordered upload" %>
       </div>
-      <%= cl_image_tag collab.drawing.kid.avatar, class:"card-collab-user avatar-bordered upload" %>
     </div>
     <div class="undo-collab">
       <%= link_to creator_collaboration_path(collab.creator, collab), method: :delete, data: { confirm: "OH NO! A child's dream will be crushed ☹" }, class: "undo-collab" do %><i class="fas fa-trash-alt"></i>
@@ -37,7 +41,7 @@
       <% end %>
     </div>
   </div>
-</div>
+<% end %>
 <% end %>
 </div>
 <h1>Completed  collaborations</h1>
