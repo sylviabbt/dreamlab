@@ -1,27 +1,3 @@
 <%= render 'form', drawing: @drawing %>
 <%#= render 'kid_drawings', limit: nil %>
-<div class="title text-center my-3">
-  <h1>My Drawings Gallery</h1>
-</div>
-<div class="row my-3 p-3">
-    <% @drawings.each do |drawing| %>
-      <% if drawing.booked? == false %>
-      <div class="col-lg-4 col-md-6 col-sm-12">
-        <div class="card-collab upload my3">
-          <%= link_to kid_drawing_path(drawing.kid, drawing) do %>
-            <%= cl_image_tag drawing.image %>
-          <% end %>
-          <div class="card-collab-infos-upload" style="position: relative;">
-            <div>
-              <p>"<%= drawing.name %>"</p>
-              <div class="collaboration-dates">
-                <p><strong><em>Created at: </em></strong><%= drawing.created_at.strftime("%d / %m / %Y") %></p>
-                <p><strong><em>NOT YET BOOKED</em></strong></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  <% end %>
-</div>
+<%= render 'kid_drawings', limit: nil %>
