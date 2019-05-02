@@ -1,7 +1,7 @@
 class CollaborationsController < ApplicationController
   before_action :set_collaboration, only: [:show, :edit, :update, :upvote, :download]
   skip_after_action :verify_authorized, only: [:show]
-  skip_before_action :authenticate_user!, only: [:upvote, :download]
+  skip_before_action :authenticate_user!, only: [:upvote]
 
   def index
     @collaborations = policy_scope(Collaboration).order(created_at: :desc)
@@ -22,7 +22,7 @@ class CollaborationsController < ApplicationController
     @collaboration.creator = current_user
 
     if @collaboration.save
-      # UserMailer.booked(@collaboration.drawing.kid).deliver_now
+      UserMailer.booked(@collaboration.drawing.kid).deliver_now
       authorize @collaboration
       redirect_to collaborations_path(@collaboration.creator), notice: "Collaboration was successfully created."
     else
@@ -36,12 +36,19 @@ class CollaborationsController < ApplicationController
   def update
     @collaboration.creator = current_user
     if @collaboration.update(collaboration_params)
-      # UserMailer.completed(@collaboration.drawing.kid).deliver_now
+      UserMailer.completed(@collaboration.drawing.kid).deliver_now
       authorize @collaboration
       redirect_to creator_collaboration_path(@collaboration.creator, @collaboration)
     else
       render :edit
     end
+  end
+
+  def destroy
+    @collaboration = Collaboration.find(params[:id])
+    authorize @collaboration
+    @collaboration.destroy
+    redirect_to collaborations_path
   end
 
   def upvote
@@ -58,11 +65,13 @@ class CollaborationsController < ApplicationController
   end
 
   def download
-    require 'open-uri'
-    authorize @collaboration
-    img = @collaboration.drawing.image
-    url = @collaboration.collab_upload.url
-    send_file(open(url), filename: img.file.filename)
+    if @collaboration.drawing.kid == current_user
+      require 'open-uri'
+      authorize @collaboration
+      img = @collaboration.drawing.image
+      url = @collaboration.collab_upload.url
+      send_file(open(url), filename: img.file.filename)
+    end
   end
 
   private

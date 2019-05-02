@@ -17,7 +17,6 @@ class DrawingsController < ApplicationController
     @drawing.kid = current_user
     authorize @drawing
 
-
     if @drawing.save
       redirect_to drawings_path, notice: 'Thank you! Your drawing was successfully uploaded'
     else
@@ -60,6 +59,6 @@ class DrawingsController < ApplicationController
   end
 
   def drawing_params
-    params.require(:drawing).permit(:name, :image, :id)
+    params.require(:drawing).permit(:name, :image, :id, :kid_id)
   end
 end
