@@ -121,7 +121,7 @@ a.icon-link {
   }
 }
 
-.btn {
+.btn-post {
   background: white;
   color: $text-color;
   font-weight: bold;
@@ -132,7 +132,7 @@ a.icon-link {
   height: 50px;
   line-height: 50px;
   display: inline-block;
-  padding: 0;
+  padding: 0px 10px 0px 10px;
   border: none;
   &:focus {
     box-shadow: none;

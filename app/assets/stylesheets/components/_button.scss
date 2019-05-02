@@ -8,7 +8,6 @@
 
 }
 
-
 .btn-view-more {
   border-radius: 24px;
   padding: 10px;
@@ -43,5 +42,9 @@
     opacity: 1;
   }
 }
-
-
+// edit account buttons
+.back-button a {
+font-family: 'Cutive Mono', monospace;
+color: black;
+background-color: white;
+}

@@ -27,7 +27,7 @@
     <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
     <meta name="twitter:image:src" content="<%= meta_image %>">
   </head>
-  <body style="background-image: url('<%= image_path "background2.jpg" %>');" >
+  <body style="background-image: url('<%= image_path "background2.jpg" %>'); background-repeat: no-repeat; background-size: cover; background-position: center;" >
     <main>
       <%= render 'shared/flashes' %>
       <% if @home %>
