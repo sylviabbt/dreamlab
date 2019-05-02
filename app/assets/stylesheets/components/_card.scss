@@ -223,12 +223,22 @@ padding-top: 10px
   padding: 0px;
 }
 
-.fa-trash-alt {
+.undo-collab {
   text-decoration: none;
   color: #756c83;
-  opacity: 0.4;
-  font-size: 20px;
+  opacity: 0.7;
+  font-size: 14px;
+  font: $body-font;
+  display: flex;
+  align-items: center;
   &:hover {
-   opacity: 1;
+    text-decoration: none;
+    color: #756c83;
+    opacity: 1;
   }
+}
+
+.undo-collab p {
+  margin-left: 4px;
+  font-size: 14px;
 }

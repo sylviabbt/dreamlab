@@ -29,10 +29,12 @@
       </div>
       <%= cl_image_tag collab.drawing.kid.avatar, class:"card-collab-user avatar-bordered upload" %>
     </div>
-    <%= link_to creator_collaboration_path(collab.creator, collab), method: :delete, data: { confirm: "OH NO! A child's dream will be crushed ☹" } do%><i class="fas fa-trash-alt"></i>
-    <% end %>
+    <div class="undo-collab">
+      <%= link_to creator_collaboration_path(collab.creator, collab), method: :delete, data: { confirm: "OH NO! A child's dream will be crushed ☹" }, class: "undo-collab" do %><i class="fas fa-trash-alt"></i>
+        <p>Changed your mind?</p>
+      <% end %>
+    </div>
   </div>
-</div>
 <% end %>
 </div>
 <h1>Completed  collaborations</h1>
