@@ -48,39 +48,46 @@
                 <div class="collaboration-dates">
                   <p><strong><em>Created at: </em></strong><%= drawing.created_at.strftime("%d / %m / %Y") %></p>
                   <p><strong><em>NOT YET BOOKED</em></strong></p>
+                  <%#= link_to kid_drawing_path(drawing),
+                method: :delete,
+                data: { confirm: "Click 'ok' to confirm deletion" } do %>
+                    <%= link_to drawing_path(drawing),
+                method: :delete,
+                data: { confirm: "Click 'ok' to confirm deletion" } do %>
+                      <i class="fas fa-trash-alt"></i> <% end %>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
-</div>
-<!-- My collabs -->
-<div class="title text-center">
-  <h1>My Collaborations</h1>
-</div>
-<div class="row my-3 p-3">
-  <% completed = @kid.collaborations.select{|x| x.collab_upload.filename != nil}%>
-  <% completed.each do |collab| %>
-    <div class="col-lg-4 col-md-6 col-sm-12">
-      <div class="card-collab my-3">
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front" style="background-image: url('<%= cl_image_path collab.drawing.image %>')"></div>
-            <div class="flip-card-back" style="background-image: url('<%= cl_image_path collab.collab_upload %>')"></div>
+  <!-- My collabs -->
+  <div class="title text-center">
+    <h1>My Collaborations</h1>
+  </div>
+  <div class="row my-3 p-3">
+    <% completed = @kid.collaborations.select{|x| x.collab_upload.filename != nil}%>
+    <% completed.each do |collab| %>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card-collab my-3">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front" style="background-image: url('<%= cl_image_path collab.drawing.image %>')"></div>
+              <div class="flip-card-back" style="background-image: url('<%= cl_image_path collab.collab_upload %>')"></div>
+            </div>
+          </div>
+          <div class="card-collab-infos">
+            <h5>"<%= collab.drawing.name %>"</h5>
+            <p> <strong><em>inspired by</em></strong> <%= collab.drawing.kid.first_name %></p>
+            <p><strong><em>brought to life by</em></strong> <%= collab.creator.first_name %></p>
+            <%= link_to collaboration_upvote_path(collab) do %> <i class="far fa-heart"></i>  <%= "#{collab.votes_for.size}" %><% end %>
           </div>
         </div>
-        <div class="card-collab-infos">
-          <h5>"<%= collab.drawing.name %>"</h5>
-          <p> <strong><em>inspired by</em></strong> <%= collab.drawing.kid.first_name %></p>
-          <p><strong><em>brought to life by</em></strong> <%= collab.creator.first_name %></p>
-          <%= link_to collaboration_upvote_path(collab) do %> <i class="far fa-heart"></i>  <%= "#{collab.votes_for.size}" %><% end %>
-        </div>
       </div>
-    </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
 </div>
 </div>

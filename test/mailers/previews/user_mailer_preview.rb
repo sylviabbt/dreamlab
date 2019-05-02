@@ -6,12 +6,12 @@ class UserMailerPreview < ActionMailer::Preview
   #   UserMailer.welcome
   # end
 
-  def booked(kid)
+  def booked
     kid = Kid.first
     UserMailer.booked(kid)
   end
 
-  def completed(kid)
+  def completed
     kid = Kid.first
     UserMailer.completed(kid)
   end
