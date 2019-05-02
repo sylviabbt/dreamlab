@@ -31,10 +31,13 @@
     </div>
     <div class="undo-collab">
       <%= link_to creator_collaboration_path(collab.creator, collab), method: :delete, data: { confirm: "OH NO! A child's dream will be crushed ☹" }, class: "undo-collab" do %><i class="fas fa-trash-alt"></i>
-        <p>Changed your mind?</p>
+        <div>
+          <p>Changed your mind?</p>
+        </div>
       <% end %>
     </div>
   </div>
+</div>
 <% end %>
 </div>
 <h1>Completed  collaborations</h1>
