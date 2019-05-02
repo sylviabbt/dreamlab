@@ -26,9 +26,6 @@ gem 'pundit'
 # image upload
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
-# rails_admin
-gem 'remotipart', github: 'mshibuya/remotipart'
-gem 'rails_admin', '>= 1.3.0.rc'
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
