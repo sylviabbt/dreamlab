@@ -1,7 +1,7 @@
 class CollaborationsController < ApplicationController
   before_action :set_collaboration, only: [:show, :edit, :update, :upvote, :download]
   skip_after_action :verify_authorized, only: [:show]
-  skip_before_action :authenticate_user!, only: [:upvote, :download]
+  skip_before_action :authenticate_user!, only: [:upvote]
 
   def index
     @collaborations = policy_scope(Collaboration).order(created_at: :desc)
@@ -58,11 +58,13 @@ class CollaborationsController < ApplicationController
   end
 
   def download
-    require 'open-uri'
-    authorize @collaboration
-    img = @collaboration.drawing.image
-    url = @collaboration.collab_upload.url
-    send_file(open(url), filename: img.file.filename)
+    if @collaboration.drawing.kid == current_user
+      require 'open-uri'
+      authorize @collaboration
+      img = @collaboration.drawing.image
+      url = @collaboration.collab_upload.url
+      send_file(open(url), filename: img.file.filename)
+    end
   end
 
   private
