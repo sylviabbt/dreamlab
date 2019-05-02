@@ -3,8 +3,7 @@ class PostsController < ApplicationController
   # skip_before_action :authenticate_user!, only: [:download]
 
   def index
-    @posts = policy_scope(Post).order(created_at: :desc)
-    @posts = Post.all
+    @posts = policy_scope(Post).all.order(created_at: :desc)
   end
 
   def create

@@ -1,18 +1,36 @@
 <div class="title text-center">
   <h1> WHAT WE'VE BEEN UP TO....</h1>
 </div>
-
-<% if current_user.admin %>
-  <%= link_to "Add a post", new_post_path(@post)%>
-<% end %>
-
-<% @posts.each do |post| %>
-  <%= link_to post_path(post) do %>
-    <h4><em><%= post.title %></em></h4>
+<!-- For admin to add a new post -->
+<div class="text-center my-3">
+  <% if current_user.admin %>
+    <p><%= link_to "+ Add a post", new_post_path(@post)%></p>
   <% end %>
-  <%= cl_image_tag post.main_image_upload  %>
-  <p><%= post.summary %></p>
-<% end %>
-
-
-
+</div>
+<!-- Each post in the index card -->
+<div class="container-post mt-5">
+  <div class="row">
+    <% @posts.each do |post| %>
+      <div class="col-12">
+        <article class="blog-card">
+          <div class="blog-card__background">
+            <div class="card__background--wrapper">
+              <div class="card__background--main">
+                <%= cl_image_tag post.main_image_upload %>
+                <div class="card__background--layer"></div>
+              </div>
+            </div>
+          </div>
+          <div class="blog-card__head">
+            <span class="date__box"><%= post.created_at.strftime("%b %d, %Y") %></span>
+          </div>
+          <div class="blog-card__info">
+            <h5><%= post.title %></h5>
+            <p><%= post.summary %></p>
+            <%= link_to "READ MORE", post_path(post), class:"btn btn--with-icon" %>
+          </div>
+        </article>
+      </div>
+    <% end %>
+  </div>
+</div>
