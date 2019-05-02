@@ -9,8 +9,8 @@
     <% if booked.present? == false %>
       <label>You currently do not have any bookings. Check out our <%= link_to "drawings page", drawings_path %> to book one now!</label>
       <div class="row my-3">
-        <% booked.each do |collab| %>
-        <% else %>
+    <% else %>
+        <% booked.each do |collab| %>  
           <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="card-collab upload my-3">
               <%= link_to kid_drawing_path(collab.drawing.kid, collab.drawing) do %>
