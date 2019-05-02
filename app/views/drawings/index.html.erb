@@ -1,21 +1,19 @@
 <div class="title text-center">
   <h1>Drawings Feed</h1>
 </div>
-<div class="row">
+<div class="row mx-auto">
   <% @drawings.each do |drawing| %>
     <% next if drawing.booked? %>
-    <div class="drawing-card col-md-6 col-sm-8 col-lg-4">
-      <div class="art-card">
-        <%= link_to kid_drawing_path(drawing.kid, drawing) do %>
-          <%= cl_image_tag drawing.image %>
-        <% end %>
-        <div class="art-card-infos ml-3 mr-3">
-          <div class="title">
-            <h4>"<em><%= drawing.name %></em>"</h4>
-          </div>
-          <h2 class="art-card-name mr-3 my-3"><%= drawing.kid.first_name %></h2>
-          <div class="art-card-user avatar avatar-bordered mr-3 my-3" id="kid-avatar" style="background-image: url('<%= cl_image_path drawing.kid.avatar %>')">
-          </div>
+    <div class="art-card">
+      <%= link_to kid_drawing_path(drawing.kid, drawing) do %>
+        <%= cl_image_tag drawing.image %>
+      <% end %>
+      <div class="art-card-infos ml-3 mr-3">
+        <div class="title">
+          <h4>"<em><%= drawing.name %></em>"</h4>
+        </div>
+        <h2 class="art-card-name mr-3 my-3"><%= drawing.kid.first_name %></h2>
+        <div class="art-card-user avatar avatar-bordered mr-3 my-3" id="kid-avatar" style="background-image: url('<%= cl_image_path drawing.kid.avatar %>')">
         </div>
       </div>
     </div>
