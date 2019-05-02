@@ -1,0 +1,11 @@
+  <%= simple_form_for @post do |d| %>
+    <%= d.input :title, label: "Title post" %>
+    <%= d.input :summary, label: "One sentence summary" %>
+    <%= d.input :main_image_upload, :required => true %>
+    <%= d.input :main_image_upload_cache, as: :hidden %>
+    <%= d.input :content, placeholder: "content of the article goes here" %>
+    <%= d.submit "Upload Now!", class:"btn btn-primary my-3" %>
+  <% end %>
+</div>
+
+
