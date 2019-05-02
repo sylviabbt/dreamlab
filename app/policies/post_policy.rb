@@ -10,11 +10,11 @@ class PostPolicy < ApplicationPolicy
   end
 
   def new?
-    true
+    user.admin?
   end
 
   def create?
-    true
+    user.admin?
   end
 
   def show?
@@ -22,16 +22,18 @@ class PostPolicy < ApplicationPolicy
   end
 
   def update?
-    # record.user == user
-    true
+    user.admin?
   end
 
   def edit?
-    true
+    user.admin?
   end
 
   def destroy?
-    true
+    user.admin?
   end
 
 end
+
+
+# if current_user.admin? == true
