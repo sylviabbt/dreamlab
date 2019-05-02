@@ -44,6 +44,13 @@ class CollaborationsController < ApplicationController
     end
   end
 
+  def destroy
+    @collaboration = Collaboration.find(params[:id])
+    authorize @collaboration
+    @collaboration.destroy
+    redirect_to collaborations_path
+  end
+
   def upvote
     authorize @collaboration
     if user_signed_in?
