@@ -39,9 +39,11 @@ class DrawingsController < ApplicationController
   end
 
   def destroy
-    @drawing.destroy
-    authorize @drawing
-    redirect_to drawings_path
+    if current_user == @drawing.kid
+      @drawing.destroy
+      authorize @drawing
+      redirect_to drawings_path
+    end
   end
 
   def download
