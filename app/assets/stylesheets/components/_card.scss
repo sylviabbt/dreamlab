@@ -247,3 +247,30 @@ padding-top: 10px
   width: 100%;
   text-align: center;
 }
+
+// Ipad Pro & Iphone X
+@media only screen and (max-width: 1050px) {
+  .card-collab {
+    width: 100%;
+    height: 97%;
+  }
+    .card-collab-infos-upload {
+    height: 259px;
+  }
+
+  .card-collab.upload a img {
+    height: 262px;
+  }
+  .flip-card-inner {
+    height: 74%;
+  }
+
+  // .card-collab-infos-upload {
+  //   height: 52%;
+  // }
+
+  .card-collab-user.avatar-bordered.upload {
+   position: absolute;
+   right: 0;
+  }
+}
