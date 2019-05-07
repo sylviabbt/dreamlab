@@ -232,11 +232,12 @@ padding-top: 10px
   display: flex;
   align-items: center;
   &:hover {
-    text-decoration: none;
     color: #756c83;
     opacity: 1;
+    text-decoration: underline white;
   }
 }
+
 
 .undo-collab p {
   margin-left: 4px;
