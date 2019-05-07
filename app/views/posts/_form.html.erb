@@ -1,9 +1,15 @@
   <%= simple_form_for @post do |d| %>
     <%= d.input :title, label: "Title post" %>
-    <%= d.input :summary, label: "One sentence summary" %>
+    <%= d.input :oneliner, label:"Catchy one-liner to describe the article " %>
     <%= d.input :main_image_upload, :required => true %>
     <%= d.input :main_image_upload_cache, as: :hidden %>
-    <%= d.input :content, placeholder: "content of the article goes here" %>
+    <%= d.input :opening, label: "insert introduction" %>
+    <%= d.input :second_image_upload, :required => true %>
+    <%= d.input :second_image_upload_cache, as: :hidden %>
+    <%= d.input :content, placeholder: "Main content of the article goes here" %>
+    <%= d.input :third_image_upload, :required => true %>
+    <%= d.input :third_image_upload_cache, as: :hidden %>
+    <%= d.input :summary, label: "Summary of the article" %>
     <%= d.submit "Upload Now!", class:"btn btn-primary my-3" %>
   <% end %>
 </div>

@@ -2,12 +2,24 @@
   <h1><em>"<%= @post.title %></em>"</h1>
 </div>
 <div class="post-content text-center">
-  <h3><%= @post.summary %></h3>
+  <h3><%= @post.oneliner %></h3>
   <div class="post-image">
     <%= cl_image_tag @post.main_image_upload  %>
   </div>
-  <div class="post-story">
+  <div class="post-story mx-auto">
+    <p><%= @post.opening %></p>
+  </div>
+  <div class="post-image">
+    <%= cl_image_tag @post.second_image_upload  %>
+  </div>
+  <div class="post-story mx-auto">
     <p><%= @post.content %></p>
+  </div>
+  <div class="post-image">
+    <%= cl_image_tag @post.third_image_upload  %>
+  </div>
+  <div class="post-story mx-auto">
+    <p><%= @post.summary %></p>
   </div>
 </div>
 <!-- link to other paths -->
