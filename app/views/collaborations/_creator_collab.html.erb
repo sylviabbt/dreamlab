@@ -46,7 +46,7 @@
 <%# end %>
 </div>
 <h1>Completed  collaborations</h1>
-<div class="row my-3 p-3">
+<div class="row my-3">
   <% completed = @collaborations.select{|x| x.collab_upload.filename != nil}%>
   <% completed.each do |collab| %>
     <div class="col-lg-4 col-md-6 col-sm-12">

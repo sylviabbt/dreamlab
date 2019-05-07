@@ -25,10 +25,19 @@
               <% else %>
                 <p><strong><em>Created at: </em></strong><%= drawing.created_at.strftime("%d / %m / %Y") %></p>
                 <p><strong><em>NOT YET BOOKED</em></strong></p>
-                 <%= link_to drawing_path(drawing),
+                <br>
+                <% if current_user.type == "Kid" %>
+                  <%= link_to drawing_path(drawing),
                 method: :delete,
                 data: { confirm: "Click 'ok' to confirm deletion" } do %>
-                      <i class="fas fa-trash-alt"></i> <% end %>
+                    <div class="undo-collab">
+                      <i class="fas fa-trash-alt"></i>
+                      <div class="undo-collab-p">
+                        <p>Sure you want to delete?</p>
+                      </div>
+                    </div>
+                  <% end %>
+                <% end %>
               <% end %>
             </div>
           </div>
