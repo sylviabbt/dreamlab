@@ -157,12 +157,21 @@ a.icon-link {
 
 .post-story {
   padding: 30px;
+  width: 60vw;
+}
+
+.post-story p {
+  font-family: 'Cutive Mono', monospace;
+  color: black;
+  font-size: 1.5rem;
+  text-align: justify;
 }
 
 
+
 .post-image img {
-  margin-top: 30px;
-  margin-bottom: 40px;
-  width: 70vw;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 60vw;
   height: auto;
 }
