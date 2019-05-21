@@ -8,10 +8,10 @@
 <!-- Image with Flip -->
 <div class="together-card lg-col-8 col-sm-8 offset-sm-2 my-3 p-3">
   <div class="drawing-image text-center">
-    <p><%= cl_image_tag @collaboration.drawing.image %></p>
+    <p><%= cl_image_tag @collaboration.drawing.image.thumb.url %></p>
   </div>
   <div class="finished-collab-image text-center">
-    <p><%= cl_image_tag @collaboration.collab_upload %></p>
+    <p><%= cl_image_tag @collaboration.collab_upload.thumb.url %></p>
   </div>
 </div>
 <div class="card-collab-infos text-center mb-3">
