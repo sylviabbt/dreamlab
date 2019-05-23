@@ -4,6 +4,19 @@ class PhotoUploader < CarrierWave::Uploader::Base
   # include CarrierWave::MiniMagick
   include Cloudinary::CarrierWave
 
+  version :standard do
+    process :eager => true
+    process resize_to_fill: [200,200, :north]
+  end
+
+  version :thumb do
+    eager
+    cloudinary_transformation :transformation => [
+      {:width => 2000, :height => 2000, :crop => :limit},
+      {:overlay => "dclwatermark", :width => 1100, :height => 1000, :effect => "colorize:100" }
+    ]
+  end
+
   # Choose what kind of storage to use for this uploader:
   # storage :file
   # storage :fog
