@@ -1,7 +1,5 @@
 class PartnershipsController < ApplicationController
-  # before_action :set_creator, only: [:show]
-  # skip_before_action :authenticate_user!, only: [:index, :new, :create, :show, :edit, :update]
-
+  before_action :set_partnership, only: [:show, :edit, :update, :destroy]
 
   def index
     @partnerships = policy_scope(Partnership).all
@@ -14,24 +12,37 @@ class PartnershipsController < ApplicationController
 
   def create
     @partnership = Partnership.new(partnership_params)
-    # ERROR user is not a method? isn't it a method from App policy?
-    # @kid.user = current_user
-    authorize @user.admin
-    #the correct fields were entered and saved
-    # if @partnership.save
-    #   bypass_sign_in(@kid)
-    #   redirect_to edit_kid_path(@kid)
-    # else
-    #   render :new
-    # end
+    if @partnership.save
+      redirect_to edit_partnership_path(@creator)
+    else
+      render :new
+    end
   end
-end
 
-def edit
-end
+  def edit
+  end
 
-def update
-end
+  def update
+    if @Partnership.update(partnership_params)
+      redirect_to partnership_path(@partnership)
+    else
+      render :edit
+    end
+  end
 
-def destroy
+  def destroy
+    @partnership.destroy
+    redirect_to partnerships_path
+  end
+
+  private
+
+  def set_partnership
+    @partnership = Partnership.find(params[:id])
+    authorize @partnership
+  end
+
+  def partnership_params
+    params.require(:partnership).permit(:name)
+  end
 end
