@@ -25,6 +25,8 @@ Rails.application.routes.draw do
     get '/upvote' => 'collaborations#upvote'
   end
 
+  resources :partnerships, only: [:index, :create, :new, :edit, :update, :destroy]
+
 end
 
 
@@ -36,25 +38,25 @@ Rails.application.routes.draw do
     namespace :v1 do
 
       resources :kids, only: [:create, :new, :show, :edit, :update] do
-      resources :drawings, only: [:create, :new, :show]
-      resources :collaborations, only: [:show]
-    end
+        resources :drawings, only: [:create, :new, :show]
+        resources :collaborations, only: [:show]
+      end
 
-    resources :drawings, only: [:index, :destroy] do
-      get '/download' => 'drawings#download'
-    end
+      resources :drawings, only: [:index, :destroy] do
+        get '/download' => 'drawings#download'
+      end
 
-    resources :creators, only: [:index, :create, :new, :show, :edit, :update] do
-      resources :collaborations, only: [:show, :edit, :update, :destroy]
-    end
+      resources :creators, only: [:index, :create, :new, :show, :edit, :update] do
+        resources :collaborations, only: [:show, :edit, :update, :destroy]
+      end
 
-    resources :posts, only: [:index, :show, :create, :new, :edit, :update, :destroy]
+      resources :posts, only: [:index, :show, :create, :new, :edit, :update, :destroy]
 
-    resources :collaborations, only: [:index, :create,] do
-      # new path =>  /collaborations/23/upvote
-      get '/download' => 'collaborations#download'
-      get '/upvote' => 'collaborations#upvote'
-    end
+      resources :collaborations, only: [:index, :create,] do
+        # new path =>  /collaborations/23/upvote
+        get '/download' => 'collaborations#download'
+        get '/upvote' => 'collaborations#upvote'
+      end
 
     end
   end
