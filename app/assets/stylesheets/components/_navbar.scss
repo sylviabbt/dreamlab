@@ -1,7 +1,7 @@
 .navbar-dreamcolab {
   justify-content: space-between;
   background-color:  #fbfbfb;
-  background:rgba(0,0,0,0.2);
+  background:rgba(0,0,0,0.4);
   width: 100%;
   color: #50C878;
   box-shadow: rgba(0,0,0,0.2);
@@ -12,12 +12,9 @@
 }
 
 .navbar-dreamcolab .navbar-brand img {
-  width: 60px;
-}
-
-#logo-name {
-  font-family: 'Covered By Your Grace', cursive;
-  font-size: 30px;
+  margin-top: 10px;
+  max-width: 360px;
+  height: 80px;
 }
 
 .navbar #navbarSupportedContent .navbar-nav .nav-item .nav-link {

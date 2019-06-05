@@ -28,6 +28,9 @@
   margin-left: 40px;
   padding: 40px;
   z-index: 100;
+  p {
+  font-size: 25px;
+  }
 }
 
 // Home carousel
@@ -45,6 +48,7 @@
 // DreamCoLab Intro
 .card-join-community {
   align-items: center;
+  margin-top: 50px;
   // border-bottom: 2px solid #b9e1dc;
 }
 
@@ -125,9 +129,9 @@ border-top: 2px solid  #b9e1dc;
 }
 
 .image-logo {
-  width: 100px;
+  max-width: 150px;
   height: 100px;
-  margin-top: 20px;
+  margin-top: 50px;
   margin-bottom: 0;
 }
 
