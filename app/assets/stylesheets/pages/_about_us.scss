@@ -1,0 +1,40 @@
+// About Us section
+
+.company-description p, .name-description p {
+  font-size: 20px;
+  font-family: 'Cutive Mono', monospace;
+
+}
+
+.team-info h2 {
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: bold;
+  color: #f38181;
+}
+
+.team-members {
+  display: flex;
+  justify-content: space-between;
+}
+
+.partner-logo {
+  max-width: 320px;
+  max-height: 180px;
+}
+
+.member-links {
+  display: flex;
+  align-items: center;
+}
+
+.member-links a {
+  color: #50C878;
+  opacity: 0.6;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+
+.member-links a:hover {
+  opacity: 1;
+}
