@@ -21,7 +21,15 @@
           <%= link_to "Dream Gallery ", dream_gallery_path, class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
-          <%= cl_image_tag current_user.avatar, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <% if current_user.avatar? == false && current_user.first_name? == false %>
+          <div class="avatar-empty dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">?</div>
+        <% elsif current_user.avatar? == false && current_user.first_name? %>
+          <div class="avatar-empty dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <%= current_user.first_name.first %><%= current_user.last_name.first %>
+          </div>
+        <% else %>
+          <%= cl_image_tag current_user.avatar, class: "avatar-empty dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <% if current_user.type == "Kid" %>
               <%= link_to "My Profile", kid_path(current_user), class: "dropdown-item" %>
