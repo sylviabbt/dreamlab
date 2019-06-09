@@ -1,6 +1,14 @@
 <div class='container-profile-creator'>
   <div class="text-center col-lg-8 offset-lg-2 col-md-6 col-sm-8 offset-sm-2">
-    <%= cl_image_tag @creator.avatar, class:"avatar-bordered-xl" %>
+    <% if @creator.avatar? == false && @creator.first_name? == false %>
+      <div class="avatar-bordered-xl-empty">?</div>
+    <% elsif @creator.avatar? == false && @creator.first_name? %>
+      <div class="avatar-bordered-xl-empty">
+        <%= @creator.first_name.first %><%= @creator.last_name.first %>
+      </div>
+    <% else %>
+      <%= cl_image_tag @creator.avatar, class:"avatar-bordered-xl" %>
+    <% end %>
     <h1><%= @creator.first_name %> <%= @creator.last_name %>, <%= @creator.age %></h2>
     <% if @creator.city.present? %>
       <h4>Location: <%= @creator.city %></h4>

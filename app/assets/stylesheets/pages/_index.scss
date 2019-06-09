@@ -77,6 +77,60 @@
   transform: scale(0.7);
 }
 
+.our-creators .picture .initials {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.9s ease 0s;
+  color: white;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: bold;
+  font-size: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.our-creators:hover .picture .initials {
+  box-shadow: 0 0 0 14px #f7f5ec;
+  transform: scale(0.7);
+  width: 100%;
+  height: 100%;
+  background-color: #746c82;
+  border-radius: 50%;
+  color: white;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: bold;
+}
+
+.our-creators .picture h1 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.9s ease 0s;
+  color: white;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: bold;
+  font-size: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.our-creators:hover .picture h1 {
+  box-shadow: 0 0 0 14px #f7f5ec;
+  transform: scale(0.7);
+  width: 100%;
+  height: 100%;
+  background-color: #746c82;
+  border-radius: 50%;
+  color: white;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: bold;
+}
+
 .our-creators .city {
   display: block;
   font-size: 15px;

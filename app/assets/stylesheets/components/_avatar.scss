@@ -21,6 +21,7 @@
   background-size: cover;
 }
 
+
 // drawings show pages about the artist
 .avatar-bordered-large {
   width: 150px;
@@ -49,4 +50,45 @@
   background-color: white;
 }
 
+// placeholder avatars for creator and kids
+.avatar-bordered-xl-empty {
+  width: 230px;
+  height: 230px;
+  // object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 1px 10px rgba(0,0,0,0.3);
+  border: white 3px solid;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #746c82;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 78px;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: bold;
+}
 
+
+.avatar-empty {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-top: 0 !important;
+  background-color: #746c82;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: bold;
+}
+
+// .avatar-creators-empty {
+//   color: white;
+//   font-family: 'Shadows Into Light', cursive;
+//   font-weight: bold;
+
+// }
