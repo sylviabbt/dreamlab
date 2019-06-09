@@ -3,15 +3,15 @@
   <div class='row'>
     <div class='edit-kid-card text-center col-sm-8 col-lg-4 offset-lg-4 offset-sm-2 my-3 p-3'>
       <%= simple_form_for current_user do |f| %>
-        <%= f.input :first_name, placeholder: "Insert first name" %>
-        <%= f.input :last_name, placeholder: "Insert last name" %>
+        <%= f.input :first_name, placeholder: "Insert first name", required: true %>
+        <%= f.input :last_name, placeholder: "Insert last name", required: true%>
         <%= f.input :age, placeholder: "How old are you?" %>
         <%= f.input :avatar, placeholder: "Upload your favourite picture" %>
         <%= f.input :avatar_cache, as: :hidden %>
         <%= f.input :city, placeholder: "Which city do you live in?" %>
         <%= f.input :description, placeholder: "How would you describe yourself?" %>
         <%= f.input :portfolio_url, placeholder: "Please insert a link to your portfolio" %>
-        <%= f.submit 'Submit!', class: 'button-register my-3' %>
+        <%= f.button :submit, class: 'button-register my-3' %>
     </div>
   <% end %>
  </div>
