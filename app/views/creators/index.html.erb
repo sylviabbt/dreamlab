@@ -17,8 +17,14 @@
             <% end %>
           </div>
           <div class="creator-content">
-            <h3 class="name"><%= c.first_name %>, <%= c.age %></h3>
-            <h4 class="city"><%= c.city %></h4>
+            <% if c.first_name? == false && c.age? == false %>
+              <h3 class="name"><%= ["Mr.", "Mrs.", "Ms."].sample %> Anonymous</h3>
+            <% elsif c.age? == false %>
+              <h3 class="name"><%= c.first_name %></h3>
+            <% else %>
+              <h3 class="name"><%= c.first_name %>, <%= c.age %></h3>
+              <h4 class="city"><%= c.city %></h4>
+            <% end %>
           </div>
           <div class="view-full-profile">
             <%= link_to "View Profile", creator_path(c) %>
