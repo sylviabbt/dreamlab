@@ -3,7 +3,7 @@
   <div class='row'>
     <div class='edit-kid-card text-center col-sm-8 col-lg-4 offset-lg-4 offset-sm-2 my-3 p-3'>
       <%= simple_form_for @kid do |f| %>
-        <p><%= f.input :first_name, label: 'Organization', placeholder: "What's your organization?" %></p>
+        <p><%= f.input :organization, label: 'Organization', placeholder: "What's your organization?" %></p>
         <%#= f.input :age, placeholder: "How old are you?" %>
         <%= f.input :avatar, label: 'Logo', placeholder: "Upload your favourite picture" %>
         <%= f.input :avatar_cache, as: :hidden %>
