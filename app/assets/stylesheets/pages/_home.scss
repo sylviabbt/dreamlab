@@ -49,6 +49,17 @@
   }
 }
 
+.header-text-card {
+  max-width: 500px;
+  margin-top: 50px;
+  color: #756c83;
+  h3 {
+    font-family: 'Josefin Slab', serif;
+    font-size: 40px;
+    font-weight: bold;
+  }
+}
+
 // Home carousel
 #home-carousel {
   position: relative;
@@ -166,11 +177,23 @@ padding: 20px;
   box-shadow: 5px;
 }
 
+.image-home-large {
+  width: 500px;
+  height: 400px;
+  box-shadow: 5px;
+  align-items: right;
+}
+
 .image-logo {
   max-width: 500px;
   height: 60px;
   margin-bottom: 0;
   text-align: left;
+}
+
+.partners-card {
+  display: flex;
+  flex-direction: row;
 }
 
 body {
@@ -179,12 +202,22 @@ body {
   height:auto !important;
 }
 
-.intro-vid {
-
-}
 
 .gallery-link-home {
   text-align: right;
   font-family: 'Josefin Slab', serif;
   color: black;
+}
+
+.contact-info h3 {
+  font-family: 'Josefin Slab', serif;
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.contact-info p {
+    font-family: 'Josefin Slab', serif;
+    font-size: 20px;
 }
