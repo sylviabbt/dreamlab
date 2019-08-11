@@ -165,7 +165,6 @@ padding: 20px;
     box-shadow: 2px;
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
-
 }
 }
 
@@ -196,6 +195,7 @@ padding: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 80px;
 }
 .partners-card p {
   flex-basis: 60%;
@@ -216,9 +216,13 @@ body {
 
 .contact-info h3 {
   font-family: 'Josefin Slab', serif;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: bold;
   margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.contact-info {
   margin-bottom: 80px;
 }
 
