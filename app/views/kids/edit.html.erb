@@ -1,16 +1,17 @@
 <div class='container-edit text-center my-3 p-3'>
-  <h3>Please share a bit about yourself!</h3>
+  <h3>Please share a bit about your organization!</h3>
   <div class='row'>
     <div class='edit-kid-card text-center col-sm-8 col-lg-4 offset-lg-4 offset-sm-2 my-3 p-3'>
       <%= simple_form_for @kid do |f| %>
-        <p><%= f.input :first_name, placeholder: "What's your nickname?" %></p>
-        <%= f.input :age, placeholder: "How old are you?" %>
-        <%= f.input :avatar, placeholder: "Upload your favourite picture" %>
+        <p><%= f.input :first_name, label: 'Organization', placeholder: "What's your organization?" %></p>
+        <%#= f.input :age, placeholder: "How old are you?" %>
+        <%= f.input :avatar, label: 'Logo', placeholder: "Upload your favourite picture" %>
         <%= f.input :avatar_cache, as: :hidden %>
-        <%= f.input :city, placeholder: "Which city do you live in?" %>
-        <%= f.input :favourite_thing_list, placeholder: "What are your favourite things?" %>
-        <%= f.input :worst_thing_list, placeholder: "What don't you like?" %>
-        <%= f.input :description, placeholder: "How would you describe yourself?" %>
+        <%= f.input :city, placeholder: "Which city do you operate in?" %>
+        <%#= f.input :favourite_thing_list, placeholder: "What are your favourite things?" %>
+        <%#= f.input :worst_thing_list, placeholder: "What don't you like?" %>
+        <%= f.input :description, placeholder: "How would you describe your organization?" %>
+        <%= f.input :portfolio_url, placeholder: "Please insert a link to your organization url" %>
         <%= f.submit 'Submit!', class: 'button-register my-3' %>
       </div>
     <% end %>
