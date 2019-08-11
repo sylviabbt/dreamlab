@@ -1,5 +1,5 @@
 Rails.application.configure do
-  config.action_mailer.default_url_options = { host: "http://TODO_PUT_YOUR_DOMAIN_HERE" }
+  config.action_mailer.default_url_options = { host: "https://www.dreamcolab.com" }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -65,6 +65,10 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "dreamlab_#{Rails.env}"
 
   config.action_mailer.perform_caching = false
+
+  #Config mail delivery for gmail forgot password
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { host: “www.dreamcolab.com” }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
