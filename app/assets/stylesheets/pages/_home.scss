@@ -27,7 +27,8 @@
 .banner-thin {
   height: 250px;
   width: 100vw;
-  background-position: center top;
+  background-position: center center;
+  background-size: cover;
   background-repeat: none;
 }
 
@@ -50,7 +51,7 @@
 }
 
 .header-text-card {
-  max-width: 500px;
+  max-width: 400px;
   margin-top: 50px;
   color: #756c83;
   h3 {
@@ -95,11 +96,13 @@
   margin-top: 10px;
   margin-bottom: 40px;
   text-shadow: 1px 1px 2px;
+  text-align: left;
 }
 
 .card-join-community p {
   font-family: 'Cutive Mono', monospace ;
   font-size: 20px;
+  text-align: center;
 }
 
 .card-join-community a {
@@ -114,12 +117,17 @@
   font-size: 20px;
   margin-bottom: 50px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
 
+.video iframe {
+  margin-bottom: 50px;
+  margin-top: 20px;
 }
 
 .brand-card {
 margin: 0 auto;
 padding: 20px;
+  align-self: center;
 }
 
 .brand-card-gallery {
@@ -150,12 +158,15 @@ padding: 20px;
   margin-top: 30px;
 }
 
+
 .image-card {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   margin-top: 30px;
   flex-wrap: wrap;
   padding: 40px;
+
 
   .image {
     width: 100%;
@@ -181,7 +192,6 @@ padding: 20px;
   height: 400px;
   box-shadow: 5px;
   align-items: right;
-  margin-left: 150px;
 }
 
 .image-logo {
@@ -193,12 +203,16 @@ padding: 20px;
 
 .partners-card {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 80px;
 }
 .partners-card p {
-  flex-basis: 60%;
+  font-family: 'Cutive Mono', monospace;
+  width: 40vw;
+  margin-left: 30px;
+  margin-top: 40px;
 }
 
 body {
