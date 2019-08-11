@@ -182,6 +182,7 @@ padding: 20px;
   height: 400px;
   box-shadow: 5px;
   align-items: right;
+  margin-left: 150px;
 }
 
 .image-logo {
@@ -194,6 +195,10 @@ padding: 20px;
 .partners-card {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+}
+.partners-card p {
+  flex-basis: 60%;
 }
 
 body {
