@@ -1,52 +1,66 @@
 <!-- Banner Top -->
-<!-- Carousel -->
-<%= render 'homepage_carousel' %>
-<!-- DreamCoLab Register new user -->
-<div class="card-join-community text-center col-sm-8 offset-sm-2">
-  <h3>JOIN OUR COMMUNITY.</h3>
-  <div class="d-flex justify-content-center col-sm-8 offset-sm-2">
-    <%= link_to "I'm a dreamer", new_kid_path(@kid) %>
-    <%= link_to "I'm a creator", new_creator_path(@creator)%>
+
+<div class="banner" style="background-image: linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3)), url(<%= image_path "leadkid.png"%>);">
+  </div>
+
+<%#= render 'homepage_carousel' %>
+<!-- Mission Info and video -->
+<div class="page-full">
+  <div class="card-join-community text-left col-sm-8 offset-sm-2">
+    <h3>OUR MISSION</h3>
+    <p>dreamco lab inspires children facing adversity by connecting them with creatives all around the world through shared collaborative artwork.</p>
+  </div>
+  <div class="video text-center">
+    <iframe width="853" height="505" src="https://www.youtube.com/embed/rcZ46PbBOaI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 </div>
-<!-- Our mission information -->
-<div class="brand-card col-sm-8 offset-sm-2 text-center">
-  <h1>OUR MISSION.</h1>
-  <p>dreamCo lab aims to bring hope, inspiration, and creativity to hospitalized children by connecting them with artists around the world to help bring their creations and dreams to reality. </p>
-  <div class="row">
-    <div class="image-card col-lg-4 col-md-6 col-sm-8">
-      <p><%= image_tag 'childdraw.jpg', class:"image" %></p>
+<!-- Who we are-->
+<div class="page-full">
+  <div class="banner-thin" style="background-image: linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3)), url(<%= image_path "homeart4.png"%>)";>
+    <div class="container-banner">
+      <h1>H O W &ensp; I T &ensp; W O R K S</h1>
     </div>
-    <div class="image-card col-lg-4 col-md-6 col-sm-8">
-      <p><%= image_tag 'childhosp1.jpg', class:"image" %></p>
-    </div>
-    <div class="image-card col-lg-4 col-md-6 col-sm-8">
-      <p><%= image_tag 'childhosp2.png', class:"image" %></p>
+  </div>
+  <div class="brand-card col-sm-8 offset-sm-2 text-center">
+    <div class="row">
+      <div class="image-card col-lg-4 col-md-6 col-sm-8">
+        <p>Creators</p>
+        <p><%= image_tag 'childdraw.jpg', class:"image-home" %></p>
+        <p>Creators browse a feed of drawings from children and choose one to reinterpret.</p>
+      </div>
+      <div class="image-card col-lg-4 col-md-6 col-sm-8">
+        <p>Organizations</p>
+        <p><%= image_tag 'childhosp1.jpg', class:"image-home" %></p>
+        <p>Organizations connect children in their care to others via artwork.</p>
+      </div>
+      <div class="image-card col-lg-4 col-md-6 col-sm-8">
+        <p>Individuals & Companies</p>
+        <p><%= image_tag 'childhosp2.png', class:"image-home" %></p>
+        <p>Browse our gallery of collaborations between creators and children from many organizations around the world.</p>
+      </div>
     </div>
   </div>
 </div>
-<!-- How it works section -->
-<div class="brand-card col-sm-8 offset-sm-2 text-center">
-  <h1>HOW IT WORKS.</h1>
-  <p><strong>Our framework is designed to be as easy and user-friendly as possible!</strong></p>
-  <i class="fas fa-user-astronaut mr-3"></i><i class="fas fa-upload"></i>
-  <p>Our dreamers will upload their favourite drawings.</p>
-  <i class="fas fa-users mr-3"></i>  <i class="fas fa-hand-pointer"></i>
-  <p>Our creators around the world will browse an index of all drawings and pick one they would like to remaster and work on.</p>
-  <i class="fas fa-hand-holding-heart mr-3"></i>   <i class="fas fa-globe-americas"></i>
-  <p>About a week later, our dreamers will receive their finished piece and get to see their imagination and creations come to life! All pieces will be represented in our Dream Gallery, which is open for the world to see. </p>
-  <p></p>
+<!--Our Partners -->
+<div class="page-full">
+  <div class="banner-thin" style="background-image: linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3)), url(<%= image_path "childpainting.jpg"%>)";>
+    <div class="container-banner">
+      <h1>OUR &ensp; PARTNERS</h1>
+    </div>
+    <div class="card-join-community text-left col-sm-8 offset-sm-2">
+      <h3>CREATING AN IMPACT TOGETHER</h3>
+    </div>
+  </div>
 </div>
-<!-- Dream Gallery section -->
-<div class="brand-card col-sm-8 offset-sm-2 text-center">
-  <h1>DREAM GALLERY.</h1>
-  <p >Our dream gallery is filled with creations and collaborations between dreamers and creators from all over the world! Take a look at some of our latest works: </p>
-  <label><%= link_to "Visit our full Dream Gallery", dream_gallery_path  %></label>
-</div>
-<div class="text-center">
-  <%= render "dream_gallery", limit: 3 %>
+<!-- Contact US Section -->
+<div class="page-full">
+  <div class="banner-thin" style="background-image: linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3)), url(<%= image_path "contactuspic.png"%>)";>
+    <div class="container-banner">
+      <h1>CONTACT &ensp; US</h1>
+    </div>
+  </div>
 </div>
 <!-- Run carousel partial -->
-<script>
+<!-- <script>
   $('.carousel').carousel()
-</script>
+</script> -->

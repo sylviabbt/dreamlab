@@ -17,6 +17,21 @@
   font-weight: bold;
 }
 
+.login-buttons {
+  font-family: 'Cutive Mono', monospace;
+  font-size: 15px;
+  border: 2px solid lightgrey;
+  background-color: lightgrey;
+  margin-top: 5px;
+  margin-left: 20px;
+  padding: 5px;
+  border-radius: 10px;
+  color: black;
+  margin-right: 20px;
+  &:hover{
+    color: #756b83;
+  }
+}
 // simple form submit button "collab complete"
 
 

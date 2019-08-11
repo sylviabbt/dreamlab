@@ -35,20 +35,30 @@
 // home only navbar
 
 .navbar-home {
-  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  // position: absolute;
+  text-align: right;
+  background-color: white;
   right:20px;
-  padding:20px;
-  z-index: 9999;
+  padding: 10px;
+  width: 100vw;
 }
 
 .nav-link-home {
-  align-text:right;
-  font-family: 'Cutive Mono', monospace;
-  color: #f38181;
+  align-text: right;
+  font-family: 'Josefin Slab', serif;
+  color: black;
   margin-right: 20px;
-  margin-top: 20px;
-  font-weight: bold;
-  font-size: 25px;
+  margin-left: 20px;
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.logins {
+  display: flex;
+  flex-direction: column;
 }
 
 
