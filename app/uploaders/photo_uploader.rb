@@ -12,7 +12,7 @@ class PhotoUploader < CarrierWave::Uploader::Base
   version :thumb do
     eager
     cloudinary_transformation :transformation => [
-      {:width => 2000, :height => 2000, :crop => :limit},
+      {:width => 1500, :crop => :limit},
       {:overlay => "dclwatermark", :width => 1100, :height => 1000, :effect => "colorize:100" }
     ]
   end

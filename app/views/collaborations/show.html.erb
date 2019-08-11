@@ -1,12 +1,18 @@
 <!-- <i class="fas fa-hand-point-left ml-3 my-3"></i><%#= link_to "Back to My Collabs", collaborations_path(@creator), class:"text-success my-3 p-3" %> -->
-<div class="title text-center col-sm-8 offset-sm-2 my-3 p-3">
+<!-- <div class="title text-center col-sm-8 offset-sm-2 my-3 p-3">
   <h1>Finished Collab</h1>
-</div>
+</div> -->
 <div class="card-collab-infos text-center text-large">
-  <h2>"<%= @collaboration.drawing.name %>"</h2>
+  <h2><%= @collaboration.drawing.name.upcase %></h2>
+  <div>
+    <h2>COLLABORATION</h2>
+  </div>
+  <div>
+    <h2>by: <%=@collaboration.creator.first_name%> </h2>
+  </div>
 </div>
 <!-- Image with Flip -->
-<div class="together-card lg-col-8 col-sm-8 offset-sm-2 my-3 p-3">
+<div class="together-card lg-col-8 offset-sm-2 my-3 p-3">
   <div class="drawing-image text-center">
     <p><%= cl_image_tag @collaboration.drawing.image.thumb.url %></p>
   </div>
@@ -14,10 +20,10 @@
     <p><%= cl_image_tag @collaboration.collab_upload.thumb.url %></p>
   </div>
 </div>
-<div class="card-collab-infos text-center mb-3">
-  <p> <strong><em>inspired by</em></strong> <%= link_to @collaboration.drawing.kid.first_name, kid_path(@collaboration.drawing.kid), class:"text-primary ml-3" %></p>
-  <p><strong><em>brought to life by</em></strong> <%= link_to @collaboration.creator.first_name, creator_path(@collaboration.creator), class:"text-primary ml-3" %></p>
-  <% if current_user == @collaboration.drawing.kid %>
-    <%= render 'collaborations/download_collab' %>
-  <% end %>
-</div>
+<!-- <div class="card-collab-infos text-center mb-3">
+  <p> <strong><em>inspired by</em></strong> <%#= link_to @collaboration.drawing.kid.first_name, kid_path(@collaboration.drawing.kid), class:"text-primary ml-3" %></p>
+  <p><strong><em>brought to life by</em></strong> <%#= link_to @collaboration.creator.first_name, creator_path(@collaboration.creator), class:"text-primary ml-3" %></p>
+  <%# if current_user == @collaboration.drawing.kid %>
+    <%#= render 'collaborations/download_collab' %>
+  <%# end %>
+</div> -->
