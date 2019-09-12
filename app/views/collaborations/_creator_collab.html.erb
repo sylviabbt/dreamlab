@@ -1,15 +1,12 @@
 <!-- Index for COLLABS FOR SPECIFIC CREATOR -->
 <div class="full-height-page">
-  <div class="title text-center mb-3">
-    <h1>My Collaborations Gallery</h1>
-  </div>
   <div class="collab-sectioning">
     <!-- text-center -->
-    <h1>Booked Collaborations</h1>
+    <h1>My Booked Collaborations</h1>
     <div class="row my-3">
       <% booked = @collaborations.select{|x| x.collab_upload.filename == nil} %>
       <% if booked.present? == false %>
-        <label class="missing-collab">You currently do not have any bookings. Check out our <%= link_to "drawings page", drawings_path %> to book one now!</label>
+        <label class="missing-collab">You currently do not have any bookings. Check out our <%= link_to "Drawings Page", drawings_path %> to book one now!</label>
       <% end %>
       <% booked.each do |collab| %>
         <div class="col-lg-4 col-md-6 col-sm-12">
@@ -45,7 +42,7 @@
 <% end %>
 <%# end %>
 </div>
-<h1>Completed  collaborations</h1>
+<h1>My Completed Collaborations</h1>
 <div class="row my-3">
   <% completed = @collaborations.select{|x| x.collab_upload.filename != nil}%>
   <% completed.each do |collab| %>
