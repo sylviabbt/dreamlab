@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
 // Banner Top
 .banner {
-  height: 100vw;
+  width: 100vw;
   height: 88vh;
   background-size: cover;
   background-position: center;
@@ -230,10 +230,12 @@ body {
 
 .contact-info h3 {
   font-family: 'Josefin Slab', serif;
-  font-size: 40px;
+  font-size: 50px;
   font-weight: bold;
   margin-top: 80px;
   margin-bottom: 80px;
+  color: #756c83;
+  text-shadow: 1px 1px 2px;
 }
 
 .contact-info {
