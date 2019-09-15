@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_07_041155) do
+ActiveRecord::Schema.define(version: 2019_08_11_080903) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,14 @@ ActiveRecord::Schema.define(version: 2019_05_07_041155) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["kid_id"], name: "index_drawings_on_kid_id"
+  end
+
+  create_table "partnerships", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.text "description"
+    t.string "image"
   end
 
   create_table "pg_search_documents", force: :cascade do |t|
@@ -113,6 +121,7 @@ ActiveRecord::Schema.define(version: 2019_05_07_041155) do
     t.string "worst_things"
     t.string "type"
     t.boolean "admin", default: false
+    t.string "organization"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
