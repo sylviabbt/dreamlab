@@ -11,12 +11,27 @@
 .btn-view-more {
   border-radius: 24px;
   padding: 10px;
-  background-color: #50C878;
-  color: black;
+  background-color: #756b83;
+  color: white;
   font-family: 'Cutive Mono', monospace;
   font-weight: bold;
 }
 
+.login-buttons {
+  font-family: 'Cutive Mono', monospace;
+  font-size: 15px;
+  border: 2px solid lightgrey;
+  background-color: lightgrey;
+  margin-top: 5px;
+  margin-left: 20px;
+  padding: 5px;
+  border-radius: 10px;
+  color: black;
+  margin-right: 20px;
+  &:hover{
+    color: #756b83;
+  }
+}
 // simple form submit button "collab complete"
 
 
@@ -36,7 +51,7 @@
 
 .fa-cloud-download-alt {
     font-size: 50px;
-    color: #50C878;
+    color: #756c83;
     opacity: 0.5;
   &:hover{
     opacity: 1;

@@ -1,3 +1,14 @@
 <div class="navbar-home">
-  <%= link_to "Jump In!", new_user_session_path, class: "nav-link-home" %>
+    <%= image_tag "dcl_logo_long.png", class:"image-logo mt-3 ml-3" %>
+  <div class="d-flex flex-row">
+    <%= link_to "About Us", posts_path, class:"nav-link-home" %>
+    <%= link_to "Get Involved", new_user_session_path, class:"nav-link-home" %>
+    <div class="logins">
+      <%= link_to "Register", new_user_registration_path, class:"login-buttons text-center" %>
+      <%= link_to "Login", new_user_session_path, class:"login-buttons text-center" %>
+    </div>
+  </div>
 </div>
+
+
+

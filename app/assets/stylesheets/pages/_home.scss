@@ -1,10 +1,10 @@
 // Specific CSS for your home-page
 // Banner Top
 .banner {
-  height: 100vh;
+  height: 100vw;
+  height: 88vh;
   background-size: cover;
   background-position: center;
-  position: absolute;
 }
 
 .banner h1 {
@@ -24,12 +24,40 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
+.banner-thin {
+  height: 250px;
+  width: 100vw;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: none;
+}
+
+.container-banner h1 {
+  font-family: 'Josefin Slab', serif;
+  font-size: 100px;
+  text-align: center;
+  color: white;
+  padding: 65px;
+}
+
 .container-homepage {
   margin-left: 40px;
   padding: 40px;
   z-index: 100;
+  width: 100vw;
   p {
   font-size: 25px;
+  }
+}
+
+.header-text-card {
+  max-width: 400px;
+  margin-top: 50px;
+  color: #756c83;
+  h3 {
+    font-family: 'Josefin Slab', serif;
+    font-size: 40px;
+    font-weight: bold;
   }
 }
 
@@ -38,6 +66,14 @@
   position: relative;
 }
 
+.page-full {
+  height: 100vh;
+}
+
+.video {
+  margin-top: 50px;
+  box-shadow: 100px;
+}
 // @media(max-width: 576px) {
 //   #home-carousel {
 //     width: 100vw;
@@ -48,23 +84,30 @@
 // DreamCoLab Intro
 .card-join-community {
   align-items: center;
-  margin-top: 50px;
+  margin-top: 70px;
   // border-bottom: 2px solid #b9e1dc;
 }
 
 .card-join-community h3 {
-  font-family: 'Shadows Into Light', cursive;
+  font-family: 'Josefin Slab', serif;
   font-weight: bold;
   color: #756c83;
   font-size: 50px;
   margin-top: 10px;
   margin-bottom: 40px;
   text-shadow: 1px 1px 2px;
+  text-align: left;
+}
+
+.card-join-community p {
+  font-family: 'Cutive Mono', monospace ;
+  font-size: 20px;
+  text-align: center;
 }
 
 .card-join-community a {
-  background-color: #f38181;
-  color: white;
+  background-color: #98d3bb;
+  color: black;
   font-weight: bold;
   padding: 10px;
   border-radius: 10px;
@@ -74,13 +117,17 @@
   font-size: 20px;
   margin-bottom: 50px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
 
+.video iframe {
+  margin-bottom: 50px;
+  margin-top: 20px;
 }
 
 .brand-card {
 margin: 0 auto;
 padding: 20px;
-border-top: 2px solid  #b9e1dc;
+  align-self: center;
 }
 
 .brand-card-gallery {
@@ -111,10 +158,15 @@ border-top: 2px solid  #b9e1dc;
   margin-top: 30px;
 }
 
+
 .image-card {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   margin-top: 30px;
+  flex-wrap: wrap;
+  padding: 40px;
+
 
   .image {
     width: 100%;
@@ -124,19 +176,71 @@ border-top: 2px solid  #b9e1dc;
     box-shadow: 2px;
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
-
 }
+}
+
+.image-home {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit:cover;
+  box-shadow: 5px;
+}
+
+.image-home-large {
+  width: 500px;
+  height: 400px;
+  box-shadow: 5px;
+  align-items: right;
 }
 
 .image-logo {
-  max-width: 150px;
-  height: 100px;
-  margin-top: 50px;
+  max-width: 500px;
+  height: 60px;
   margin-bottom: 0;
+  text-align: left;
+}
+
+.partners-card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+.partners-card p {
+  font-family: 'Cutive Mono', monospace;
+  width: 40vw;
+  margin-left: 30px;
+  margin-top: 40px;
 }
 
 body {
   background-size: cover;
   min-height:100%;
   height:auto !important;
+}
+
+
+.gallery-link-home {
+  text-align: right;
+  font-family: 'Josefin Slab', serif;
+  color: black;
+}
+
+.contact-info h3 {
+  font-family: 'Josefin Slab', serif;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.contact-info {
+  margin-bottom: 80px;
+}
+
+.contact-info p {
+    font-family: 'Josefin Slab', serif;
+    font-size: 20px;
 }
