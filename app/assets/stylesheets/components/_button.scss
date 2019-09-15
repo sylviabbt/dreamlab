@@ -1,3 +1,21 @@
+.button-gallery {
+  background-color: #756c83;
+  color: white;
+  font-weight: bold;
+  font-family: 'Josefin Slab', serif;
+  font-size: 24px;
+  box-shadow: 1px 1px 6px;
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  width: 20vw;
+  justify-content: center;
+  bottom: 15px;
+  position: absolute;
+  left: 38%;
+
+}
+
 .btn-sign-in {
   color: #f38181;
   background-color: #fbfbfb;
