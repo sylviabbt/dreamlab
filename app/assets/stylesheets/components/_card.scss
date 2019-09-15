@@ -37,7 +37,6 @@
   margin: 0;
 }
 
-
 .card-collab .card-collab-infos {
   padding: 16px;
   display: flex;
@@ -45,6 +44,11 @@
   align-items: flex-end;
   position: relative;
   flex-direction: column;
+}
+
+.card-collab-infos {
+  margin: 8vh 0;
+
 }
 
 .card-collab-infos .card-collab-user {
@@ -57,6 +61,8 @@
 .card-collab-infos h2 {
   font-family: 'Cutive Mono', monospace;
   font-weight: bold;
+  color: #98D3BB;
+  font-size: 40px;
 }
 
 // TEST flip card CSS
@@ -123,9 +129,10 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  flex-wrap: wrap;
+  // flex-wrap: wrap; will vertical-align cards
   width: 100%;
   height: auto;
+  margin: 0;
 
 }
 
