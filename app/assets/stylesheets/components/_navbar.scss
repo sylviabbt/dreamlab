@@ -87,3 +87,10 @@
   }
 }
 
+@media only screen and (min-width:771px) and (max-width:1070px) {
+  .navbar #navbarSupportedContent .navbar-nav .nav-item .nav-link {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
