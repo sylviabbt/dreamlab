@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :destroy, :update]
-  # skip_before_action :authenticate_user!, only: [:download]
 
   def index
     @posts = policy_scope(Post).all.order(created_at: :desc)
