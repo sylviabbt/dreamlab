@@ -9,7 +9,7 @@
 
 <%#= render 'homepage_carousel' %>
 <!-- Mission Info and video -->
-<!-- <div class="page-full"> -->
+
   <div class="card-join-community col-sm-8 offset-sm-2">
     <h3>Our Mission</h3>
     <p>dreamco lab inspires children facing adversity by connecting them with creatives all around the world through shared collaborative artwork.</p>
@@ -18,9 +18,9 @@
     <iframe width="853" height="480" src="https://www.youtube.com/embed/rcZ46PbBOaI" frameborder="0" allowfullscreen></iframe>
   </div>
 
-<!-- </div> -->
+
 <!-- Who we are-->
-<!-- <div class="page-full"> -->
+
   <div class="banner-thin" style="background-image: linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3)), url(<%= image_path "homeart5.jpg"%>)";>
     <div class="container-banner">
       <h1>H O W &ensp; I T &ensp; W O R K S</h1>
@@ -45,9 +45,9 @@
       </div>
     </div>
   </div>
-<!-- </div> -->
+
 <!--Our Partners -->
-<!-- <div class="page-full"> -->
+
   <div class="banner-thin" style="background-image: linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3)), url(<%= image_path "childpainting.jpg"%>)";>
     <div class="container-banner">
       <h1>OUR &ensp; PARTNERS</h1>
@@ -60,11 +60,12 @@
    <h3><%= image_tag 'communityicon.jpg', class:"image-home-large" %></h3>
     <div class="partners-card-text">
       <p>We partner with charities, hospitals, and organizations all around the world to help bring inspiration and support to their children in need. dreamco lab is always looking to establish and build long-term relationships with both local and global organizations to help raise awareness.</p>
-      <p>We also work with talented individuals and art communities who share a passion for creating different forms of art, and welcome everyone interested in giving back to join us in our cause. Together we can make a difference in helping those who need us most.</p>
-      <p><%= link_to "Check out our partners >>", drawings_path %></p>
+      <p>We also work with talented individuals and art communities who share a passion for creating different forms of art, and welcome everyone interested in giving back to join us in our cause. Together we can make a difference for the little ones who need us most.</p>
+
+      <p><%#= link_to "Check out our partners >>", drawings_path %></p>
     </div>
   </div>
-<!-- </div> -->
+
 <!-- Contact US Section -->
 <!-- <div class="page-full"> -->
   <div class="banner-thin" style="background-image: linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3)), url(<%= image_path "contactuspic.png"%>)";>
