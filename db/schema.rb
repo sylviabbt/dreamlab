@@ -38,14 +38,6 @@ ActiveRecord::Schema.define(version: 2019_08_11_080903) do
     t.index ["kid_id"], name: "index_drawings_on_kid_id"
   end
 
-  create_table "partnerships", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "name"
-    t.text "description"
-    t.string "image"
-  end
-
   create_table "pg_search_documents", force: :cascade do |t|
     t.text "content"
     t.string "searchable_type"

@@ -46,10 +46,10 @@
   flex-direction: column;
 }
 
-.card-collab-infos {
-  margin: 8vh 0;
+// .card-collab-infos {
+//   margin: 8vh 0;
 
-}
+// }
 
 .card-collab-infos .card-collab-user {
   position: absolute;
@@ -282,5 +282,9 @@ padding-top: 10px
   .card-collab-user.avatar-bordered.upload {
    position: absolute;
    right: 0;
+  }
+
+  .together-card {
+    flex-wrap: wrap;
   }
 }

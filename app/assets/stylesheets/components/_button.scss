@@ -1,3 +1,24 @@
+.button-gallery {
+  background-color: #756c83;
+  color: white;
+  font-weight: bold;
+  font-family: 'Josefin Slab', serif;
+  font-size: 24px;
+  box-shadow: 1px 1px 5px;
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  width: 20vw;
+  justify-content: center;
+  bottom: 15px;
+  position: absolute;
+  left: 38%;
+&:hover {
+  color: #98d3bb;
+  text-decoration: none;
+}
+}
+
 .btn-sign-in {
   color: #f38181;
   background-color: #fbfbfb;
@@ -62,4 +83,31 @@
 font-family: 'Cutive Mono', monospace;
 color: black;
 background-color: white;
+}
+
+
+// MEDIA & RESPONSIVENESS
+
+@media only screen and (max-width: 770px) {
+
+.button-gallery {
+  bottom: 145px;
+  width: 80vw;
+  left: 11%;
+}
+}
+
+@media only screen and (min-width:771px) and (max-width:1070px) {
+        //TABLET ONLY STYLES
+.button-gallery {
+  bottom: 78px;
+  width: 60vw;
+  height: 4vh;
+  left: 22%;
+}
+
+.row {
+    margin-right: -100px;
+    margin-left: -100px;
+}
 }

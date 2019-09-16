@@ -31,7 +31,11 @@
     <main>
       <%#= render 'shared/flashes' %>
       <% if @home %>
-        <%= render 'shared/homenav' %>
+        <% if user_signed_in? %>
+          <%= render 'shared/navbar' %>
+          <% else %>
+          <%= render 'shared/homenav' %>
+        <% end %>
       <% else %>
         <%= render 'shared/navbar' %>
       <% end %>

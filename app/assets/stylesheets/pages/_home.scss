@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
 // Banner Top
 .banner {
-  height: 100vw;
+  width: 100vw;
   height: 88vh;
   background-size: cover;
   background-position: center;
@@ -22,6 +22,11 @@
   font-family: 'Cutive Mono', monospace;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.banner-container {
+  width: 100vw;
+
 }
 
 .banner-thin {
@@ -70,9 +75,22 @@
   height: 100vh;
 }
 
-.video {
-  margin-top: 50px;
-  box-shadow: 100px;
+.video-container {
+position: relative;
+padding-bottom: 56.25%;
+padding-top: 30px; height: 0; overflow: hidden;
+margin-bottom: -15%;
+left: 20%;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 60%;
+height: 60%;
 }
 // @media(max-width: 576px) {
 //   #home-carousel {
@@ -99,10 +117,17 @@
   text-align: left;
 }
 
+.card-join-community h4 {
+  font-family: 'Josefin Slab', serif;
+  font-weight: bold;
+  color: #756c83;
+}
+
 .card-join-community p {
   font-family: 'Cutive Mono', monospace ;
   font-size: 20px;
   text-align: center;
+  margin-bottom: 60px;
 }
 
 .card-join-community a {
@@ -179,6 +204,10 @@ padding: 20px;
 }
 }
 
+.image-card a {
+  color: #98d3bb;
+}
+
 .image-home {
   border-radius: 50%;
   width: 200px;
@@ -230,10 +259,12 @@ body {
 
 .contact-info h3 {
   font-family: 'Josefin Slab', serif;
-  font-size: 40px;
+  font-size: 50px;
   font-weight: bold;
   margin-top: 80px;
   margin-bottom: 80px;
+  color: #756c83;
+  text-shadow: 1px 1px 2px;
 }
 
 .contact-info {
@@ -243,4 +274,47 @@ body {
 .contact-info p {
     font-family: 'Josefin Slab', serif;
     font-size: 20px;
+}
+
+// MEDIA IPHONE & IPAD
+@media only screen and (max-width: 770px) {
+.image-logo {
+  margin-left: 50px !important ;
+  margin-bottom: 20px;
+}
+
+.card-join-community h3 {
+  margin-left: 14%;
+}
+
+.container-banner h1 {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+ h3, .contact-info h3 {
+  font-size: 30px;
+  text-align: center;
+ }
+
+.image-card {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 15px;
+}
+
+.partners-card-text p{
+  width: 80vw;
+}
+}
+
+@media only screen and (min-width:771px) and (max-width:1070px) {
+  .container-banner h1 {
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
 }
