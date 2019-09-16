@@ -34,3 +34,9 @@
   font-family: 'Josefin Slab', serif;
   font-size: 25px;
 }
+
+@media only screen and (max-width: 770px) {
+ .footer-copyright {
+  margin-left: 90px;
+ }
+}

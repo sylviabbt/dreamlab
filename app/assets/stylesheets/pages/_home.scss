@@ -75,9 +75,22 @@
   height: 100vh;
 }
 
-.video {
-  margin-top: 50px;
-  box-shadow: 100px;
+.video-container {
+position: relative;
+padding-bottom: 56.25%;
+padding-top: 30px; height: 0; overflow: hidden;
+margin-bottom: -15%;
+left: 20%;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 60%;
+height: 60%;
 }
 // @media(max-width: 576px) {
 //   #home-carousel {
@@ -108,6 +121,7 @@
   font-family: 'Cutive Mono', monospace ;
   font-size: 20px;
   text-align: center;
+  margin-bottom: 60px;
 }
 
 .card-join-community a {
@@ -250,4 +264,42 @@ body {
 .contact-info p {
     font-family: 'Josefin Slab', serif;
     font-size: 20px;
+}
+
+// MEDIA IPHONE & IPAD
+@media only screen and (max-width: 770px) {
+.card-join-community h3 {
+  margin-left: 14%;
+}
+
+.container-banner h1 {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+ h3, .contact-info h3 {
+  font-size: 30px;
+  text-align: center;
+ }
+
+.image-card {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 15px;
+}
+
+.partners-card-text p{
+  width: 80vw;
+}
+}
+
+@media only screen and (min-width:771px) and (max-width:1070px) {
+  .container-banner h1 {
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
 }

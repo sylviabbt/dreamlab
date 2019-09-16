@@ -13,7 +13,10 @@
   bottom: 15px;
   position: absolute;
   left: 38%;
-
+&:hover {
+  color: #98d3bb;
+  text-decoration: none;
+}
 }
 
 .btn-sign-in {
@@ -80,4 +83,31 @@
 font-family: 'Cutive Mono', monospace;
 color: black;
 background-color: white;
+}
+
+
+// MEDIA & RESPONSIVENESS
+
+@media only screen and (max-width: 770px) {
+
+.button-gallery {
+  bottom: 145px;
+  width: 80vw;
+  left: 11%;
+}
+}
+
+@media only screen and (min-width:771px) and (max-width:1070px) {
+        //TABLET ONLY STYLES
+.button-gallery {
+  bottom: 78px;
+  width: 60vw;
+  height: 4vh;
+  left: 22%;
+}
+
+.row {
+    margin-right: -100px;
+    margin-left: -100px;
+}
 }

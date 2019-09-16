@@ -39,12 +39,14 @@
   border: white 1px solid;
 }
 
+
 // home only navbar
 
 .navbar-home {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
   // position: absolute;
   text-align: right;
   background-color: white;
@@ -68,4 +70,20 @@
   flex-direction: column;
 }
 
+//MEDIA AND RESPONSIVENESS
+
+@media only screen and (max-width: 770px) {
+  .navbar-home {
+    text-align: center;
+  }
+
+  .image-logo {
+    align-items: center;
+  }
+
+  .banner {
+    width: 100vw;
+    height: 60vh;
+  }
+}
 
