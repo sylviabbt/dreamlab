@@ -36,6 +36,8 @@
   color: white;
   font-family: 'Cutive Mono', monospace;
   font-weight: bold;
+  margin-top: 30px;
+  margin-right: 100px;
 }
 
 .login-buttons {
@@ -91,10 +93,15 @@ background-color: white;
 @media only screen and (max-width: 770px) {
 
 .button-gallery {
-  bottom: -430px;
+  bottom: -390px;
   width: 80vw;
   left: 11%;
   position: relative;
+}
+
+.btn-view-more {
+  margin-top: 20px;
+  margin-right: 50px;
 }
 }
 
