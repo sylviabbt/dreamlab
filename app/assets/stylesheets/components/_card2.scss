@@ -31,3 +31,38 @@
 .card-product .card-product-infos {
   padding: 16px;
 }
+
+.registration-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 10px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.signup-card {
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 34px;
+  font-weight: bold;
+  font-family: 'Josefin Slab', serif;
+  text-shadow: 1px 1px 3px;
+  border-radius: 15px;
+  margin-top: 25px;
+  margin-left: -20px;
+  flex-wrap: wrap;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+@media only screen and (max-width: 770px) {
+  .signup-card {
+    margin-left: 0;
+  }
+
+  }
