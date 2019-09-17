@@ -32,11 +32,6 @@ body{
     transition: 300ms ease-in-out;
   }
 
-  // .blog-card img {
-  //  image-fit: cover;
-  //  width: 100%;
-  // }
-
   .blog-card__background,
   .card__background--layer{
     z-index: -1;
@@ -167,11 +162,15 @@ a.icon-link {
   text-align: justify;
 }
 
-
-
 .post-image img {
   margin-top: 15px;
   margin-bottom: 15px;
   width: 60vw;
   height: auto;
+}
+
+@media only screen and (max-width: 1050px) {
+  .blog-card .blog-card__info {
+    margin-top: -50px;
+  }
 }
