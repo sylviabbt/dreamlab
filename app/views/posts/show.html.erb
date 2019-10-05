@@ -23,10 +23,12 @@
   </div>
 </div>
 <!-- link to other paths -->
-<% if current_user.admin %>
-  <div class="post-links text-center mb-3 ">
-    <%= link_to "Edit ", edit_post_path(@post), class:"mx-3"%>
-    <%= link_to "Delete ", post_path(@post), class:"mr-3", method: :delete, data: {confirm: "Are you sure your would like to delete this post?"} %>
+<div class="post-links text-center mb-3 ">
+  <% if current_user %>
+    <% if current_user.admin %>
+      <%= link_to "Edit ", edit_post_path(@post), class:"mx-3"%>
+      <%= link_to "Delete ", post_path(@post), class:"mr-3", method: :delete, data: {confirm: "Are you sure your would like to delete this post?"} %>
+    <% end %>
   <% end %>
   <%= link_to "Back to All Posts", posts_path(@posts), class:"mx-3"%>
 </div>

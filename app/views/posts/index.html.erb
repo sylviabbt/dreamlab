@@ -3,8 +3,10 @@
 </div>
 <!-- For admin to add a new post -->
 <div class="text-center my-3">
-  <% if current_user.admin %>
-    <p><%= link_to "+ Add a post", new_post_path(@post)%></p>
+  <% if current_user %>
+    <% if current_user.admin %>
+      <p><%= link_to "+ Add a post", new_post_path(@post)%></p>
+    <% end %>
   <% end %>
 </div>
 <!-- Each post in the index card -->
